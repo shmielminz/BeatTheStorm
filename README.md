@@ -9,7 +9,7 @@ The game starts with all players in middle spot, there are 50 spots up, and 50 s
 
 There are two goals in the game. One is not to get caught by the storm, and not to lose, by getting to -50 (נ' שערי טומאה). And the primary goal is, to ***Beat the Storm***, and to get to +50 (נ' שערי קדושה).
 
-## The Winner or Looser:
+### The Winner or Looser
 Once a player reaches +50, the player takes one more turn, and if player gets a plus turn, that player is the Winner.
 
 And same is for looser, if a player gets to -50, the player takes one more turn, and if player gets another minus turn, that player is the Looser.
