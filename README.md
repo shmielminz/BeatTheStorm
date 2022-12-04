@@ -1,6 +1,6 @@
 # Beat The Storm
 ## Overview
-This repo is for the implementation of the new game called Beat the Storm, which is a game similar to <a href="https://en.wikipedia.org/wiki/Snakes_and_ladders">Snakes and ladders</a>, where you challenge yourself against your friend or the computer, who will beat the storm of technology first, and get first to 50 שערי קדושה, or who will fail to fight the storm, and drop to below 50 שערי טומאה.
+This repo is for the implementation of the new game called Beat the Storm, which is a game similar to <a href="https://en.wikipedia.org/wiki/Snakes_and_ladders" target="_blank">Snakes and ladders</a>, where you challenge yourself against your friend or the computer, who will beat the storm of technology first, and get first to 50 שערי קדושה, or who will fail to fight the storm, and drop to below 50 שערי טומאה.
 
 ## The Game
 
