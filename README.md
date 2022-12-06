@@ -5,11 +5,11 @@ This repo is for the implementation of the new game called Beat the Storm, which
 ## The Game
 
 ### The Start
-The game starts with all players in middle spot, there are 50 spots up, and 50 spots down, you pick a card, to move up or down on board.
+The game starts with all players in middle spot, there are 50 spots up, and 50 spots down, you pick a card, to move up or down the board.
 
-You need to take care not to get caught in the Storm, and not to drop to -50, and to move up to +50.
+There are two goals in the game. One is not to get caught by the storm, and not to lose, by getting to -50 (נ' שערי טומאה). And the primary goal is, to ***Beat the Storm***, and to get to +50 (נ' שערי קדושה).
 
-## The Winner or Looser:
+### The Winner or Looser
 Once a player reaches +50, the player takes one more turn, and if player gets a plus turn, that player is the Winner.
 
 And same is for looser, if a player gets to -50, the player takes one more turn, and if player gets another minus turn, that player is the Looser.
