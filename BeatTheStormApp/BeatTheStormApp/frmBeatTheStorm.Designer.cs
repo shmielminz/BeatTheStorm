@@ -149,6 +149,7 @@
             this.picCardCurrent = new System.Windows.Forms.PictureBox();
             this.lblDiceValCurrent = new System.Windows.Forms.Label();
             this.lblDiceValPrevious = new System.Windows.Forms.Label();
+            this.btnRestart = new System.Windows.Forms.Button();
             this.tblMain.SuspendLayout();
             this.pnlPlayers.SuspendLayout();
             this.pnlPlayingModes.SuspendLayout();
@@ -172,8 +173,9 @@
             this.tblMain.Controls.Add(this.btnStart, 3, 0);
             this.tblMain.Controls.Add(this.tblGame, 0, 2);
             this.tblMain.Controls.Add(this.lblCopyright, 0, 3);
-            this.tblMain.Controls.Add(this.btnHelp, 3, 3);
             this.tblMain.Controls.Add(this.tblCards, 4, 0);
+            this.tblMain.Controls.Add(this.btnHelp, 2, 3);
+            this.tblMain.Controls.Add(this.btnRestart, 3, 3);
             this.tblMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblMain.Location = new System.Drawing.Point(0, 0);
             this.tblMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1635,11 +1637,11 @@
             // 
             this.lblCopyright.AutoSize = true;
             this.lblCopyright.BackColor = System.Drawing.Color.Gainsboro;
-            this.tblMain.SetColumnSpan(this.lblCopyright, 3);
+            this.tblMain.SetColumnSpan(this.lblCopyright, 2);
             this.lblCopyright.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCopyright.Location = new System.Drawing.Point(3, 944);
             this.lblCopyright.Name = "lblCopyright";
-            this.lblCopyright.Size = new System.Drawing.Size(1311, 106);
+            this.lblCopyright.Size = new System.Drawing.Size(872, 106);
             this.lblCopyright.TabIndex = 5;
             this.lblCopyright.Text = "© Copyright 2022 by Shmiel Minz";
             this.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1648,9 +1650,9 @@
             // 
             this.btnHelp.BackColor = System.Drawing.Color.LightGray;
             this.btnHelp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHelp.Location = new System.Drawing.Point(1320, 947);
+            this.btnHelp.Location = new System.Drawing.Point(881, 947);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(134, 100);
+            this.btnHelp.Size = new System.Drawing.Size(433, 100);
             this.btnHelp.TabIndex = 6;
             this.btnHelp.Text = "Help";
             this.btnHelp.UseVisualStyleBackColor = false;
@@ -1740,6 +1742,17 @@
             this.lblDiceValPrevious.Size = new System.Drawing.Size(455, 217);
             this.lblDiceValPrevious.TabIndex = 5;
             this.lblDiceValPrevious.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnRestart
+            // 
+            this.btnRestart.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnRestart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRestart.Location = new System.Drawing.Point(1320, 947);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(134, 100);
+            this.btnRestart.TabIndex = 8;
+            this.btnRestart.Text = "Restart";
+            this.btnRestart.UseVisualStyleBackColor = false;
             // 
             // frmBeatTheStorm
             // 
@@ -1891,5 +1904,6 @@
         private PictureBox picCardPrevious;
         private Label lblDiceValCurrent;
         private Label lblDiceValPrevious;
+        private Button btnRestart;
     }
 }

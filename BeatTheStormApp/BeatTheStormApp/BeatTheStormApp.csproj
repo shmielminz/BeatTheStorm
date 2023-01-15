@@ -9,13 +9,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Aolmail.jpg" />
+    <None Remove="Images\Bbcnews.jpg" />
     <None Remove="Images\Bing.jpg" />
     <None Remove="Images\Facebook.jpg" />
     <None Remove="Images\Gmail.jpg" />
     <None Remove="Images\Google.jpg" />
+    <None Remove="Images\Googleplay.jpg" />
     <None Remove="Images\Hashomrim1.jpg" />
     <None Remove="Images\Hashomrim10.jpg" />
+    <None Remove="Images\Hashomrim11.jpg" />
+    <None Remove="Images\Hashomrim12.jpg" />
+    <None Remove="Images\Hashomrim13.jpg" />
+    <None Remove="Images\Hashomrim14.jpg" />
+    <None Remove="Images\Hashomrim15.jpg" />
+    <None Remove="Images\Hashomrim16.jpg" />
+    <None Remove="Images\Hashomrim17.jpg" />
+    <None Remove="Images\Hashomrim18.jpg" />
+    <None Remove="Images\Hashomrim19.jpg" />
     <None Remove="Images\Hashomrim2.jpg" />
+    <None Remove="Images\Hashomrim20.jpg" />
+    <None Remove="Images\Hashomrim21.jpg" />
+    <None Remove="Images\Hashomrim22.jpg" />
+    <None Remove="Images\Hashomrim23.jpg" />
+    <None Remove="Images\Hashomrim24.jpg" />
+    <None Remove="Images\Hashomrim25.jpg" />
+    <None Remove="Images\Hashomrim26.jpg" />
     <None Remove="Images\Hashomrim3.jpg" />
     <None Remove="Images\Hashomrim4.jpg" />
     <None Remove="Images\Hashomrim5.jpg" />
@@ -23,16 +42,38 @@
     <None Remove="Images\Hashomrim7.jpg" />
     <None Remove="Images\Hashomrim8.jpg" />
     <None Remove="Images\Hashomrim9.jpg" />
+    <None Remove="Images\Hashomrimback.jpg" />
     <None Remove="Images\icon.ico" />
     <None Remove="Images\Instagram.jpg" />
+    <None Remove="Images\Linkedin.jpg" />
+    <None Remove="Images\Netflix.jpg" />
+    <None Remove="Images\Nytimes.jpg" />
+    <None Remove="Images\Outlook.jpg" />
     <None Remove="Images\Pinterest.jpg" />
+    <None Remove="Images\Roblox.jpg" />
+    <None Remove="Images\Skype.jpg" />
     <None Remove="Images\Slack.jpg" />
+    <None Remove="Images\Spec_for_Beat_the_Storm.mht" />
+    <None Remove="Images\Spec_for_Beat_the_Storm.pdf" />
+    <None Remove="Images\Steam.jpg" />
+    <None Remove="Images\Telegram.jpg" />
+    <None Remove="Images\Tiktok.jpg" />
+    <None Remove="Images\Twitch.jpg" />
     <None Remove="Images\Twitter.jpg" />
+    <None Remove="Images\Vimeo.jpg" />
     <None Remove="Images\Whatsapp.jpg" />
+    <None Remove="Images\Yahoomail.jpg" />
     <None Remove="Images\Youtube.jpg" />
+    <None Remove="Images\Zoom.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Images\Aolmail.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Bbcnews.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Bing.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -45,13 +86,64 @@
     <Content Include="Images\Google.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Googleplay.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Hashomrim1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Hashomrim10.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Hashomrim11.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim12.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim13.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim14.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim15.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim16.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim17.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim18.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim19.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Hashomrim2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim20.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim21.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim22.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim23.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim24.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim25.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hashomrim26.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Hashomrim3.jpg">
@@ -75,25 +167,70 @@
     <Content Include="Images\Hashomrim9.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Hashomrimback.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Instagram.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Linkedin.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Netflix.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Nytimes.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Outlook.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Pinterest.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Roblox.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Skype.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Slack.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Spec_for_Beat_the_Storm.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Steam.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Telegram.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Tiktok.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Twitch.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Twitter.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Vimeo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Whatsapp.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Yahoomail.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Youtube.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Zoom.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
