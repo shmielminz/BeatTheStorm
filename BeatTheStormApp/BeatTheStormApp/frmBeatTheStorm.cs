@@ -27,13 +27,18 @@ namespace BeatTheStormApp
         //List<string> lstcards;
         List<Dictionary<string, string>> dctcards;
         bool checkedhandled = false;
+        bool dicerolled = false;
+        int dice;
         public frmBeatTheStorm()
         {
             InitializeComponent();
             btnStart.Click += BtnStart_Click;
-            lblDiceValCurrent.Click += LblDiceValCurrent_Click;
+            picDicePlayer1.Click += PicDiceVal_Click;
+            picDicePlayer2.Click += PicDiceVal_Click;
             btnHelp.Click += BtnHelp_Click;
             btnRestart.Click += BtnRestart_Click;
+            picCardPlayer1.Click += PicCard_Click;
+            picCardPlayer2.Click += PicCard_Click;
             foreach (Control c in tblMain.Controls)
             {
                 foreach (Control ctrl in c.Controls)
@@ -50,30 +55,9 @@ namespace BeatTheStormApp
             {
                 lblspots.Add(l);
             }
-            //picCardCurrent.ImageLocation = imagepath + "Bing.jpg";
-            //lstcards = new() {
-            //    "Bing",
-            //    "Facebook",
-            //    "Gmail",
-            //    "Google",
-            //    "Instagram",
-            //    "Pinterest",
-            //    "Slack",
-            //    "Twitter",
-            //    "Whatsapp",
-            //    "Youtube",
-            //    "Hashomrim1",
-            //    "Hashomrim2",
-            //    "Hashomrim3",
-            //    "Hashomrim4",
-            //    "Hashomrim5",
-            //    "Hashomrim6",
-            //    "Hashomrim7",
-            //    "Hashomrim8",
-            //    "Hashomrim9",
-            //    "Hashomrim10"
-            //};
+//SM In order to test the game. Comment out the different types of cards, and only leave the + or - cards, and run the game, and you'll see it gets winner and loser.
             dctcards = new() {
+                //SM - cards
                 new() { { "Name", "Facebook" }, { "Value", "5" } },
                 new() { { "Name", "Instagram" }, { "Value", "5" } },
                 new() { { "Name", "Twitter" }, { "Value", "5" } },
@@ -100,6 +84,7 @@ namespace BeatTheStormApp
                 new() { { "Name", "Yahoomail" }, { "Value", "1" } },
                 new() { { "Name", "Outlook" }, { "Value", "1" } },
                 new() { { "Name", "Aolmail" }, { "Value", "1" } },
+                //SM + cards
                 new() { { "Name", "Hashomrim1" }, { "Value", "5" } },
                 new() { { "Name", "Hashomrim2" }, { "Value", "5" } },
                 new() { { "Name", "Hashomrim3" }, { "Value", "5" } },
@@ -125,27 +110,34 @@ namespace BeatTheStormApp
                 new() { { "Name", "Hashomrim23" }, { "Value", "1" } },
                 new() { { "Name", "Hashomrim24" }, { "Value", "1" } },
                 new() { { "Name", "Hashomrim25" }, { "Value", "1" } },
-                new() { { "Name", "Hashomrim26" }, { "Value", "1" } },
+                new() { { "Name", "Hashomrim26" }, { "Value", "1" } }
             };
         }
 
-        private PlayerEnum DeterminePlayer()
+        private void SwitchPlayer()
         {
             if (player == PlayerEnum.A)
             {
                 player = PlayerEnum.B;
+                lblDiceOrCardPlayer1.Text = "Player 1 ";
+                lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
+                lblDiceOrCardPlayer2.Text = "Player 1 turn";
             }
             else
             {
                 player = PlayerEnum.A;
+                if (playermode == PlayerModeEnum.TwoPlayers)
+                {
+                    lblDiceOrCardPlayer2.Text = "Player 2 ";
+                    lblDiceOrCardPlayer2.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
+                    lblDiceOrCardPlayer1.Text = "Player 2 turn";
+                }
             }
-            return player;
         }
 
         private int GetRandomCard()
         {
             Random rnd = new(DateTime.Now.Millisecond);
-            //int num = rnd.Next(0, lstcards.Count());
             int num = rnd.Next(0, dctcards.Count());
             return num;
         }
@@ -154,14 +146,20 @@ namespace BeatTheStormApp
         {
             if (gamestatus == GameStatusEnum.Playing)
             {
-                PlayerEnum currentplayer = DeterminePlayer();
-                Random rnd = new();
-                int dice = rnd.Next(1, 7);
+                PlayerEnum currentplayer = player;
+                if (gamemode == GameModeEnum.CardOnly)
+                {
+                    dice = new Random().Next(1, 7);
+                }
                 int randomcard = GetRandomCard();
-                lblDiceValPrevious.Text = lblDiceValCurrent.Text;
-                picCardPrevious.ImageLocation = picCardCurrent.ImageLocation;
-                //picCardCurrent.ImageLocation = imagepath + lstcards[randomcard] + ".jpg";
-                picCardCurrent.ImageLocation = imagepath + dctcards[randomcard]["Name"] + ".jpg";
+                if (player == PlayerEnum.A)
+                {
+                    picCardPlayer1.ImageLocation = imagepath + dctcards[randomcard]["Name"] + ".jpg";
+                }
+                else if (player == PlayerEnum.B)
+                {
+                    picCardPlayer2.ImageLocation = imagepath + dctcards[randomcard]["Name"] + ".jpg";
+                }
                 if (gamemode == GameModeEnum.CardOnly)
                 {
                     if (int.TryParse(dctcards[randomcard]["Value"], out int n))
@@ -175,8 +173,6 @@ namespace BeatTheStormApp
                     string s = lbl.Name.Replace("lblSpot", "");
                     if (int.TryParse(s, out int d))
                     {
-                        lblDiceValCurrent.Text = "Dice Value: " + dice.ToString();
-                        //if (lstcards[randomcard].Contains("Hashomrim"))
                         if (dctcards[randomcard]["Name"].Contains("Hashomrim"))
                         {
                             d += dice;
@@ -222,7 +218,44 @@ namespace BeatTheStormApp
             }
             if (playermode == PlayerModeEnum.PlayAgainstComputer && player == PlayerEnum.A && gamestatus == GameStatusEnum.Playing)
             {
+                RollDice();
+                if (gamemode == GameModeEnum.CardOnly)
+                {
+                    SwitchPlayer();
+                }
                 DoTurn();
+            }
+            dicerolled = false;
+        }
+
+        private void RollDice()
+        {
+            if (gamemode == GameModeEnum.DiceWithRandomCard && gamestatus == GameStatusEnum.Playing && !dicerolled)
+            {
+                SwitchPlayer();
+                dice = new Random().Next(1, 7);
+                if (player == PlayerEnum.A)
+                {
+                    picDicePlayer1.ImageLocation = imagepath + "dice" + dice.ToString() + ".jpg";
+                }
+                else if (player == PlayerEnum.B)
+                {
+                    picDicePlayer2.ImageLocation = imagepath + "dice" + dice.ToString() + ".jpg";
+                }
+                dicerolled = true;
+                if (playermode == PlayerModeEnum.TwoPlayers || player == PlayerEnum.A)
+                {
+                    if (player == PlayerEnum.A)
+                    {
+                        lblDiceOrCardPlayer1.Text = "Player 1 Pick a Card";
+                        lblDiceOrCardPlayer2.Text = "Player 1 turn";
+                    }
+                    else if (player == PlayerEnum.B)
+                    {
+                        lblDiceOrCardPlayer2.Text = "Player 2 Pick a Card";
+                        lblDiceOrCardPlayer1.Text = "Player 2 turn";
+                    }
+                }
             }
         }
 
@@ -231,8 +264,10 @@ namespace BeatTheStormApp
             gamemode = optModeCardOnly.Checked ? GameModeEnum.CardOnly : GameModeEnum.DiceWithRandomCard;
             playermode = optMultiplePlayers.Checked ? PlayerModeEnum.TwoPlayers : PlayerModeEnum.PlayAgainstComputer;
             lblStatus.Text = gamemode == GameModeEnum.CardOnly ? "Click on card deck to pick a card." : "Throw the dice by clicking on dice";
-            lblDiceValCurrent.Text = gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
-            //DoTurn();
+            
+            lblDiceOrCardPlayer1.Text = "Player 1 ";
+            lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
+            lblDiceOrCardPlayer2.Text = "Player 1 turn";
         }
 
         private void BtnStart_Click(object? sender, EventArgs e)
@@ -277,9 +312,24 @@ namespace BeatTheStormApp
             checkedhandled = false;
         }
 
-        private void LblDiceValCurrent_Click(object? sender, EventArgs e)
+        private void PicDiceVal_Click(object? sender, EventArgs e)
         {
-            DoTurn();
+            RollDice();
+        }
+
+        private void PicCard_Click(object? sender, EventArgs e)
+        {
+            if (gamestatus == GameStatusEnum.Playing && (dicerolled || gamemode == GameModeEnum.CardOnly))
+            {
+                dicerolled = false;
+                if (gamemode == GameModeEnum.CardOnly)
+                {
+                    SwitchPlayer();
+                }
+                if (player == PlayerEnum.A || playermode == PlayerModeEnum.TwoPlayers) { 
+                    DoTurn();
+                }
+            }
         }
 
         private void BtnHelp_Click(object? sender, EventArgs e)
@@ -296,10 +346,12 @@ namespace BeatTheStormApp
             lblspots.ForEach(l => l.Text = "");
             lblSpot51.Text = "AB";
             gamestatus = GameStatusEnum.NotStarted;
-            lblDiceValCurrent.Text = "";
-            picCardCurrent.ImageLocation = null;
-            lblDiceValPrevious.Text = "";
-            picCardPrevious.ImageLocation = null;
+            picDicePlayer1.ImageLocation = null;
+            picCardPlayer1.ImageLocation = null;
+            picDicePlayer2.Image = null;
+            picCardPlayer2.ImageLocation = null;
+            lblDiceOrCardPlayer1.Text = "";
+            lblDiceOrCardPlayer2.Text = "";
         }
     }
 }

@@ -12,6 +12,12 @@
     <None Remove="Images\Aolmail.jpg" />
     <None Remove="Images\Bbcnews.jpg" />
     <None Remove="Images\Bing.jpg" />
+    <None Remove="Images\dice1.jpg" />
+    <None Remove="Images\dice2.jpg" />
+    <None Remove="Images\dice3.jpg" />
+    <None Remove="Images\dice4.jpg" />
+    <None Remove="Images\dice5.jpg" />
+    <None Remove="Images\dice6.jpg" />
     <None Remove="Images\Facebook.jpg" />
     <None Remove="Images\Gmail.jpg" />
     <None Remove="Images\Google.jpg" />
@@ -75,6 +81,24 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Bing.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dice1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dice2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dice3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dice4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dice5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dice6.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Facebook.jpg">
@@ -233,6 +257,21 @@
     <Content Include="Images\Zoom.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
