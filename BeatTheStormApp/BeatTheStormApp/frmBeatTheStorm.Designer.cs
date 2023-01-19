@@ -1691,7 +1691,6 @@
             this.lblDiceOrCardPlayer1.Name = "lblDiceOrCardPlayer1";
             this.lblDiceOrCardPlayer1.Size = new System.Drawing.Size(455, 143);
             this.lblDiceOrCardPlayer1.TabIndex = 0;
-            this.lblDiceOrCardPlayer1.Text = "Player 1 Do turn";
             this.lblDiceOrCardPlayer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picCardPlayer2
@@ -1712,7 +1711,6 @@
             this.lblDiceOrCardPlayer2.Name = "lblDiceOrCardPlayer2";
             this.lblDiceOrCardPlayer2.Size = new System.Drawing.Size(455, 121);
             this.lblDiceOrCardPlayer2.TabIndex = 1;
-            this.lblDiceOrCardPlayer2.Text = "Player 2 Do turn";
             this.lblDiceOrCardPlayer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picCardPlayer1

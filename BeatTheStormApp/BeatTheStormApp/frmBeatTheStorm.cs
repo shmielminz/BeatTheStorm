@@ -282,6 +282,15 @@ namespace BeatTheStormApp
             lblDiceOrCardPlayer1.Text = "Player 1 ";
             lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
             lblDiceOrCardPlayer2.Text = "Player 1 turn";
+            
+            picCardPlayer1.ImageLocation = imagepath + "Hashomrimback.jpg";
+            
+            picCardPlayer2.ImageLocation = imagepath + "Hashomrimback.jpg";
+            if (gamemode == GameModeEnum.DiceWithRandomCard)
+            {
+                picDicePlayer2.ImageLocation = imagepath + "dice1.jpg";
+                picDicePlayer1.ImageLocation = imagepath + "dice1.jpg";
+            }
         }
 
         private void BtnStart_Click(object? sender, EventArgs e)
@@ -360,10 +369,11 @@ namespace BeatTheStormApp
             lblspots.ForEach(l => l.Text = "");
             lblSpot51.Text = "AB";
             gamestatus = GameStatusEnum.NotStarted;
-            picDicePlayer1.ImageLocation = null;
-            picCardPlayer1.ImageLocation = null;
+            player = PlayerEnum.B;
+            picDicePlayer1.Image = null;
+            picCardPlayer1.Image = null;
             picDicePlayer2.Image = null;
-            picCardPlayer2.ImageLocation = null;
+            picCardPlayer2.Image = null;
             lblDiceOrCardPlayer1.Text = "";
             lblDiceOrCardPlayer2.Text = "";
         }
