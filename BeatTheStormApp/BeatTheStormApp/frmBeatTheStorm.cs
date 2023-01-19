@@ -13,7 +13,7 @@ namespace BeatTheStormApp
 {
     public partial class frmBeatTheStorm : Form
     {
-        string imagepath = Application.StartupPath + @"\Images\";
+        string imagepath = Application.StartupPath + @"Images\";
         private enum PlayerEnum { A, B }
         private enum GameModeEnum { DiceWithRandomCard, CardOnly }
         private enum PlayerModeEnum { TwoPlayers, PlayAgainstComputer }
@@ -24,7 +24,6 @@ namespace BeatTheStormApp
         PlayerModeEnum playermode = PlayerModeEnum.TwoPlayers;
         List<Label> lblspots = new();
         List<RadioButton> optbtns = new();
-        //List<string> lstcards;
         List<Dictionary<string, string>> dctcards;
         bool checkedhandled = false;
         bool dicerolled = false;
@@ -214,6 +213,21 @@ namespace BeatTheStormApp
                             }
                         }
                     }
+                }
+            }
+            if (gamestatus == GameStatusEnum.Playing)
+            {
+                if (player == PlayerEnum.A)
+                {
+                    lblDiceOrCardPlayer1.Text = "Player 2 turn";
+                    lblDiceOrCardPlayer2.Text = "Player 2 ";
+                    lblDiceOrCardPlayer2.Text += gamemode == GameModeEnum.DiceWithRandomCard ? "Throw the Dice" : "Pick a Card";
+                }
+                else
+                {
+                    lblDiceOrCardPlayer2.Text = "Player 1 turn";
+                    lblDiceOrCardPlayer1.Text = "Player 1 ";
+                    lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.DiceWithRandomCard ? "Throw the Dice" : "Pick a Card";
                 }
             }
             if (playermode == PlayerModeEnum.PlayAgainstComputer && player == PlayerEnum.A && gamestatus == GameStatusEnum.Playing)
