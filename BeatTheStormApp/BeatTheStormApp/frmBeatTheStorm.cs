@@ -28,6 +28,10 @@ namespace BeatTheStormApp
         bool checkedhandled = false;
         bool dicerolled = false;
         int dice;
+        PictureBox picDicePlayer1 = new() { Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.CenterImage };
+        PictureBox picDicePlayer2 = new() { Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.CenterImage };
+        PictureBox picCardPlayer1 = new() { Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.Zoom };
+        PictureBox picCardPlayer2 = new() { Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.Zoom };
         public frmBeatTheStorm()
         {
             InitializeComponent();
@@ -146,10 +150,7 @@ namespace BeatTheStormApp
             if (gamestatus == GameStatusEnum.Playing)
             {
                 PlayerEnum currentplayer = player;
-                if (gamemode == GameModeEnum.CardOnly)
-                {
-                    dice = new Random().Next(1, 7);
-                }
+
                 int randomcard = GetRandomCard();
                 if (player == PlayerEnum.A)
                 {
@@ -219,12 +220,16 @@ namespace BeatTheStormApp
             {
                 if (player == PlayerEnum.A)
                 {
+                    tblPlayer2.BackColor = Color.AliceBlue;
+                    tblPlayer1.BackColor = DefaultBackColor;
                     lblDiceOrCardPlayer1.Text = "Player 2 turn";
                     lblDiceOrCardPlayer2.Text = "Player 2 ";
                     lblDiceOrCardPlayer2.Text += gamemode == GameModeEnum.DiceWithRandomCard ? "Throw the Dice" : "Pick a Card";
                 }
                 else
                 {
+                    tblPlayer1.BackColor = Color.AliceBlue;
+                    tblPlayer2.BackColor = DefaultBackColor;
                     lblDiceOrCardPlayer2.Text = "Player 1 turn";
                     lblDiceOrCardPlayer1.Text = "Player 1 ";
                     lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.DiceWithRandomCard ? "Throw the Dice" : "Pick a Card";
@@ -279,6 +284,22 @@ namespace BeatTheStormApp
             playermode = optMultiplePlayers.Checked ? PlayerModeEnum.TwoPlayers : PlayerModeEnum.PlayAgainstComputer;
             lblStatus.Text = gamemode == GameModeEnum.CardOnly ? "Click on card deck to pick a card." : "Throw the dice by clicking on dice";
             
+            switch (gamemode)
+            {
+                case GameModeEnum.DiceWithRandomCard:
+                    tblPlayer1.Controls.Add(picDicePlayer1, 0, 1);
+                    tblPlayer1.Controls.Add(picCardPlayer1, 0, 2);
+                    tblPlayer2.Controls.Add(picDicePlayer2, 0, 1);
+                    tblPlayer2.Controls.Add(picCardPlayer2, 0, 2);
+                    break;
+                case GameModeEnum.CardOnly:
+                    tblPlayer1.Controls.Add(picCardPlayer1, 0, 1);
+                    tblPlayer2.Controls.Add(picCardPlayer2, 0, 1);
+                    tblPlayer1.SetRowSpan(picCardPlayer1, 2);
+                    tblPlayer1.SetRowSpan(picCardPlayer2, 2);
+                    break;
+            }
+            
             lblDiceOrCardPlayer1.Text = "Player 1 ";
             lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
             lblDiceOrCardPlayer2.Text = "Player 1 turn";
@@ -290,6 +311,51 @@ namespace BeatTheStormApp
             {
                 picDicePlayer2.ImageLocation = imagepath + "dice1.jpg";
                 picDicePlayer1.ImageLocation = imagepath + "dice1.jpg";
+            }
+            tblPlayer1.BackColor = Color.AliceBlue;
+            tblPlayer2.BackColor = DefaultBackColor;
+        }
+
+        private void RestartGame()
+        {
+            lblStatus.Text = "Choose playing mode and click start";
+            lblspots.ForEach(l => l.Text = "");
+            lblSpot51.Text = "AB";
+            gamestatus = GameStatusEnum.NotStarted;
+            player = PlayerEnum.B;
+            picDicePlayer1.Image = null;
+            picCardPlayer1.Image = null;
+            picDicePlayer2.Image = null;
+            picCardPlayer2.Image = null;
+            lblDiceOrCardPlayer1.Text = "";
+            lblDiceOrCardPlayer2.Text = "";
+        }
+
+        private void RadioButtonControl(RadioButton opt)
+        {
+            opt.Checked = false;
+            checkedhandled = true;
+            switch (gamemode)
+            {
+                case GameModeEnum.DiceWithRandomCard:
+                    optModeDiceWithRandomCard.Checked = true;
+                    break;
+                case GameModeEnum.CardOnly:
+                    optModeCardOnly.Checked = true;
+                    break;
+                default:
+                    break;
+            }
+            switch (playermode)
+            {
+                case PlayerModeEnum.TwoPlayers:
+                    optMultiplePlayers.Checked = true;
+                    break;
+                case PlayerModeEnum.PlayAgainstComputer:
+                    optPlayComputer.Checked = true;
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -306,31 +372,7 @@ namespace BeatTheStormApp
         {
             if (sender != null && gamestatus == GameStatusEnum.Playing && !checkedhandled)
             {
-                RadioButton o = (RadioButton)sender;
-                o.Checked = false;
-                checkedhandled = true;
-                switch (gamemode)
-                {
-                    case GameModeEnum.DiceWithRandomCard:
-                        optModeDiceWithRandomCard.Checked = true;
-                        break;
-                    case GameModeEnum.CardOnly:
-                        optModeCardOnly.Checked = true;
-                        break;
-                    default:
-                        break;
-                }
-                switch (playermode)
-                {
-                    case PlayerModeEnum.TwoPlayers:
-                        optMultiplePlayers.Checked = true;
-                        break;
-                    case PlayerModeEnum.PlayAgainstComputer:
-                        optPlayComputer.Checked = true;
-                        break;
-                    default:
-                        break;
-                }
+                RadioButtonControl((RadioButton)sender);
             }
             checkedhandled = false;
         }
@@ -365,17 +407,7 @@ namespace BeatTheStormApp
 
         private void BtnRestart_Click(object? sender, EventArgs e)
         {
-            lblStatus.Text = "Choose playing mode and click start";
-            lblspots.ForEach(l => l.Text = "");
-            lblSpot51.Text = "AB";
-            gamestatus = GameStatusEnum.NotStarted;
-            player = PlayerEnum.B;
-            picDicePlayer1.Image = null;
-            picCardPlayer1.Image = null;
-            picDicePlayer2.Image = null;
-            picCardPlayer2.Image = null;
-            lblDiceOrCardPlayer1.Text = "";
-            lblDiceOrCardPlayer2.Text = "";
+            RestartGame();
         }
     }
 }

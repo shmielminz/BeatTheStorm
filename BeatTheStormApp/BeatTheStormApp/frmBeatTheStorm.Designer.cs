@@ -142,23 +142,20 @@
             this.lblSpot41 = new System.Windows.Forms.Label();
             this.lblCopyright = new System.Windows.Forms.Label();
             this.tblCards = new System.Windows.Forms.TableLayoutPanel();
-            this.picDicePlayer2 = new System.Windows.Forms.PictureBox();
+            this.tblPlayer1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblDiceOrCardPlayer1 = new System.Windows.Forms.Label();
-            this.picCardPlayer2 = new System.Windows.Forms.PictureBox();
+            this.tblPlayer2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblDiceOrCardPlayer2 = new System.Windows.Forms.Label();
-            this.picCardPlayer1 = new System.Windows.Forms.PictureBox();
-            this.picDicePlayer1 = new System.Windows.Forms.PictureBox();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tblMain.SuspendLayout();
             this.pnlPlayers.SuspendLayout();
             this.pnlPlayingModes.SuspendLayout();
             this.tblGame.SuspendLayout();
             this.tblCards.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picDicePlayer2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCardPlayer2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCardPlayer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDicePlayer1)).BeginInit();
+            this.tblPlayer1.SuspendLayout();
+            this.tblPlayer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblMain
@@ -1650,89 +1647,76 @@
             // 
             // tblCards
             // 
+            this.tblCards.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tblCards.ColumnCount = 1;
             this.tblCards.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblCards.Controls.Add(this.picDicePlayer2, 0, 4);
-            this.tblCards.Controls.Add(this.lblDiceOrCardPlayer1, 0, 0);
-            this.tblCards.Controls.Add(this.picCardPlayer2, 0, 5);
-            this.tblCards.Controls.Add(this.lblDiceOrCardPlayer2, 0, 3);
-            this.tblCards.Controls.Add(this.picCardPlayer1, 0, 2);
-            this.tblCards.Controls.Add(this.picDicePlayer1, 0, 1);
+            this.tblCards.Controls.Add(this.tblPlayer1, 0, 0);
+            this.tblCards.Controls.Add(this.tblPlayer2, 0, 1);
             this.tblCards.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblCards.Location = new System.Drawing.Point(1460, 3);
             this.tblCards.Name = "tblCards";
-            this.tblCards.RowCount = 6;
+            this.tblCards.RowCount = 2;
             this.tblMain.SetRowSpan(this.tblCards, 4);
-            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.7931F));
-            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.78161F));
-            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.3295F));
-            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.59004F));
-            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.44061F));
-            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.06513F));
+            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblCards.Size = new System.Drawing.Size(461, 1044);
             this.tblCards.TabIndex = 7;
             // 
-            // picDicePlayer2
+            // tblPlayer1
             // 
-            this.picDicePlayer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picDicePlayer2.Location = new System.Drawing.Point(3, 643);
-            this.picDicePlayer2.Name = "picDicePlayer2";
-            this.picDicePlayer2.Size = new System.Drawing.Size(455, 102);
-            this.picDicePlayer2.TabIndex = 5;
-            this.picDicePlayer2.TabStop = false;
+            this.tblPlayer1.BackColor = System.Drawing.SystemColors.Control;
+            this.tblPlayer1.ColumnCount = 1;
+            this.tblPlayer1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblPlayer1.Controls.Add(this.lblDiceOrCardPlayer1, 0, 0);
+            this.tblPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblPlayer1.Location = new System.Drawing.Point(3, 3);
+            this.tblPlayer1.Name = "tblPlayer1";
+            this.tblPlayer1.RowCount = 3;
+            this.tblPlayer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tblPlayer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tblPlayer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblPlayer1.Size = new System.Drawing.Size(455, 516);
+            this.tblPlayer1.TabIndex = 0;
             // 
             // lblDiceOrCardPlayer1
             // 
+            this.lblDiceOrCardPlayer1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDiceOrCardPlayer1.AutoSize = true;
-            this.lblDiceOrCardPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDiceOrCardPlayer1.Location = new System.Drawing.Point(3, 0);
+            this.lblDiceOrCardPlayer1.Location = new System.Drawing.Point(169, 32);
             this.lblDiceOrCardPlayer1.Name = "lblDiceOrCardPlayer1";
-            this.lblDiceOrCardPlayer1.Size = new System.Drawing.Size(455, 143);
+            this.lblDiceOrCardPlayer1.Size = new System.Drawing.Size(116, 38);
             this.lblDiceOrCardPlayer1.TabIndex = 0;
-            this.lblDiceOrCardPlayer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDiceOrCardPlayer1.Text = "Player 1";
             // 
-            // picCardPlayer2
+            // tblPlayer2
             // 
-            this.picCardPlayer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picCardPlayer2.Location = new System.Drawing.Point(3, 751);
-            this.picCardPlayer2.Name = "picCardPlayer2";
-            this.picCardPlayer2.Size = new System.Drawing.Size(455, 290);
-            this.picCardPlayer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCardPlayer2.TabIndex = 3;
-            this.picCardPlayer2.TabStop = false;
+            this.tblPlayer2.BackColor = System.Drawing.SystemColors.Control;
+            this.tblPlayer2.ColumnCount = 1;
+            this.tblPlayer2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblPlayer2.Controls.Add(this.lblDiceOrCardPlayer2, 0, 0);
+            this.tblPlayer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblPlayer2.Location = new System.Drawing.Point(3, 525);
+            this.tblPlayer2.Name = "tblPlayer2";
+            this.tblPlayer2.RowCount = 3;
+            this.tblPlayer2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tblPlayer2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tblPlayer2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblPlayer2.Size = new System.Drawing.Size(455, 516);
+            this.tblPlayer2.TabIndex = 1;
             // 
             // lblDiceOrCardPlayer2
             // 
+            this.lblDiceOrCardPlayer2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDiceOrCardPlayer2.AutoSize = true;
-            this.lblDiceOrCardPlayer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDiceOrCardPlayer2.Location = new System.Drawing.Point(3, 519);
+            this.lblDiceOrCardPlayer2.Location = new System.Drawing.Point(169, 32);
             this.lblDiceOrCardPlayer2.Name = "lblDiceOrCardPlayer2";
-            this.lblDiceOrCardPlayer2.Size = new System.Drawing.Size(455, 121);
+            this.lblDiceOrCardPlayer2.Size = new System.Drawing.Size(116, 38);
             this.lblDiceOrCardPlayer2.TabIndex = 1;
-            this.lblDiceOrCardPlayer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // picCardPlayer1
-            // 
-            this.picCardPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picCardPlayer1.Location = new System.Drawing.Point(3, 269);
-            this.picCardPlayer1.Name = "picCardPlayer1";
-            this.picCardPlayer1.Size = new System.Drawing.Size(455, 247);
-            this.picCardPlayer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCardPlayer1.TabIndex = 2;
-            this.picCardPlayer1.TabStop = false;
-            // 
-            // picDicePlayer1
-            // 
-            this.picDicePlayer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picDicePlayer1.Location = new System.Drawing.Point(3, 146);
-            this.picDicePlayer1.Name = "picDicePlayer1";
-            this.picDicePlayer1.Size = new System.Drawing.Size(455, 117);
-            this.picDicePlayer1.TabIndex = 4;
-            this.picDicePlayer1.TabStop = false;
+            this.lblDiceOrCardPlayer2.Text = "Player 2";
             // 
             // btnHelp
             // 
@@ -1756,6 +1740,21 @@
             this.btnRestart.Text = "Restart";
             this.btnRestart.UseVisualStyleBackColor = false;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
             // frmBeatTheStorm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 38F);
@@ -1777,11 +1776,10 @@
             this.tblGame.ResumeLayout(false);
             this.tblGame.PerformLayout();
             this.tblCards.ResumeLayout(false);
-            this.tblCards.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picDicePlayer2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCardPlayer2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCardPlayer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDicePlayer1)).EndInit();
+            this.tblPlayer1.ResumeLayout(false);
+            this.tblPlayer1.PerformLayout();
+            this.tblPlayer2.ResumeLayout(false);
+            this.tblPlayer2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1902,12 +1900,11 @@
         private Label lblCopyright;
         private Button btnHelp;
         private TableLayoutPanel tblCards;
-        private Label lblDiceOrCardPlayer2;
-        private Label lblDiceOrCardPlayer1;
-        private PictureBox picCardPlayer1;
-        private PictureBox picCardPlayer2;
         private Button btnRestart;
-        private PictureBox picDicePlayer2;
-        private PictureBox picDicePlayer1;
+        private TableLayoutPanel tblPlayer1;
+        private Label lblDiceOrCardPlayer1;
+        private TableLayoutPanel tblPlayer2;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label lblDiceOrCardPlayer2;
     }
 }
