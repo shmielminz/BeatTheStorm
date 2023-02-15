@@ -36,12 +36,12 @@ namespace BeatTheStormApp
         {
             InitializeComponent();
             btnStart.Click += BtnStart_Click;
-            picDicePlayer1.Click += PicDiceVal_Click;
-            picDicePlayer2.Click += PicDiceVal_Click;
+            picDicePlayer1.Click += PicDiceVal_Click;// PicDicePlayer1_Click;
+            picDicePlayer2.Click += PicDiceVal_Click;// PicDicePlayer2_Click;
             btnHelp.Click += BtnHelp_Click;
             btnRestart.Click += BtnRestart_Click;
-            picCardPlayer1.Click += PicCard_Click;
-            picCardPlayer2.Click += PicCard_Click;
+            picCardPlayer1.Click += PicCard_Click;// PicCardPlayer1_Click;
+            picCardPlayer2.Click += PicCard_Click;// PicCardPlayer2_Click;
             foreach (Control c in tblMain.Controls)
             {
                 foreach (Control ctrl in c.Controls)
@@ -115,6 +115,8 @@ namespace BeatTheStormApp
                 new() { { "Name", "Hashomrim25" }, { "Value", "1" } },
                 new() { { "Name", "Hashomrim26" }, { "Value", "1" } }
             };
+            lblPlayer1.Text = "Player " + PlayerEnum.A;
+            lblPlayer2.Text = "Player " + PlayerEnum.B;
         }
 
         private void SwitchPlayer()
@@ -122,19 +124,19 @@ namespace BeatTheStormApp
             if (player == PlayerEnum.A)
             {
                 player = PlayerEnum.B;
-                lblDiceOrCardPlayer1.Text = "Player 1 ";
-                lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
-                lblDiceOrCardPlayer2.Text = "Player 1 turn";
+                //lblDiceOrCardPlayer1.Text = "Player 1 ";
+                //lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
+                //lblDiceOrCardPlayer2.Text = "Player 1 turn";
             }
             else
             {
                 player = PlayerEnum.A;
-                if (playermode == PlayerModeEnum.TwoPlayers)
-                {
-                    lblDiceOrCardPlayer2.Text = "Player 2 ";
-                    lblDiceOrCardPlayer2.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
-                    lblDiceOrCardPlayer1.Text = "Player 2 turn";
-                }
+                //if (playermode == PlayerModeEnum.TwoPlayers)
+                //{
+                //    lblDiceOrCardPlayer2.Text = "Player 2 ";
+                //    lblDiceOrCardPlayer2.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
+                //    lblDiceOrCardPlayer1.Text = "Player 2 turn";
+                //}
             }
         }
 
@@ -222,16 +224,16 @@ namespace BeatTheStormApp
                 {
                     tblPlayer2.BackColor = Color.AliceBlue;
                     tblPlayer1.BackColor = DefaultBackColor;
-                    lblDiceOrCardPlayer1.Text = "Player 2 turn";
-                    lblDiceOrCardPlayer2.Text = "Player 2 ";
+                    lblDiceOrCardPlayer1.Text = $"Player {PlayerEnum.B} turn";
+                    lblDiceOrCardPlayer2.Text = $"Player {PlayerEnum.B} ";
                     lblDiceOrCardPlayer2.Text += gamemode == GameModeEnum.DiceWithRandomCard ? "Throw the Dice" : "Pick a Card";
                 }
                 else
                 {
                     tblPlayer1.BackColor = Color.AliceBlue;
                     tblPlayer2.BackColor = DefaultBackColor;
-                    lblDiceOrCardPlayer2.Text = "Player 1 turn";
-                    lblDiceOrCardPlayer1.Text = "Player 1 ";
+                    lblDiceOrCardPlayer2.Text = $"Player {PlayerEnum.A} turn";
+                    lblDiceOrCardPlayer1.Text = $"Player {PlayerEnum.A} ";
                     lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.DiceWithRandomCard ? "Throw the Dice" : "Pick a Card";
                 }
             }
@@ -266,13 +268,13 @@ namespace BeatTheStormApp
                 {
                     if (player == PlayerEnum.A)
                     {
-                        lblDiceOrCardPlayer1.Text = "Player 1 Pick a Card";
-                        lblDiceOrCardPlayer2.Text = "Player 1 turn";
+                        lblDiceOrCardPlayer1.Text = $"Player {player} Pick a Card";
+                        lblDiceOrCardPlayer2.Text = $"Player {player} turn";
                     }
                     else if (player == PlayerEnum.B)
                     {
-                        lblDiceOrCardPlayer2.Text = "Player 2 Pick a Card";
-                        lblDiceOrCardPlayer1.Text = "Player 2 turn";
+                        lblDiceOrCardPlayer2.Text = $"Player {player} Pick a Card";
+                        lblDiceOrCardPlayer1.Text = $"Player {player} turn";
                     }
                 }
             }
@@ -287,22 +289,22 @@ namespace BeatTheStormApp
             switch (gamemode)
             {
                 case GameModeEnum.DiceWithRandomCard:
-                    tblPlayer1.Controls.Add(picDicePlayer1, 0, 1);
-                    tblPlayer1.Controls.Add(picCardPlayer1, 0, 2);
-                    tblPlayer2.Controls.Add(picDicePlayer2, 0, 1);
-                    tblPlayer2.Controls.Add(picCardPlayer2, 0, 2);
+                    tblPlayer1.Controls.Add(picDicePlayer1, 0, 2);
+                    tblPlayer1.Controls.Add(picCardPlayer1, 0, 3);
+                    tblPlayer2.Controls.Add(picDicePlayer2, 0, 2);
+                    tblPlayer2.Controls.Add(picCardPlayer2, 0, 3);
                     break;
                 case GameModeEnum.CardOnly:
-                    tblPlayer1.Controls.Add(picCardPlayer1, 0, 1);
-                    tblPlayer2.Controls.Add(picCardPlayer2, 0, 1);
+                    tblPlayer1.Controls.Add(picCardPlayer1, 0, 2);
+                    tblPlayer2.Controls.Add(picCardPlayer2, 0, 2);
                     tblPlayer1.SetRowSpan(picCardPlayer1, 2);
                     tblPlayer1.SetRowSpan(picCardPlayer2, 2);
                     break;
             }
             
-            lblDiceOrCardPlayer1.Text = "Player 1 ";
+            lblDiceOrCardPlayer1.Text = $"Player {PlayerEnum.A} ";
             lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
-            lblDiceOrCardPlayer2.Text = "Player 1 turn";
+            lblDiceOrCardPlayer2.Text = $"Player {PlayerEnum.A} turn";
             
             picCardPlayer1.ImageLocation = imagepath + "Hashomrimback.jpg";
             
@@ -314,6 +316,12 @@ namespace BeatTheStormApp
             }
             tblPlayer1.BackColor = Color.AliceBlue;
             tblPlayer2.BackColor = DefaultBackColor;
+
+            if (playermode == PlayerModeEnum.PlayAgainstComputer)
+            {
+                picCardPlayer2.Enabled = false;
+                picDicePlayer2.Enabled = false;
+            }
         }
 
         private void RestartGame()
@@ -329,6 +337,8 @@ namespace BeatTheStormApp
             picCardPlayer2.Image = null;
             lblDiceOrCardPlayer1.Text = "";
             lblDiceOrCardPlayer2.Text = "";
+            picCardPlayer2.Enabled = true;
+            picDicePlayer2.Enabled = true;
         }
 
         private void RadioButtonControl(RadioButton opt)
@@ -396,6 +406,60 @@ namespace BeatTheStormApp
                 }
             }
         }
+
+        //private void PicDicePlayer1_Click(object? sender, EventArgs e)
+        //{
+        //    if (player == PlayerEnum.A)
+        //    {
+        //        RollDice();
+        //    }
+        //}
+
+        //private void PicDicePlayer2_Click(object? sender, EventArgs e)
+        //{
+        //    if (player == PlayerEnum.B)
+        //    {
+        //        RollDice();
+        //    }
+        //}
+
+        //private void PicCardPlayer2_Click(object? sender, EventArgs e)
+        //{
+        //    if (player == PlayerEnum.B)
+        //    {
+        //        if (gamestatus == GameStatusEnum.Playing && (dicerolled || gamemode == GameModeEnum.CardOnly))
+        //        {
+        //            dicerolled = false;
+        //            if (gamemode == GameModeEnum.CardOnly)
+        //            {
+        //                SwitchPlayer();
+        //            }
+        //            if (player == PlayerEnum.A || playermode == PlayerModeEnum.TwoPlayers)
+        //            {
+        //                DoTurn();
+        //            }
+        //        }
+        //    }
+        //}
+
+        //private void PicCardPlayer1_Click(object? sender, EventArgs e)
+        //{
+        //    if (player == PlayerEnum.A)
+        //    {
+        //        if (gamestatus == GameStatusEnum.Playing && (dicerolled || gamemode == GameModeEnum.CardOnly))
+        //        {
+        //            dicerolled = false;
+        //            if (gamemode == GameModeEnum.CardOnly)
+        //            {
+        //                SwitchPlayer();
+        //            }
+        //            if (player == PlayerEnum.A || playermode == PlayerModeEnum.TwoPlayers)
+        //            {
+        //                DoTurn();
+        //            }
+        //        }
+        //    }
+        //}
 
         private void BtnHelp_Click(object? sender, EventArgs e)
         {
