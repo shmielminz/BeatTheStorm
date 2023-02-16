@@ -36,12 +36,12 @@ namespace BeatTheStormApp
         {
             InitializeComponent();
             btnStart.Click += BtnStart_Click;
-            picDicePlayer1.Click += PicDiceVal_Click;// PicDicePlayer1_Click;
-            picDicePlayer2.Click += PicDiceVal_Click;// PicDicePlayer2_Click;
+            picDicePlayer1.Click += PicDiceVal_Click;
+            picDicePlayer2.Click += PicDiceVal_Click;
             btnHelp.Click += BtnHelp_Click;
             btnRestart.Click += BtnRestart_Click;
-            picCardPlayer1.Click += PicCard_Click;// PicCardPlayer1_Click;
-            picCardPlayer2.Click += PicCard_Click;// PicCardPlayer2_Click;
+            picCardPlayer1.Click += PicCard_Click;
+            picCardPlayer2.Click += PicCard_Click;
             foreach (Control c in tblMain.Controls)
             {
                 foreach (Control ctrl in c.Controls)
@@ -124,19 +124,10 @@ namespace BeatTheStormApp
             if (player == PlayerEnum.A)
             {
                 player = PlayerEnum.B;
-                //lblDiceOrCardPlayer1.Text = "Player 1 ";
-                //lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
-                //lblDiceOrCardPlayer2.Text = "Player 1 turn";
             }
             else
             {
                 player = PlayerEnum.A;
-                //if (playermode == PlayerModeEnum.TwoPlayers)
-                //{
-                //    lblDiceOrCardPlayer2.Text = "Player 2 ";
-                //    lblDiceOrCardPlayer2.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
-                //    lblDiceOrCardPlayer1.Text = "Player 2 turn";
-                //}
             }
         }
 
@@ -406,60 +397,6 @@ namespace BeatTheStormApp
                 }
             }
         }
-
-        //private void PicDicePlayer1_Click(object? sender, EventArgs e)
-        //{
-        //    if (player == PlayerEnum.A)
-        //    {
-        //        RollDice();
-        //    }
-        //}
-
-        //private void PicDicePlayer2_Click(object? sender, EventArgs e)
-        //{
-        //    if (player == PlayerEnum.B)
-        //    {
-        //        RollDice();
-        //    }
-        //}
-
-        //private void PicCardPlayer2_Click(object? sender, EventArgs e)
-        //{
-        //    if (player == PlayerEnum.B)
-        //    {
-        //        if (gamestatus == GameStatusEnum.Playing && (dicerolled || gamemode == GameModeEnum.CardOnly))
-        //        {
-        //            dicerolled = false;
-        //            if (gamemode == GameModeEnum.CardOnly)
-        //            {
-        //                SwitchPlayer();
-        //            }
-        //            if (player == PlayerEnum.A || playermode == PlayerModeEnum.TwoPlayers)
-        //            {
-        //                DoTurn();
-        //            }
-        //        }
-        //    }
-        //}
-
-        //private void PicCardPlayer1_Click(object? sender, EventArgs e)
-        //{
-        //    if (player == PlayerEnum.A)
-        //    {
-        //        if (gamestatus == GameStatusEnum.Playing && (dicerolled || gamemode == GameModeEnum.CardOnly))
-        //        {
-        //            dicerolled = false;
-        //            if (gamemode == GameModeEnum.CardOnly)
-        //            {
-        //                SwitchPlayer();
-        //            }
-        //            if (player == PlayerEnum.A || playermode == PlayerModeEnum.TwoPlayers)
-        //            {
-        //                DoTurn();
-        //            }
-        //        }
-        //    }
-        //}
 
         private void BtnHelp_Click(object? sender, EventArgs e)
         {
