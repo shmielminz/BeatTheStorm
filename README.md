@@ -14,6 +14,8 @@ Once a player reaches +50, the player takes one more turn, and if player gets a 
 
 And same is for loser, if a player gets to -50, the player takes one more turn, and if player gets another minus turn, that player is the Loser.
 
+The game is finished once there's a winner or loser.
+
 **The full spec for the game is in the repo**
 
 ![Page](https://user-images.githubusercontent.com/44436569/206477761-0ba4037d-8043-4e04-938e-7254139746af.png)
