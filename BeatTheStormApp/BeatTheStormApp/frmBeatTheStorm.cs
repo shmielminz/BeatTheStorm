@@ -133,6 +133,7 @@ namespace BeatTheStormApp
 
         private int GetRandomCard()
         {
+            //AF I'm just curious - why did you pass in the millisecond to Random()?  the seed value is based on the time by default
             Random rnd = new(DateTime.Now.Millisecond);
             int num = rnd.Next(0, dctcards.Count());
             return num;
@@ -142,6 +143,7 @@ namespace BeatTheStormApp
         {
             if (gamestatus == GameStatusEnum.Playing)
             {
+                //AF You already initialized a playerenum - player, is there a reason that you are initializing a new one here?
                 PlayerEnum currentplayer = player;
 
                 int randomcard = GetRandomCard();
@@ -209,6 +211,7 @@ namespace BeatTheStormApp
                     }
                 }
             }
+            //AF This second if statement is identical to the one above, they can be combined
             if (gamestatus == GameStatusEnum.Playing)
             {
                 if (player == PlayerEnum.A)
@@ -255,6 +258,7 @@ namespace BeatTheStormApp
                     picDicePlayer2.ImageLocation = imagepath + "dice" + dice.ToString() + ".jpg";
                 }
                 dicerolled = true;
+                //AF All this can be combined into the above if else statement, no need to have another if statement with basically the same conditions
                 if (playermode == PlayerModeEnum.TwoPlayers || player == PlayerEnum.A)
                 {
                     if (player == PlayerEnum.A)
@@ -280,6 +284,7 @@ namespace BeatTheStormApp
             switch (gamemode)
             {
                 case GameModeEnum.DiceWithRandomCard:
+                    //AF The code can be shortened by taking these first 2 statements out of this case statement and the one below, since they apply to both cases
                     tblPlayer1.Controls.Add(picDicePlayer1, 0, 2);
                     tblPlayer1.Controls.Add(picCardPlayer1, 0, 3);
                     tblPlayer2.Controls.Add(picDicePlayer2, 0, 2);
