@@ -12,7 +12,7 @@ There are two goals in the game. One is not to get caught by the storm, and not 
 ### The Winner or Looser
 Once a player reaches +50, the player takes one more turn, and if player gets a plus turn, that player is the Winner.
 
-And same is for looser, if a player gets to -50, the player takes one more turn, and if player gets another minus turn, that player is the Looser.
+And same is for loser, if a player gets to -50, the player takes one more turn, and if player gets another minus turn, that player is the Looser.
 
 **The full spec for the game is in the repo**
 
