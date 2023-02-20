@@ -134,6 +134,7 @@ namespace BeatTheStormApp
         private int GetRandomCard()
         {
             //AF I'm just curious - why did you pass in the millisecond to Random()?  the seed value is based on the time by default
+            //SM The problem was that it didn't look too random (it returned too many times the same card). So I tried it with this and it got more random.
             Random rnd = new(DateTime.Now.Millisecond);
             int num = rnd.Next(0, dctcards.Count());
             return num;
@@ -144,7 +145,7 @@ namespace BeatTheStormApp
             if (gamestatus == GameStatusEnum.Playing)
             {
                 //AF You already initialized a playerenum - player, is there a reason that you are initializing a new one here?
-                PlayerEnum currentplayer = player;
+                //SM You're right, I added this before I created the higher level player variable
 
                 int randomcard = GetRandomCard();
                 if (player == PlayerEnum.A)
@@ -162,7 +163,7 @@ namespace BeatTheStormApp
                         dice = n;
                     }
                 }
-                Label? lbl = lblspots.FirstOrDefault(l => l.Text.Contains(currentplayer.ToString()));
+                Label? lbl = lblspots.FirstOrDefault(l => l.Text.Contains(player.ToString()));
                 if (lbl != null)
                 {
                     string s = lbl.Name.Replace("lblSpot", "");
@@ -181,30 +182,30 @@ namespace BeatTheStormApp
                         {
                             if (l.Name == newspot)
                             {
-                                l.Text += currentplayer.ToString();
-                                lbl.Text = lbl.Text.Replace(currentplayer.ToString(), "");
+                                l.Text += player.ToString();
+                                lbl.Text = lbl.Text.Replace(player.ToString(), "");
                             }
                         });
                         if (!lblspots.Any(l => l.Name == newspot))
                         {
                             if (d > 101 && d <= 106 && lbl.Name != "lblSpot101")
                             {
-                                lblSpot101.Text += currentplayer.ToString();
-                                lbl.Text = lbl.Text.Replace(currentplayer.ToString(), "");
+                                lblSpot101.Text += player.ToString();
+                                lbl.Text = lbl.Text.Replace(player.ToString(), "");
                             }
                             else if (d < 1 && lbl.Name != "lblSpot1")
                             {
-                                lblSpot1.Text += currentplayer.ToString();
-                                lbl.Text = lbl.Text.Replace(currentplayer.ToString(), "");
+                                lblSpot1.Text += player.ToString();
+                                lbl.Text = lbl.Text.Replace(player.ToString(), "");
                             }
                             else if (lbl.Name == "lblSpot101")
                             {
-                                lblStatus.Text = "Winner is " + currentplayer.ToString();
+                                lblStatus.Text = "Winner is " + player.ToString();
                                 gamestatus = GameStatusEnum.Winner;
                             }
                             else if (lbl.Name == "lblSpot1")
                             {
-                                lblStatus.Text = "Loser is " + currentplayer.ToString();
+                                lblStatus.Text = "Loser is " + player.ToString();
                                 gamestatus = GameStatusEnum.Loser;
                             }
                         }
@@ -212,6 +213,7 @@ namespace BeatTheStormApp
                 }
             }
             //AF This second if statement is identical to the one above, they can be combined
+            //SM No, this makes sure only to work if it didn't change to loser or winner, and it's still playing. Maybe I can add it in other if statement but checking if it's still playing
             if (gamestatus == GameStatusEnum.Playing)
             {
                 if (player == PlayerEnum.A)
@@ -230,16 +232,25 @@ namespace BeatTheStormApp
                     lblDiceOrCardPlayer1.Text = $"Player {PlayerEnum.A} ";
                     lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.DiceWithRandomCard ? "Throw the Dice" : "Pick a Card";
                 }
-            }
-            if (playermode == PlayerModeEnum.PlayAgainstComputer && player == PlayerEnum.A && gamestatus == GameStatusEnum.Playing)
-            {
-                RollDice();
-                if (gamemode == GameModeEnum.CardOnly)
+                if (playermode == PlayerModeEnum.PlayAgainstComputer && player == PlayerEnum.A)
                 {
-                    SwitchPlayer();
+                    RollDice();
+                    if (gamemode == GameModeEnum.CardOnly)
+                    {
+                        SwitchPlayer();
+                    }
+                    DoTurn();
                 }
-                DoTurn();
             }
+            //if (playermode == PlayerModeEnum.PlayAgainstComputer && player == PlayerEnum.A && gamestatus == GameStatusEnum.Playing)
+            //{
+            //    RollDice();
+            //    if (gamemode == GameModeEnum.CardOnly)
+            //    {
+            //        SwitchPlayer();
+            //    }
+            //    DoTurn();
+            //}
             dicerolled = false;
         }
 
@@ -252,26 +263,18 @@ namespace BeatTheStormApp
                 if (player == PlayerEnum.A)
                 {
                     picDicePlayer1.ImageLocation = imagepath + "dice" + dice.ToString() + ".jpg";
+                    lblDiceOrCardPlayer1.Text = $"Player {player} Pick a Card";
+                    lblDiceOrCardPlayer2.Text = $"Player {player} turn";
                 }
                 else if (player == PlayerEnum.B)
                 {
                     picDicePlayer2.ImageLocation = imagepath + "dice" + dice.ToString() + ".jpg";
+                    lblDiceOrCardPlayer2.Text = $"Player {player} Pick a Card";
+                    lblDiceOrCardPlayer1.Text = $"Player {player} turn";
                 }
                 dicerolled = true;
                 //AF All this can be combined into the above if else statement, no need to have another if statement with basically the same conditions
-                if (playermode == PlayerModeEnum.TwoPlayers || player == PlayerEnum.A)
-                {
-                    if (player == PlayerEnum.A)
-                    {
-                        lblDiceOrCardPlayer1.Text = $"Player {player} Pick a Card";
-                        lblDiceOrCardPlayer2.Text = $"Player {player} turn";
-                    }
-                    else if (player == PlayerEnum.B)
-                    {
-                        lblDiceOrCardPlayer2.Text = $"Player {player} Pick a Card";
-                        lblDiceOrCardPlayer1.Text = $"Player {player} turn";
-                    }
-                }
+                //SM Correct. Updated.
             }
         }
 
@@ -280,14 +283,16 @@ namespace BeatTheStormApp
             gamemode = optModeCardOnly.Checked ? GameModeEnum.CardOnly : GameModeEnum.DiceWithRandomCard;
             playermode = optMultiplePlayers.Checked ? PlayerModeEnum.TwoPlayers : PlayerModeEnum.PlayAgainstComputer;
             lblStatus.Text = gamemode == GameModeEnum.CardOnly ? "Click on card deck to pick a card." : "Throw the dice by clicking on dice";
-            
+
             switch (gamemode)
             {
                 case GameModeEnum.DiceWithRandomCard:
                     //AF The code can be shortened by taking these first 2 statements out of this case statement and the one below, since they apply to both cases
+                    //SM When taking out the card, it gets always assigned at row 3 even with tblPlayer2.Controls.Add(picCardPlayer2), and it won't update as I restart the game in cardonly mode.
+                    //See my commented out code later. If you know a way to specify the row later and it should update, please let me know.
                     tblPlayer1.Controls.Add(picDicePlayer1, 0, 2);
-                    tblPlayer1.Controls.Add(picCardPlayer1, 0, 3);
                     tblPlayer2.Controls.Add(picDicePlayer2, 0, 2);
+                    tblPlayer1.Controls.Add(picCardPlayer1, 0, 3);
                     tblPlayer2.Controls.Add(picCardPlayer2, 0, 3);
                     break;
                 case GameModeEnum.CardOnly:
@@ -297,7 +302,25 @@ namespace BeatTheStormApp
                     tblPlayer1.SetRowSpan(picCardPlayer2, 2);
                     break;
             }
-            
+
+            //SM This is what I tried and it didn't work.
+
+            //tblPlayer1.Controls.Add(picCardPlayer1);
+            //tblPlayer2.Controls.Add(picCardPlayer2);
+            //switch (gamemode)
+            //{
+            //    case GameModeEnum.DiceWithRandomCard:
+            //        tblPlayer1.Controls.Add(picDicePlayer1, 0, 2);
+            //        tblPlayer2.Controls.Add(picDicePlayer2, 0, 2);
+            //        break;
+            //    case GameModeEnum.CardOnly:
+            //        tblPlayer1.SetRow(picCardPlayer1, 2);
+            //        tblPlayer2.SetRow(picCardPlayer2, 2);
+            //        tblPlayer1.SetRowSpan(picCardPlayer1, 2);
+            //        tblPlayer1.SetRowSpan(picCardPlayer2, 2);
+            //        break;
+            //}
+
             lblDiceOrCardPlayer1.Text = $"Player {PlayerEnum.A} ";
             lblDiceOrCardPlayer1.Text += gamemode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
             lblDiceOrCardPlayer2.Text = $"Player {PlayerEnum.A} turn";
