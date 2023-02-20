@@ -50,7 +50,6 @@
             this.lblDirection60_70 = new System.Windows.Forms.Label();
             this.lblDirection70_80 = new System.Windows.Forms.Label();
             this.lblDirectionEnd = new System.Windows.Forms.Label();
-            this.lblDirection80_90 = new System.Windows.Forms.Label();
             this.tblSpots = new System.Windows.Forms.TableLayoutPanel();
             this.lblSpot1 = new System.Windows.Forms.Label();
             this.lblSpot2 = new System.Windows.Forms.Label();
@@ -164,6 +163,7 @@
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblDirection80_90 = new System.Windows.Forms.Label();
             this.tblMain.SuspendLayout();
             this.pnlPlayers.SuspendLayout();
             this.pnlPlayingModes.SuspendLayout();
@@ -314,8 +314,8 @@
             this.tblGame.Controls.Add(this.lblDirection60_70, 0, 2);
             this.tblGame.Controls.Add(this.lblDirection70_80, 2, 1);
             this.tblGame.Controls.Add(this.lblDirectionEnd, 2, 0);
-            this.tblGame.Controls.Add(this.lblDirection80_90, 0, 0);
             this.tblGame.Controls.Add(this.tblSpots, 1, 0);
+            this.tblGame.Controls.Add(this.lblDirection80_90, 0, 0);
             this.tblGame.Location = new System.Drawing.Point(3, 107);
             this.tblGame.Name = "tblGame";
             this.tblGame.RowCount = 11;
@@ -470,19 +470,6 @@
             this.lblDirectionEnd.TabIndex = 102;
             this.lblDirectionEnd.Text = "Winner";
             // 
-            // lblDirection80_90
-            // 
-            this.lblDirection80_90.AutoSize = true;
-            this.lblDirection80_90.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDirection80_90.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDirection80_90.Location = new System.Drawing.Point(3, 0);
-            this.lblDirection80_90.Name = "lblDirection80_90";
-            this.tblGame.SetRowSpan(this.lblDirection80_90, 2);
-            this.lblDirection80_90.Size = new System.Drawing.Size(139, 150);
-            this.lblDirection80_90.TabIndex = 101;
-            this.lblDirection80_90.Text = "↪️";
-            this.lblDirection80_90.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // tblSpots
             // 
             this.tblSpots.ColumnCount = 10;
@@ -620,6 +607,7 @@
             // lblSpot1
             // 
             this.lblSpot1.AutoSize = true;
+            this.lblSpot1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot1.Location = new System.Drawing.Point(3, 750);
             this.lblSpot1.Name = "lblSpot1";
@@ -630,6 +618,7 @@
             // lblSpot2
             // 
             this.lblSpot2.AutoSize = true;
+            this.lblSpot2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot2.Location = new System.Drawing.Point(118, 750);
             this.lblSpot2.Name = "lblSpot2";
@@ -640,6 +629,7 @@
             // lblSpot3
             // 
             this.lblSpot3.AutoSize = true;
+            this.lblSpot3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot3.Location = new System.Drawing.Point(233, 750);
             this.lblSpot3.Name = "lblSpot3";
@@ -650,6 +640,7 @@
             // lblSpot4
             // 
             this.lblSpot4.AutoSize = true;
+            this.lblSpot4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot4.Location = new System.Drawing.Point(348, 750);
             this.lblSpot4.Name = "lblSpot4";
@@ -660,6 +651,7 @@
             // lblSpot5
             // 
             this.lblSpot5.AutoSize = true;
+            this.lblSpot5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot5.Location = new System.Drawing.Point(463, 750);
             this.lblSpot5.Name = "lblSpot5";
@@ -670,6 +662,7 @@
             // lblSpot6
             // 
             this.lblSpot6.AutoSize = true;
+            this.lblSpot6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot6.Location = new System.Drawing.Point(578, 750);
             this.lblSpot6.Name = "lblSpot6";
@@ -680,6 +673,7 @@
             // lblSpot7
             // 
             this.lblSpot7.AutoSize = true;
+            this.lblSpot7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot7.Location = new System.Drawing.Point(693, 750);
             this.lblSpot7.Name = "lblSpot7";
@@ -690,6 +684,7 @@
             // lblSpot8
             // 
             this.lblSpot8.AutoSize = true;
+            this.lblSpot8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot8.Location = new System.Drawing.Point(808, 750);
             this.lblSpot8.Name = "lblSpot8";
@@ -700,6 +695,7 @@
             // lblSpot9
             // 
             this.lblSpot9.AutoSize = true;
+            this.lblSpot9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot9.Location = new System.Drawing.Point(923, 750);
             this.lblSpot9.Name = "lblSpot9";
@@ -710,6 +706,7 @@
             // lblSpot10
             // 
             this.lblSpot10.AutoSize = true;
+            this.lblSpot10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot10.Location = new System.Drawing.Point(1038, 750);
             this.lblSpot10.Name = "lblSpot10";
@@ -720,6 +717,7 @@
             // lblSpot20
             // 
             this.lblSpot20.AutoSize = true;
+            this.lblSpot20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot20.Location = new System.Drawing.Point(3, 675);
             this.lblSpot20.Name = "lblSpot20";
@@ -730,6 +728,7 @@
             // lblSpot19
             // 
             this.lblSpot19.AutoSize = true;
+            this.lblSpot19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot19.Location = new System.Drawing.Point(118, 675);
             this.lblSpot19.Name = "lblSpot19";
@@ -740,6 +739,7 @@
             // lblSpot18
             // 
             this.lblSpot18.AutoSize = true;
+            this.lblSpot18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot18.Location = new System.Drawing.Point(233, 675);
             this.lblSpot18.Name = "lblSpot18";
@@ -750,6 +750,7 @@
             // lblSpot17
             // 
             this.lblSpot17.AutoSize = true;
+            this.lblSpot17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot17.Location = new System.Drawing.Point(348, 675);
             this.lblSpot17.Name = "lblSpot17";
@@ -760,6 +761,7 @@
             // lblSpot16
             // 
             this.lblSpot16.AutoSize = true;
+            this.lblSpot16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot16.Location = new System.Drawing.Point(463, 675);
             this.lblSpot16.Name = "lblSpot16";
@@ -770,6 +772,7 @@
             // lblSpot15
             // 
             this.lblSpot15.AutoSize = true;
+            this.lblSpot15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot15.Location = new System.Drawing.Point(578, 675);
             this.lblSpot15.Name = "lblSpot15";
@@ -780,6 +783,7 @@
             // lblSpot14
             // 
             this.lblSpot14.AutoSize = true;
+            this.lblSpot14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot14.Location = new System.Drawing.Point(693, 675);
             this.lblSpot14.Name = "lblSpot14";
@@ -790,6 +794,7 @@
             // lblSpot13
             // 
             this.lblSpot13.AutoSize = true;
+            this.lblSpot13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot13.Location = new System.Drawing.Point(808, 675);
             this.lblSpot13.Name = "lblSpot13";
@@ -800,6 +805,7 @@
             // lblSpot12
             // 
             this.lblSpot12.AutoSize = true;
+            this.lblSpot12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot12.Location = new System.Drawing.Point(923, 675);
             this.lblSpot12.Name = "lblSpot12";
@@ -810,6 +816,7 @@
             // lblSpot11
             // 
             this.lblSpot11.AutoSize = true;
+            this.lblSpot11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot11.Location = new System.Drawing.Point(1038, 675);
             this.lblSpot11.Name = "lblSpot11";
@@ -820,6 +827,7 @@
             // lblSpot21
             // 
             this.lblSpot21.AutoSize = true;
+            this.lblSpot21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot21.Location = new System.Drawing.Point(3, 600);
             this.lblSpot21.Name = "lblSpot21";
@@ -830,6 +838,7 @@
             // lblSpot22
             // 
             this.lblSpot22.AutoSize = true;
+            this.lblSpot22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot22.Location = new System.Drawing.Point(118, 600);
             this.lblSpot22.Name = "lblSpot22";
@@ -840,6 +849,7 @@
             // lblSpot23
             // 
             this.lblSpot23.AutoSize = true;
+            this.lblSpot23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot23.Location = new System.Drawing.Point(233, 600);
             this.lblSpot23.Name = "lblSpot23";
@@ -850,6 +860,7 @@
             // lblSpot24
             // 
             this.lblSpot24.AutoSize = true;
+            this.lblSpot24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot24.Location = new System.Drawing.Point(348, 600);
             this.lblSpot24.Name = "lblSpot24";
@@ -860,6 +871,7 @@
             // lblSpot25
             // 
             this.lblSpot25.AutoSize = true;
+            this.lblSpot25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot25.Location = new System.Drawing.Point(463, 600);
             this.lblSpot25.Name = "lblSpot25";
@@ -870,6 +882,7 @@
             // lblSpot26
             // 
             this.lblSpot26.AutoSize = true;
+            this.lblSpot26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot26.Location = new System.Drawing.Point(578, 600);
             this.lblSpot26.Name = "lblSpot26";
@@ -880,6 +893,7 @@
             // lblSpot27
             // 
             this.lblSpot27.AutoSize = true;
+            this.lblSpot27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot27.Location = new System.Drawing.Point(693, 600);
             this.lblSpot27.Name = "lblSpot27";
@@ -890,6 +904,7 @@
             // lblSpot28
             // 
             this.lblSpot28.AutoSize = true;
+            this.lblSpot28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot28.Location = new System.Drawing.Point(808, 600);
             this.lblSpot28.Name = "lblSpot28";
@@ -900,6 +915,7 @@
             // lblSpot29
             // 
             this.lblSpot29.AutoSize = true;
+            this.lblSpot29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot29.Location = new System.Drawing.Point(923, 600);
             this.lblSpot29.Name = "lblSpot29";
@@ -910,6 +926,7 @@
             // lblSpot30
             // 
             this.lblSpot30.AutoSize = true;
+            this.lblSpot30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot30.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot30.Location = new System.Drawing.Point(1038, 600);
             this.lblSpot30.Name = "lblSpot30";
@@ -920,6 +937,7 @@
             // lblSpot40
             // 
             this.lblSpot40.AutoSize = true;
+            this.lblSpot40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot40.Location = new System.Drawing.Point(3, 525);
             this.lblSpot40.Name = "lblSpot40";
@@ -930,6 +948,7 @@
             // lblSpot39
             // 
             this.lblSpot39.AutoSize = true;
+            this.lblSpot39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot39.Location = new System.Drawing.Point(118, 525);
             this.lblSpot39.Name = "lblSpot39";
@@ -940,6 +959,7 @@
             // lblSpot38
             // 
             this.lblSpot38.AutoSize = true;
+            this.lblSpot38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot38.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot38.Location = new System.Drawing.Point(233, 525);
             this.lblSpot38.Name = "lblSpot38";
@@ -950,6 +970,7 @@
             // lblSpot37
             // 
             this.lblSpot37.AutoSize = true;
+            this.lblSpot37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot37.Location = new System.Drawing.Point(348, 525);
             this.lblSpot37.Name = "lblSpot37";
@@ -960,6 +981,7 @@
             // lblSpot36
             // 
             this.lblSpot36.AutoSize = true;
+            this.lblSpot36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot36.Location = new System.Drawing.Point(463, 525);
             this.lblSpot36.Name = "lblSpot36";
@@ -970,6 +992,7 @@
             // lblSpot35
             // 
             this.lblSpot35.AutoSize = true;
+            this.lblSpot35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot35.Location = new System.Drawing.Point(578, 525);
             this.lblSpot35.Name = "lblSpot35";
@@ -980,6 +1003,7 @@
             // lblSpot34
             // 
             this.lblSpot34.AutoSize = true;
+            this.lblSpot34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot34.Location = new System.Drawing.Point(693, 525);
             this.lblSpot34.Name = "lblSpot34";
@@ -990,6 +1014,7 @@
             // lblSpot33
             // 
             this.lblSpot33.AutoSize = true;
+            this.lblSpot33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot33.Location = new System.Drawing.Point(808, 525);
             this.lblSpot33.Name = "lblSpot33";
@@ -1000,6 +1025,7 @@
             // lblSpot32
             // 
             this.lblSpot32.AutoSize = true;
+            this.lblSpot32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot32.Location = new System.Drawing.Point(923, 525);
             this.lblSpot32.Name = "lblSpot32";
@@ -1010,6 +1036,7 @@
             // lblSpot31
             // 
             this.lblSpot31.AutoSize = true;
+            this.lblSpot31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot31.Location = new System.Drawing.Point(1038, 525);
             this.lblSpot31.Name = "lblSpot31";
@@ -1020,6 +1047,7 @@
             // lblSpot41
             // 
             this.lblSpot41.AutoSize = true;
+            this.lblSpot41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot41.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot41.Location = new System.Drawing.Point(3, 450);
             this.lblSpot41.Name = "lblSpot41";
@@ -1030,6 +1058,7 @@
             // lblSpot42
             // 
             this.lblSpot42.AutoSize = true;
+            this.lblSpot42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot42.Location = new System.Drawing.Point(118, 450);
             this.lblSpot42.Name = "lblSpot42";
@@ -1040,6 +1069,7 @@
             // lblSpot43
             // 
             this.lblSpot43.AutoSize = true;
+            this.lblSpot43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot43.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot43.Location = new System.Drawing.Point(233, 450);
             this.lblSpot43.Name = "lblSpot43";
@@ -1050,6 +1080,7 @@
             // lblSpot44
             // 
             this.lblSpot44.AutoSize = true;
+            this.lblSpot44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot44.Location = new System.Drawing.Point(348, 450);
             this.lblSpot44.Name = "lblSpot44";
@@ -1060,6 +1091,7 @@
             // lblSpot45
             // 
             this.lblSpot45.AutoSize = true;
+            this.lblSpot45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot45.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot45.Location = new System.Drawing.Point(463, 450);
             this.lblSpot45.Name = "lblSpot45";
@@ -1070,6 +1102,7 @@
             // lblSpot46
             // 
             this.lblSpot46.AutoSize = true;
+            this.lblSpot46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot46.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot46.Location = new System.Drawing.Point(578, 450);
             this.lblSpot46.Name = "lblSpot46";
@@ -1080,6 +1113,7 @@
             // lblSpot47
             // 
             this.lblSpot47.AutoSize = true;
+            this.lblSpot47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot47.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot47.Location = new System.Drawing.Point(693, 450);
             this.lblSpot47.Name = "lblSpot47";
@@ -1090,6 +1124,7 @@
             // lblSpot48
             // 
             this.lblSpot48.AutoSize = true;
+            this.lblSpot48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot48.Location = new System.Drawing.Point(808, 450);
             this.lblSpot48.Name = "lblSpot48";
@@ -1100,6 +1135,7 @@
             // lblSpot49
             // 
             this.lblSpot49.AutoSize = true;
+            this.lblSpot49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot49.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot49.Location = new System.Drawing.Point(923, 450);
             this.lblSpot49.Name = "lblSpot49";
@@ -1110,6 +1146,7 @@
             // lblSpot50
             // 
             this.lblSpot50.AutoSize = true;
+            this.lblSpot50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot50.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot50.Location = new System.Drawing.Point(1038, 450);
             this.lblSpot50.Name = "lblSpot50";
@@ -1120,6 +1157,7 @@
             // lblSpot51
             // 
             this.lblSpot51.AutoSize = true;
+            this.lblSpot51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tblSpots.SetColumnSpan(this.lblSpot51, 10);
             this.lblSpot51.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot51.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -1133,6 +1171,7 @@
             // lblSpot61
             // 
             this.lblSpot61.AutoSize = true;
+            this.lblSpot61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot61.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot61.Location = new System.Drawing.Point(1038, 300);
             this.lblSpot61.Name = "lblSpot61";
@@ -1143,6 +1182,7 @@
             // lblSpot60
             // 
             this.lblSpot60.AutoSize = true;
+            this.lblSpot60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot60.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot60.Location = new System.Drawing.Point(923, 300);
             this.lblSpot60.Name = "lblSpot60";
@@ -1153,6 +1193,7 @@
             // lblSpot59
             // 
             this.lblSpot59.AutoSize = true;
+            this.lblSpot59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot59.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot59.Location = new System.Drawing.Point(808, 300);
             this.lblSpot59.Name = "lblSpot59";
@@ -1163,6 +1204,7 @@
             // lblSpot58
             // 
             this.lblSpot58.AutoSize = true;
+            this.lblSpot58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot58.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot58.Location = new System.Drawing.Point(693, 300);
             this.lblSpot58.Name = "lblSpot58";
@@ -1173,6 +1215,7 @@
             // lblSpot57
             // 
             this.lblSpot57.AutoSize = true;
+            this.lblSpot57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot57.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot57.Location = new System.Drawing.Point(578, 300);
             this.lblSpot57.Name = "lblSpot57";
@@ -1183,6 +1226,7 @@
             // lblSpot56
             // 
             this.lblSpot56.AutoSize = true;
+            this.lblSpot56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot56.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot56.Location = new System.Drawing.Point(463, 300);
             this.lblSpot56.Name = "lblSpot56";
@@ -1193,6 +1237,7 @@
             // lblSpot55
             // 
             this.lblSpot55.AutoSize = true;
+            this.lblSpot55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot55.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot55.Location = new System.Drawing.Point(348, 300);
             this.lblSpot55.Name = "lblSpot55";
@@ -1203,6 +1248,7 @@
             // lblSpot54
             // 
             this.lblSpot54.AutoSize = true;
+            this.lblSpot54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot54.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot54.Location = new System.Drawing.Point(233, 300);
             this.lblSpot54.Name = "lblSpot54";
@@ -1213,6 +1259,7 @@
             // lblSpot53
             // 
             this.lblSpot53.AutoSize = true;
+            this.lblSpot53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot53.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot53.Location = new System.Drawing.Point(118, 300);
             this.lblSpot53.Name = "lblSpot53";
@@ -1223,6 +1270,7 @@
             // lblSpot52
             // 
             this.lblSpot52.AutoSize = true;
+            this.lblSpot52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot52.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot52.Location = new System.Drawing.Point(3, 300);
             this.lblSpot52.Name = "lblSpot52";
@@ -1233,6 +1281,7 @@
             // lblSpot62
             // 
             this.lblSpot62.AutoSize = true;
+            this.lblSpot62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot62.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot62.Location = new System.Drawing.Point(1038, 225);
             this.lblSpot62.Name = "lblSpot62";
@@ -1243,6 +1292,7 @@
             // lblSpot63
             // 
             this.lblSpot63.AutoSize = true;
+            this.lblSpot63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot63.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot63.Location = new System.Drawing.Point(923, 225);
             this.lblSpot63.Name = "lblSpot63";
@@ -1253,6 +1303,7 @@
             // lblSpot64
             // 
             this.lblSpot64.AutoSize = true;
+            this.lblSpot64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot64.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot64.Location = new System.Drawing.Point(808, 225);
             this.lblSpot64.Name = "lblSpot64";
@@ -1263,6 +1314,7 @@
             // lblSpot65
             // 
             this.lblSpot65.AutoSize = true;
+            this.lblSpot65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot65.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot65.Location = new System.Drawing.Point(693, 225);
             this.lblSpot65.Name = "lblSpot65";
@@ -1273,6 +1325,7 @@
             // lblSpot66
             // 
             this.lblSpot66.AutoSize = true;
+            this.lblSpot66.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot66.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot66.Location = new System.Drawing.Point(578, 225);
             this.lblSpot66.Name = "lblSpot66";
@@ -1283,6 +1336,7 @@
             // lblSpot67
             // 
             this.lblSpot67.AutoSize = true;
+            this.lblSpot67.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot67.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot67.Location = new System.Drawing.Point(463, 225);
             this.lblSpot67.Name = "lblSpot67";
@@ -1293,6 +1347,7 @@
             // lblSpot68
             // 
             this.lblSpot68.AutoSize = true;
+            this.lblSpot68.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot68.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot68.Location = new System.Drawing.Point(348, 225);
             this.lblSpot68.Name = "lblSpot68";
@@ -1303,6 +1358,7 @@
             // lblSpot69
             // 
             this.lblSpot69.AutoSize = true;
+            this.lblSpot69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot69.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot69.Location = new System.Drawing.Point(233, 225);
             this.lblSpot69.Name = "lblSpot69";
@@ -1313,6 +1369,7 @@
             // lblSpot70
             // 
             this.lblSpot70.AutoSize = true;
+            this.lblSpot70.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot70.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot70.Location = new System.Drawing.Point(118, 225);
             this.lblSpot70.Name = "lblSpot70";
@@ -1323,6 +1380,7 @@
             // lblSpot71
             // 
             this.lblSpot71.AutoSize = true;
+            this.lblSpot71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot71.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot71.Location = new System.Drawing.Point(3, 225);
             this.lblSpot71.Name = "lblSpot71";
@@ -1333,6 +1391,7 @@
             // lblSpot81
             // 
             this.lblSpot81.AutoSize = true;
+            this.lblSpot81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot81.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot81.Location = new System.Drawing.Point(1038, 150);
             this.lblSpot81.Name = "lblSpot81";
@@ -1343,6 +1402,7 @@
             // lblSpot80
             // 
             this.lblSpot80.AutoSize = true;
+            this.lblSpot80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot80.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot80.Location = new System.Drawing.Point(923, 150);
             this.lblSpot80.Name = "lblSpot80";
@@ -1353,6 +1413,7 @@
             // lblSpot79
             // 
             this.lblSpot79.AutoSize = true;
+            this.lblSpot79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot79.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot79.Location = new System.Drawing.Point(808, 150);
             this.lblSpot79.Name = "lblSpot79";
@@ -1363,6 +1424,7 @@
             // lblSpot78
             // 
             this.lblSpot78.AutoSize = true;
+            this.lblSpot78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot78.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot78.Location = new System.Drawing.Point(693, 150);
             this.lblSpot78.Name = "lblSpot78";
@@ -1373,6 +1435,7 @@
             // lblSpot77
             // 
             this.lblSpot77.AutoSize = true;
+            this.lblSpot77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot77.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot77.Location = new System.Drawing.Point(578, 150);
             this.lblSpot77.Name = "lblSpot77";
@@ -1383,6 +1446,7 @@
             // lblSpot76
             // 
             this.lblSpot76.AutoSize = true;
+            this.lblSpot76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot76.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot76.Location = new System.Drawing.Point(463, 150);
             this.lblSpot76.Name = "lblSpot76";
@@ -1393,6 +1457,7 @@
             // lblSpot75
             // 
             this.lblSpot75.AutoSize = true;
+            this.lblSpot75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot75.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot75.Location = new System.Drawing.Point(348, 150);
             this.lblSpot75.Name = "lblSpot75";
@@ -1403,6 +1468,7 @@
             // lblSpot74
             // 
             this.lblSpot74.AutoSize = true;
+            this.lblSpot74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot74.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot74.Location = new System.Drawing.Point(233, 150);
             this.lblSpot74.Name = "lblSpot74";
@@ -1413,6 +1479,7 @@
             // lblSpot73
             // 
             this.lblSpot73.AutoSize = true;
+            this.lblSpot73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot73.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot73.Location = new System.Drawing.Point(118, 150);
             this.lblSpot73.Name = "lblSpot73";
@@ -1423,6 +1490,7 @@
             // lblSpot72
             // 
             this.lblSpot72.AutoSize = true;
+            this.lblSpot72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot72.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot72.Location = new System.Drawing.Point(3, 150);
             this.lblSpot72.Name = "lblSpot72";
@@ -1433,6 +1501,7 @@
             // lblSpot82
             // 
             this.lblSpot82.AutoSize = true;
+            this.lblSpot82.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot82.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot82.Location = new System.Drawing.Point(1038, 75);
             this.lblSpot82.Name = "lblSpot82";
@@ -1443,6 +1512,7 @@
             // lblSpot83
             // 
             this.lblSpot83.AutoSize = true;
+            this.lblSpot83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot83.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot83.Location = new System.Drawing.Point(923, 75);
             this.lblSpot83.Name = "lblSpot83";
@@ -1453,6 +1523,7 @@
             // lblSpot84
             // 
             this.lblSpot84.AutoSize = true;
+            this.lblSpot84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot84.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot84.Location = new System.Drawing.Point(808, 75);
             this.lblSpot84.Name = "lblSpot84";
@@ -1463,6 +1534,7 @@
             // lblSpot85
             // 
             this.lblSpot85.AutoSize = true;
+            this.lblSpot85.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot85.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot85.Location = new System.Drawing.Point(693, 75);
             this.lblSpot85.Name = "lblSpot85";
@@ -1473,6 +1545,7 @@
             // lblSpot86
             // 
             this.lblSpot86.AutoSize = true;
+            this.lblSpot86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot86.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot86.Location = new System.Drawing.Point(578, 75);
             this.lblSpot86.Name = "lblSpot86";
@@ -1483,6 +1556,7 @@
             // lblSpot87
             // 
             this.lblSpot87.AutoSize = true;
+            this.lblSpot87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot87.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot87.Location = new System.Drawing.Point(463, 75);
             this.lblSpot87.Name = "lblSpot87";
@@ -1493,6 +1567,7 @@
             // lblSpot88
             // 
             this.lblSpot88.AutoSize = true;
+            this.lblSpot88.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot88.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot88.Location = new System.Drawing.Point(348, 75);
             this.lblSpot88.Name = "lblSpot88";
@@ -1503,6 +1578,7 @@
             // lblSpot89
             // 
             this.lblSpot89.AutoSize = true;
+            this.lblSpot89.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot89.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot89.Location = new System.Drawing.Point(233, 75);
             this.lblSpot89.Name = "lblSpot89";
@@ -1513,6 +1589,7 @@
             // lblSpot90
             // 
             this.lblSpot90.AutoSize = true;
+            this.lblSpot90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot90.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot90.Location = new System.Drawing.Point(118, 75);
             this.lblSpot90.Name = "lblSpot90";
@@ -1523,6 +1600,7 @@
             // lblSpot91
             // 
             this.lblSpot91.AutoSize = true;
+            this.lblSpot91.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot91.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot91.Location = new System.Drawing.Point(3, 75);
             this.lblSpot91.Name = "lblSpot91";
@@ -1533,6 +1611,7 @@
             // lblSpot101
             // 
             this.lblSpot101.AutoSize = true;
+            this.lblSpot101.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot101.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot101.Location = new System.Drawing.Point(1038, 0);
             this.lblSpot101.Name = "lblSpot101";
@@ -1543,6 +1622,7 @@
             // lblSpot100
             // 
             this.lblSpot100.AutoSize = true;
+            this.lblSpot100.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot100.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot100.Location = new System.Drawing.Point(923, 0);
             this.lblSpot100.Name = "lblSpot100";
@@ -1553,6 +1633,7 @@
             // lblSpot99
             // 
             this.lblSpot99.AutoSize = true;
+            this.lblSpot99.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot99.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot99.Location = new System.Drawing.Point(808, 0);
             this.lblSpot99.Name = "lblSpot99";
@@ -1563,6 +1644,7 @@
             // lblSpot98
             // 
             this.lblSpot98.AutoSize = true;
+            this.lblSpot98.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot98.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot98.Location = new System.Drawing.Point(693, 0);
             this.lblSpot98.Name = "lblSpot98";
@@ -1573,6 +1655,7 @@
             // lblSpot97
             // 
             this.lblSpot97.AutoSize = true;
+            this.lblSpot97.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot97.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot97.Location = new System.Drawing.Point(578, 0);
             this.lblSpot97.Name = "lblSpot97";
@@ -1583,6 +1666,7 @@
             // lblSpot96
             // 
             this.lblSpot96.AutoSize = true;
+            this.lblSpot96.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot96.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot96.Location = new System.Drawing.Point(463, 0);
             this.lblSpot96.Name = "lblSpot96";
@@ -1593,6 +1677,7 @@
             // lblSpot95
             // 
             this.lblSpot95.AutoSize = true;
+            this.lblSpot95.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot95.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot95.Location = new System.Drawing.Point(348, 0);
             this.lblSpot95.Name = "lblSpot95";
@@ -1603,6 +1688,7 @@
             // lblSpot94
             // 
             this.lblSpot94.AutoSize = true;
+            this.lblSpot94.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot94.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot94.Location = new System.Drawing.Point(233, 0);
             this.lblSpot94.Name = "lblSpot94";
@@ -1613,6 +1699,7 @@
             // lblSpot93
             // 
             this.lblSpot93.AutoSize = true;
+            this.lblSpot93.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot93.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot93.Location = new System.Drawing.Point(118, 0);
             this.lblSpot93.Name = "lblSpot93";
@@ -1623,6 +1710,7 @@
             // lblSpot92
             // 
             this.lblSpot92.AutoSize = true;
+            this.lblSpot92.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSpot92.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSpot92.Location = new System.Drawing.Point(3, 0);
             this.lblSpot92.Name = "lblSpot92";
@@ -1777,6 +1865,19 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // lblDirection80_90
+            // 
+            this.lblDirection80_90.AutoSize = true;
+            this.lblDirection80_90.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDirection80_90.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDirection80_90.Location = new System.Drawing.Point(3, 0);
+            this.lblDirection80_90.Name = "lblDirection80_90";
+            this.tblGame.SetRowSpan(this.lblDirection80_90, 2);
+            this.lblDirection80_90.Size = new System.Drawing.Size(139, 150);
+            this.lblDirection80_90.TabIndex = 123;
+            this.lblDirection80_90.Text = "↪️";
+            this.lblDirection80_90.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmBeatTheStorm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 38F);
@@ -1842,7 +1943,6 @@
         private Label lblDirection60_70;
         private Label lblDirection70_80;
         private Label lblDirectionEnd;
-        private Label lblDirection80_90;
         private TableLayoutPanel tblSpots;
         private Label lblSpot51;
         private Label lblSpot61;
@@ -1945,5 +2045,6 @@
         private Label lblSpot48;
         private Label lblSpot49;
         private Label lblSpot50;
+        private Label lblDirection80_90;
     }
 }
