@@ -136,6 +136,7 @@ namespace BeatTheStormApp
         {
             //AF I'm just curious - why did you pass in the millisecond to Random()?  the seed value is based on the time by default
             //SM The problem was that it didn't look too random (it returned too many times the same card). So I tried it with this and it got more random.
+            //AF Great, good idea
             Random rnd = new(DateTime.Now.Millisecond);
             int num = rnd.Next(0, dctcards.Count());
             return num;
@@ -145,9 +146,6 @@ namespace BeatTheStormApp
         {
             if (gamestatus == GameStatusEnum.Playing)
             {
-                //AF You already initialized a playerenum - player, is there a reason that you are initializing a new one here?
-                //SM You're right, I added this before I created the higher level player variable
-
                 int randomcard = GetRandomCard();
                 if (player == PlayerEnum.A)
                 {
@@ -274,8 +272,6 @@ namespace BeatTheStormApp
                     lblDiceOrCardPlayer1.Text = $"Player {player} turn";
                 }
                 dicerolled = true;
-                //AF All this can be combined into the above if else statement, no need to have another if statement with basically the same conditions
-                //SM Correct. Updated.
             }
         }
 
