@@ -54,7 +54,7 @@ namespace BeatTheStormApp
                 }
             }
             optbtns.ForEach(o => o.CheckedChanged += Opt_CheckedChanged);
-            foreach (Label l in tblGame.Controls)
+            foreach (Label l in tblSpots.Controls)
             {
                 lblspots.Add(l);
             }
