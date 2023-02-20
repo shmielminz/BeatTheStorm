@@ -213,6 +213,7 @@ namespace BeatTheStormApp
             }
             //AF This second if statement is identical to the one above, they can be combined
             //SM No, this makes sure only to work if it didn't change to loser or winner, and it's still playing. Maybe I can add it in other if statement but checking if it's still playing
+            //AF Now I understand the reason for the second if statement, it's fine to leave it as is
             if (gamestatus == GameStatusEnum.Playing)
             {
                 if (player == PlayerEnum.A)
