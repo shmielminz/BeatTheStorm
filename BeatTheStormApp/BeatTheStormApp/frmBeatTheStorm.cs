@@ -288,6 +288,8 @@ namespace BeatTheStormApp
                     //AF The code can be shortened by taking these first 2 statements out of this case statement and the one below, since they apply to both cases
                     //SM When taking out the card, it gets always assigned at row 3 even with tblPlayer2.Controls.Add(picCardPlayer2), and it won't update as I restart the game in cardonly mode.
                     //See my commented out code later. If you know a way to specify the row later and it should update, please let me know.
+                    //AF My mistake, I missed the fact that you are adding picdice in first and piccard in second, so I had thought to combine it
+                    //YOu can just leave it as is
                     tblPlayer1.Controls.Add(picDicePlayer1, 0, 2);
                     tblPlayer2.Controls.Add(picDicePlayer2, 0, 2);
                     tblPlayer1.Controls.Add(picCardPlayer1, 0, 3);
