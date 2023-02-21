@@ -10,8 +10,6 @@
 
   <ItemGroup>
     <None Remove="Images\Aolmail.jpg" />
-    <None Remove="Images\ArrowLeft.jpg" />
-    <None Remove="Images\ArrowRight.jpg" />
     <None Remove="Images\Bbcnews.jpg" />
     <None Remove="Images\Bing.jpg" />
     <None Remove="Images\dice1.jpg" />
@@ -77,9 +75,6 @@
 
   <ItemGroup>
     <Content Include="Images\Aolmail.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\ArrowRight.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Bbcnews.jpg">
@@ -260,12 +255,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Zoom.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Images\ArrowLeft.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
