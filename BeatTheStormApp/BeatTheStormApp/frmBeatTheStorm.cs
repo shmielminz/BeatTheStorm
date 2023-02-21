@@ -136,6 +136,7 @@ namespace BeatTheStormApp
         {
             //AF I'm just curious - why did you pass in the millisecond to Random()?  the seed value is based on the time by default
             //SM The problem was that it didn't look too random (it returned too many times the same card). So I tried it with this and it got more random.
+            //AF Great, good idea
             Random rnd = new(DateTime.Now.Millisecond);
             int num = rnd.Next(0, dctcards.Count());
             return num;
@@ -145,9 +146,6 @@ namespace BeatTheStormApp
         {
             if (gamestatus == GameStatusEnum.Playing)
             {
-                //AF You already initialized a playerenum - player, is there a reason that you are initializing a new one here?
-                //SM You're right, I added this before I created the higher level player variable
-
                 int randomcard = GetRandomCard();
                 if (player == PlayerEnum.A)
                 {
@@ -215,6 +213,7 @@ namespace BeatTheStormApp
             }
             //AF This second if statement is identical to the one above, they can be combined
             //SM No, this makes sure only to work if it didn't change to loser or winner, and it's still playing. Maybe I can add it in other if statement but checking if it's still playing
+            //AF Now I understand the reason for the second if statement, it's fine to leave it as is
             if (gamestatus == GameStatusEnum.Playing)
             {
                 if (player == PlayerEnum.A)
@@ -274,8 +273,6 @@ namespace BeatTheStormApp
                     lblDiceOrCardPlayer1.Text = $"Player {player} turn";
                 }
                 dicerolled = true;
-                //AF All this can be combined into the above if else statement, no need to have another if statement with basically the same conditions
-                //SM Correct. Updated.
             }
         }
 
@@ -291,6 +288,8 @@ namespace BeatTheStormApp
                     //AF The code can be shortened by taking these first 2 statements out of this case statement and the one below, since they apply to both cases
                     //SM When taking out the card, it gets always assigned at row 3 even with tblPlayer2.Controls.Add(picCardPlayer2), and it won't update as I restart the game in cardonly mode.
                     //See my commented out code later. If you know a way to specify the row later and it should update, please let me know.
+                    //AF My mistake, I missed the fact that you are adding picdice in first and piccard in second, so I had thought to combine it
+                    //YOu can just leave it as is
                     tblPlayer1.Controls.Add(picDicePlayer1, 0, 2);
                     tblPlayer2.Controls.Add(picDicePlayer2, 0, 2);
                     tblPlayer1.Controls.Add(picCardPlayer1, 0, 3);
