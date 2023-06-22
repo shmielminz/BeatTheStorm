@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeatTheStormMAUI.Settings"
+             Title="Settings">
+    <ScrollView>
+        <Grid Style="{StaticResource Key=page-grid}">
+            <VerticalStackLayout Grid.Row="0">
+                <Label x:Name="lblStatus" Text="Choose a playing mode and click Start" FontSize="Header" HorizontalOptions="Center" Margin="20"/>
+                <HorizontalStackLayout HorizontalOptions="Center" Margin="0,10,0,30">
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Players" HorizontalTextAlignment="Center" Padding="20" BackgroundColor="Beige"/>
+                            <RadioButton x:Name="optMultiplePlayer" Content="Multiple Players" Margin="50,20,50,0"/>
+                            <RadioButton x:Name="optPlayComputer" Content="Play against the Computer" Margin="50,0,50,20" IsChecked="True"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Game mode" HorizontalTextAlignment="Center" Padding="20" BackgroundColor="Beige"/>
+                            <RadioButton x:Name="optModeCardOnly" Content="Card Only" Margin="50,20,50,0" IsChecked="True"/>
+                            <RadioButton x:Name="optModeDiceWithRandomCard" Content="Dice with Random Card" Margin="50,0,50,20"/>
+                        </VerticalStackLayout>
+                    </Border>
+                </HorizontalStackLayout>
+                <Label Text="Will add here option to choose from list of icons." BackgroundColor="Red" FontSize="Small" TextColor="White" HorizontalTextAlignment="Center"/>
+                <Button x:Name="btnStart" Text="Start" BackgroundColor="Green" CornerRadius="20" Padding="100,20" FontSize="Large" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+            <Label Text="Copyright &#x00A9; 2023 by Shmiel Minz" Style="{StaticResource Key=copyright}"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>

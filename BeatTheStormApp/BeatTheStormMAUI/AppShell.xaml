@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BeatTheStormMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BeatTheStormMAUI"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+            Title="Settings"
+            ContentTemplate="{DataTemplate local:Settings}"
+            Route="Settings"/>
+        
+        <ShellContent
+            Title="Beat The Storm"
+            ContentTemplate="{DataTemplate local:BeatTheStorm}"
+            Route="BeatTheStorm" />
+
+        <ShellContent
+            Title="Help"
+            ContentTemplate="{DataTemplate local:Help}"
+            Route="Help"/>
+    </TabBar>
+</Shell>

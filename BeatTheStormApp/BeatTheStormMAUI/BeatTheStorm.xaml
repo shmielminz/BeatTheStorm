@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeatTheStormMAUI.BeatTheStorm"
+             Title="BeatTheStorm">
+    <ContentPage.Resources>
+        <x:String x:Key="help">&#x3f;</x:String>
+        <x:String x:Key="undo">&#xf2ea;</x:String>
+        <x:String x:Key="redo">&#xf2f9;</x:String>
+        <x:String x:Key="more">&#xf0d7;</x:String>
+        <x:String x:Key="game-icon-1">&#xf447;</x:String>
+        <x:String x:Key="game-icon-2">&#xf805;</x:String>
+        <x:String x:Key="game-icon-3">&#xf442;</x:String>
+    </ContentPage.Resources>
+    <ScrollView>
+        <Grid Style="{StaticResource Key=page-grid}">
+            <VerticalStackLayout Grid.Row="0">
+                <Grid Margin="10" HeightRequest="80" ColumnDefinitions="Auto,Auto,Auto,Auto,*,Auto">
+                    <Label Text="Undo" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextDecorations="Underline" Margin="30,0,0,0"/>
+                    <Button Style="{StaticResource Key=undo-redo}" Text="{StaticResource undo}" Margin="10,0,0,0" Grid.Column="0"/>
+                    <Button Style="{StaticResource Key=undo-redo}" Text="{StaticResource more}" Margin="-30" Grid.Column="1"/>
+                    <Label Text="Redo" Grid.Column="2" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextDecorations="Underline" Margin="40,0,0,0"/>
+                    <Button Style="{StaticResource Key=undo-redo}" Text="{StaticResource redo}" Margin="20,0,0,0" Grid.Column="2"/>
+                    <Button Style="{StaticResource Key=undo-redo}" Text="{StaticResource more}" Margin="-30" Grid.Column="3"/>
+                    <Button Text="End Game" FontSize="Medium" BackgroundColor="PaleVioletRed" Padding="100,0,100,0" HorizontalOptions="End" Grid.Column="4" Margin="0,0,0,20"/>
+                    <Button Style="{StaticResource Key=home-buttons}" Text="{StaticResource help}" BackgroundColor="GreenYellow" Padding="40,0,40,0" HorizontalOptions="End" Grid.Column="5" Margin="0,0,0,20"/>
+                </Grid>
+                <Label Text="Current Player: Computer. Score: 20. Moved: Up 2 steps." FontSize="Medium" BackgroundColor="Azure" Padding="20" HorizontalTextAlignment="Center" Margin="10"/>
+                <Grid ColumnDefinitions="2*,*,*,*,*,*,*,*,*,*,*,2*" RowDefinitions="*,*,*,*,*,*,*,*,*,*,*" ColumnSpacing="1" RowSpacing="1">
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="1" Grid.Row="0"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="2" Grid.Row="0"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="3" Grid.Row="0"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="4" Grid.Row="0"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="5" Grid.Row="0"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="6" Grid.Row="0"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="7" Grid.Row="0"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="8" Grid.Row="0"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="9" Grid.Row="0"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="10" Grid.Row="0"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="1" Grid.Row="1"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="2" Grid.Row="1"/>
+                    <Label Style="{StaticResource Key=game-special-label}" Grid.Column="3" Grid.Row="1"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="4" Grid.Row="1"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="5" Grid.Row="1"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="6" Grid.Row="1"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="7" Grid.Row="1"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="8" Grid.Row="1"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="9" Grid.Row="1"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="10" Grid.Row="1"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="1" Grid.Row="2"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="2" Grid.Row="2"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="3" Grid.Row="2"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="4" Grid.Row="2"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="5" Grid.Row="2"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="6" Grid.Row="2"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="7" Grid.Row="2"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="8" Grid.Row="2"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="9" Grid.Row="2"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="10" Grid.Row="2"/>
+                    <Label Style="{StaticResource Key=game-front-label}" FontFamily="FAS" Text="{StaticResource game-icon-3}" FontSize="Large" TextColor="Black" Grid.Column="1" Grid.Row="3"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="2" Grid.Row="3"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="3" Grid.Row="3"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="4" Grid.Row="3"/>
+                    <Label Style="{StaticResource Key=game-special-label}" Grid.Column="5" Grid.Row="3"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="6" Grid.Row="3"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="7" Grid.Row="3"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="8" Grid.Row="3"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="9" Grid.Row="3"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="10" Grid.Row="3"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="1" Grid.Row="4"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="2" Grid.Row="4"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="3" Grid.Row="4"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="4" Grid.Row="4"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="5" Grid.Row="4"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="6" Grid.Row="4"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="7" Grid.Row="4"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="8" Grid.Row="4"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="9" Grid.Row="4"/>
+                    <Label Style="{StaticResource Key=game-special-label}" Grid.Column="10" Grid.Row="4"/>
+                    <Label Style="{StaticResource Key=game-front-label}" FontFamily="FAS" Text="{StaticResource game-icon-1}" FontSize="Large" TextColor="Black" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="10"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="1" Grid.Row="6"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="2" Grid.Row="6"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="3" Grid.Row="6"/>
+                    <Label Style="{StaticResource Key=game-special-label}" Grid.Column="4" Grid.Row="6"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="5" Grid.Row="6"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="6" Grid.Row="6"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="7" Grid.Row="6"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="8" Grid.Row="6"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="9" Grid.Row="6"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="10" Grid.Row="6"/>
+                    <Label Style="{StaticResource Key=game-front-label}" FontFamily="FAS" Text="{StaticResource game-icon-2}" FontSize="Large" TextColor="Black" Grid.Column="1" Grid.Row="7"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="2" Grid.Row="7"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="3" Grid.Row="7"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="4" Grid.Row="7"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="5" Grid.Row="7"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="6" Grid.Row="7"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="7" Grid.Row="7"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="8" Grid.Row="7"/>
+                    <Label Style="{StaticResource Key=game-special-label}" Grid.Column="9" Grid.Row="7"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="10" Grid.Row="7"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="1" Grid.Row="8"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="2" Grid.Row="8"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="3" Grid.Row="8"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="4" Grid.Row="8"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="5" Grid.Row="8"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="6" Grid.Row="8"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="7" Grid.Row="8"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="8" Grid.Row="8"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="9" Grid.Row="8"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="10" Grid.Row="8"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="1" Grid.Row="9"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="2" Grid.Row="9"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="3" Grid.Row="9"/>
+                    <Label Style="{StaticResource Key=game-special-label}" Grid.Column="4" Grid.Row="9"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="5" Grid.Row="9"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="6" Grid.Row="9"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="7" Grid.Row="9"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="8" Grid.Row="9"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="9" Grid.Row="9"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="10" Grid.Row="9"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="1" Grid.Row="10"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="2" Grid.Row="10"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="3" Grid.Row="10"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="4" Grid.Row="10"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="5" Grid.Row="10"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="6" Grid.Row="10"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="7" Grid.Row="10"/>
+                    <Label Style="{StaticResource Key=game-special-label}" Grid.Column="8" Grid.Row="10"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="9" Grid.Row="10"/>
+                    <Label Style="{StaticResource Key=game-front-label}" Grid.Column="10" Grid.Row="10"/>
+                    <Label Text="41" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="0"/>
+                    <Label Text="42" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="0"/>
+                    <Label Text="43" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="0"/>
+                    <Label Text="44" Style="{StaticResource Key=game-back-label}" Grid.Column="4" Grid.Row="0"/>
+                    <Label Text="45" Style="{StaticResource Key=game-back-label}" Grid.Column="5" Grid.Row="0"/>
+                    <Label Text="46" Style="{StaticResource Key=game-back-label}" Grid.Column="6" Grid.Row="0"/>
+                    <Label Text="47" Style="{StaticResource Key=game-back-label}" Grid.Column="7" Grid.Row="0"/>
+                    <Label Text="48" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="0"/>
+                    <Label Text="49" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="0"/>
+                    <Label Text="50" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="0"/>
+                    <Label Text="40" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="1"/>
+                    <Label Text="39" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="1"/>
+                    <Label Text="38" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="1"/>
+                    <Label Text="37" Style="{StaticResource Key=game-back-label}" Grid.Column="4" Grid.Row="1"/>
+                    <Label Text="36" Style="{StaticResource Key=game-back-label}" Grid.Column="5" Grid.Row="1"/>
+                    <Label Text="35" Style="{StaticResource Key=game-back-label}" Grid.Column="6" Grid.Row="1"/>
+                    <Label Text="34" Style="{StaticResource Key=game-back-label}" Grid.Column="7" Grid.Row="1"/>
+                    <Label Text="33" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="1"/>
+                    <Label Text="32" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="1"/>
+                    <Label Text="31" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="1"/>
+                    <Label Text="21" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="2"/>
+                    <Label Text="22" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="2"/>
+                    <Label Text="23" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="2"/>
+                    <Label Text="24" Style="{StaticResource Key=game-back-label}" Grid.Column="4" Grid.Row="2"/>
+                    <Label Text="25" Style="{StaticResource Key=game-back-label}" Grid.Column="5" Grid.Row="2"/>
+                    <Label Text="26" Style="{StaticResource Key=game-back-label}" Grid.Column="6" Grid.Row="2"/>
+                    <Label Text="27" Style="{StaticResource Key=game-back-label}" Grid.Column="7" Grid.Row="2"/>
+                    <Label Text="28" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="2"/>
+                    <Label Text="29" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="2"/>
+                    <Label Text="30" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="2"/>
+                    <Label Text="20" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="3"/>
+                    <Label Text="19" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="3"/>
+                    <Label Text="18" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="3"/>
+                    <Label Text="17" Style="{StaticResource Key=game-back-label}" Grid.Column="4" Grid.Row="3"/>
+                    <Label Text="16" Style="{StaticResource Key=game-back-label}" Grid.Column="5" Grid.Row="3"/>
+                    <Label Text="15" Style="{StaticResource Key=game-back-label}" Grid.Column="6" Grid.Row="3"/>
+                    <Label Text="14" Style="{StaticResource Key=game-back-label}" Grid.Column="7" Grid.Row="3"/>
+                    <Label Text="13" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="3"/>
+                    <Label Text="12" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="3"/>
+                    <Label Text="11" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="3"/>
+                    <Label Text="1" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="4"/>
+                    <Label Text="2" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="4"/>
+                    <Label Text="3" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="4"/>
+                    <Label Text="4" Style="{StaticResource Key=game-back-label}" Grid.Column="4" Grid.Row="4"/>
+                    <Label Text="5" Style="{StaticResource Key=game-back-label}" Grid.Column="5" Grid.Row="4"/>
+                    <Label Text="6" Style="{StaticResource Key=game-back-label}" Grid.Column="6" Grid.Row="4"/>
+                    <Label Text="7" Style="{StaticResource Key=game-back-label}" Grid.Column="7" Grid.Row="4"/>
+                    <Label Text="8" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="4"/>
+                    <Label Text="9" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="4"/>
+                    <Label Text="10" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="4"/>
+                    <Label Text="0" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="10"/>
+                    <Label Text="-10" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="6"/>
+                    <Label Text="-9" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="6"/>
+                    <Label Text="-8" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="6"/>
+                    <Label Text="-7" Style="{StaticResource Key=game-back-label}" Grid.Column="4" Grid.Row="6"/>
+                    <Label Text="-6" Style="{StaticResource Key=game-back-label}" Grid.Column="5" Grid.Row="6"/>
+                    <Label Text="-5" Style="{StaticResource Key=game-back-label}" Grid.Column="6" Grid.Row="6"/>
+                    <Label Text="-4" Style="{StaticResource Key=game-back-label}" Grid.Column="7" Grid.Row="6"/>
+                    <Label Text="-3" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="6"/>
+                    <Label Text="-2" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="6"/>
+                    <Label Text="-1" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="6"/>
+                    <Label Text="-11" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="7"/>
+                    <Label Text="-12" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="7"/>
+                    <Label Text="-13" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="7"/>
+                    <Label Text="-14" Style="{StaticResource Key=game-back-label}" Grid.Column="4" Grid.Row="7"/>
+                    <Label Text="-15" Style="{StaticResource Key=game-back-label}" Grid.Column="5" Grid.Row="7"/>
+                    <Label Text="-16" Style="{StaticResource Key=game-back-label}" Grid.Column="6" Grid.Row="7"/>
+                    <Label Text="-17" Style="{StaticResource Key=game-back-label}" Grid.Column="7" Grid.Row="7"/>
+                    <Label Text="-18" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="7"/>
+                    <Label Text="-19" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="7"/>
+                    <Label Text="-20" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="7"/>
+                    <Label Text="-30" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="8"/>
+                    <Label Text="-29" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="8"/>
+                    <Label Text="-28" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="8"/>
+                    <Label Text="-27" Style="{StaticResource Key=game-back-label}" Grid.Column="4" Grid.Row="8"/>
+                    <Label Text="-26" Style="{StaticResource Key=game-back-label}" Grid.Column="5" Grid.Row="8"/>
+                    <Label Text="-25" Style="{StaticResource Key=game-back-label}" Grid.Column="6" Grid.Row="8"/>
+                    <Label Text="-24" Style="{StaticResource Key=game-back-label}" Grid.Column="7" Grid.Row="8"/>
+                    <Label Text="-23" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="8"/>
+                    <Label Text="-22" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="8"/>
+                    <Label Text="-21" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="8"/>
+                    <Label Text="-31" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="9"/>
+                    <Label Text="-32" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="9"/>
+                    <Label Text="-33" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="9"/>
+                    <Label Text="-34" Style="{StaticResource Key=game-back-label}" Grid.Column="4" Grid.Row="9"/>
+                    <Label Text="-35" Style="{StaticResource Key=game-back-label}" Grid.Column="5" Grid.Row="9"/>
+                    <Label Text="-36" Style="{StaticResource Key=game-back-label}" Grid.Column="6" Grid.Row="9"/>
+                    <Label Text="-37" Style="{StaticResource Key=game-back-label}" Grid.Column="7" Grid.Row="9"/>
+                    <Label Text="-38" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="9"/>
+                    <Label Text="-39" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="9"/>
+                    <Label Text="-40" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="9"/>
+                    <Label Text="-50" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="10"/>
+                    <Label Text="-49" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="10"/>
+                    <Label Text="-48" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="10"/>
+                    <Label Text="-47" Style="{StaticResource Key=game-back-label}" Grid.Column="4" Grid.Row="10"/>
+                    <Label Text="-46" Style="{StaticResource Key=game-back-label}" Grid.Column="5" Grid.Row="10"/>
+                    <Label Text="-45" Style="{StaticResource Key=game-back-label}" Grid.Column="6" Grid.Row="10"/>
+                    <Label Text="-44" Style="{StaticResource Key=game-back-label}" Grid.Column="7" Grid.Row="10"/>
+                    <Label Text="-43" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="10"/>
+                    <Label Text="-42" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="10"/>
+                    <Label Text="-41" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="10"/>
+                </Grid>
+
+            </VerticalStackLayout>
+            <Label Text="Copyright &#x00A9; 2023 by Shmiel Minz" Style="{StaticResource Key=copyright}"/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
