@@ -15,7 +15,7 @@
     <ScrollView>
         <Grid Style="{StaticResource Key=page-grid}">
             <VerticalStackLayout Grid.Row="0">
-                <Grid Margin="10" HeightRequest="80" ColumnDefinitions="Auto,Auto,Auto,Auto,*,Auto">
+                <Grid Margin="10,0,10,0" HeightRequest="80" ColumnDefinitions="Auto,Auto,Auto,Auto,*,Auto">
                     <Label Text="Undo" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextDecorations="Underline" Margin="30,0,0,0"/>
                     <Button Style="{StaticResource Key=undo-redo}" Text="{StaticResource undo}" Margin="10,0,0,0" Grid.Column="0"/>
                     <Button Style="{StaticResource Key=undo-redo}" Text="{StaticResource more}" Margin="-30" Grid.Column="1"/>
@@ -25,8 +25,8 @@
                     <Button Text="End Game" FontSize="Medium" BackgroundColor="PaleVioletRed" Padding="100,0,100,0" HorizontalOptions="End" Grid.Column="4" Margin="0,0,0,20"/>
                     <Button Style="{StaticResource Key=home-buttons}" Text="{StaticResource help}" BackgroundColor="GreenYellow" Padding="40,0,40,0" HorizontalOptions="End" Grid.Column="5" Margin="0,0,0,20"/>
                 </Grid>
-                <Label Text="Current Player: Computer. Score: 20. Moved: Up 2 steps." FontSize="Medium" BackgroundColor="Azure" Padding="20" HorizontalTextAlignment="Center" Margin="10"/>
-                <Grid ColumnDefinitions="2*,*,*,*,*,*,*,*,*,*,*,2*" RowDefinitions="*,*,*,*,*,*,*,*,*,*,*" ColumnSpacing="1" RowSpacing="1">
+                <Label Text="Current Player: Computer. Score: 20. Moved: Up 2 steps." FontSize="Medium" BackgroundColor="Azure" Padding="10" HorizontalTextAlignment="Center"/>
+                <Grid ColumnDefinitions="2*,*,*,*,*,*,*,*,*,*,*,2*" RowDefinitions="50,50,50,50,50,50,50,50,50,50,50" ColumnSpacing="1" RowSpacing="1">
                     <Label Style="{StaticResource Key=game-front-label}" Grid.Column="1" Grid.Row="0"/>
                     <Label Style="{StaticResource Key=game-front-label}" Grid.Column="2" Grid.Row="0"/>
                     <Label Style="{StaticResource Key=game-front-label}" Grid.Column="3" Grid.Row="0"/>

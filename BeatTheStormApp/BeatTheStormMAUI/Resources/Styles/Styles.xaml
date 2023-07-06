@@ -181,16 +181,16 @@
     
     <Style TargetType="Label" x:Key="game-front-label" BasedOn="{StaticResource game-label}">
         <Setter Property="BackgroundColor" Value="GreenYellow"/>
-        <Setter Property="MinimumWidthRequest" Value="50"/>
-        <Setter Property="MinimumHeightRequest" Value="50"/>
+        <Setter Property="MaximumWidthRequest" Value="30"/>
+        <Setter Property="MaximumWidthRequest" Value="30"/>
         <Setter Property="Margin" Value="2,15,2,2"/>
         <Setter Property="Opacity" Value="1"/>
     </Style>
 
     <Style TargetType="Label" x:Key="game-back-label" BasedOn="{StaticResource game-label}">
         <Setter Property="BackgroundColor" Value="LightGray"/>
-        <Setter Property="MinimumWidthRequest" Value="50"/>
-        <Setter Property="MinimumHeightRequest" Value="50"/>
+        <Setter Property="MaximumWidthRequest" Value="40"/>
+        <Setter Property="MaximumWidthRequest" Value="40"/>
         <Setter Property="Opacity" Value=".7"/>
     </Style>
 
