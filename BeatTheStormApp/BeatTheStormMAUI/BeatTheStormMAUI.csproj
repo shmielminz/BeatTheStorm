@@ -57,6 +57,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\BeatTheStormSystem\BeatTheStormSystem.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="BeatTheStorm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
