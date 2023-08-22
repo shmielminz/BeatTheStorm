@@ -1,7 +1,11 @@
-﻿namespace BeatTheStormSystem
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace BeatTheStormSystem
 {
-    public class Game
+    public class Game : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler? PropertyChanged;
         public enum GameModeEnum { DiceWithRandomCard, CardOnly }
         public enum GameStatusEnum { NotStarted, Playing, Winner, Loser }
         GameStatusEnum _gamestatus = GameStatusEnum.NotStarted;
@@ -76,6 +80,8 @@
         }
         private Stack<Dictionary<string, object>> UndoStack = new();
         private Stack<Dictionary<string, object>> RedoStack = new();
+
+
         public List<Player> Players { get; private set; } = new();
         public void AddPlayer(Player player)
         {
@@ -88,6 +94,8 @@
             private set
             {
                 _gamestatus = value;
+                this.InvokePropertyChanged();
+                this.InvokePropertyChanged("GameStatusDescription");
             }
         }
         public Player CurrentPlayer
@@ -96,6 +104,8 @@
             private set
             {
                 _currentplayer = value;
+                this.InvokePropertyChanged();
+                this.InvokePropertyChanged("GameStatusDescription");
             }
         }
         public GameModeEnum GameMode
@@ -106,20 +116,31 @@
                 _gamemode = value;
             }
         }
+        public string PreviousCard { get; private set; } = "";
+        public int PreviousDice { get; private set; }
         public bool PlayAgainstComputer { get; set; }
-        public Player Winner { get; set; } = new();
-        public Player Loser { get; set; } = new();
+        public Player Winner { get; private set; } = new();
+        public Player Loser { get; private set; } = new();
         public void StartGame(bool playagainstcomputer = false, GameModeEnum gamemode = GameModeEnum.CardOnly)
         {
-            this.PlayAgainstComputer = playagainstcomputer;
-            this.GameMode = gamemode;
-            this.GameStatus = GameStatusEnum.Playing;
-            this.CurrentPlayer = this.Players[_currentplayerindex];
-            if (playagainstcomputer)
+            if (this.GameStatus == GameStatusEnum.NotStarted)
             {
-                this.AddPlayer(new() { PlayerName = "Computer", PlayingPiece = "d", SpotValue = this.Spots[50] });
+                this.PlayAgainstComputer = playagainstcomputer;
+                this.GameMode = gamemode;
+                this.GameStatus = GameStatusEnum.Playing;
+                this.CurrentPlayer = this.Players[_currentplayerindex];
+                if (playagainstcomputer)
+                {
+                    this.AddPlayer(new() { PlayerName = "Computer", PlayingPiece = "d" });
+                }
+                this.Players.ForEach(p =>
+                {
+                    this.Spots[50].AddPlayerToSpot(p);
+                    p.SpotValue = this.Spots[50];
+                });
+                this.UndoStack.Clear();
+                this.RedoStack.Clear();
             }
-            this.Players.ForEach(p => p.SpotValue = this.Spots[50]);
         }
         public void TakeSpot(int spotnum)
         {
@@ -129,12 +150,14 @@
         }
         public void TakeTurn(Spot spot)
         {
+            this.PreviousDice = this.DiceValue;
+            this.PreviousCard = this.PlayingCard;
             int dice = 0;
             Dictionary<string, string> card = this.GetRandomCard();
             this.PlayingCard = card["Name"];
             if (GameMode == GameModeEnum.DiceWithRandomCard)
             {
-                dice = RollDice();
+                dice = this.DiceValue;
             }
             else
             {
@@ -174,7 +197,7 @@
             UndoStack.Push(new() {
                 { "Player", this.CurrentPlayer },
                 { "FromSpot", spot },
-                { "ToSpot", this.Spots[spotnum] } 
+                { "ToSpot", this.Spots[spotnum] }
             });
             if (this.GameStatus == GameStatusEnum.Playing)
             {
@@ -187,7 +210,10 @@
         }
         public void DoTurn()
         {
-            TakeTurn(this.CurrentPlayer.SpotValue);
+            if (GameStatus == GameStatusEnum.Playing)
+            {
+                TakeTurn(this.CurrentPlayer.SpotValue);
+            }
         }
         private void SwitchPlayer()
         {
@@ -210,7 +236,7 @@
         {
             Random rnd = new();
             int dice = rnd.Next(1, 7);
-            _dice = dice;
+            this.DiceValue = dice;
             return dice;
         }
         public Dictionary<string, string> GetRandomCard()
@@ -222,9 +248,21 @@
         public string PlayingCard
         {
             get => _card;
-            private set { _card = value; }
+            private set
+            {
+                _card = value;
+                this.InvokePropertyChanged();
+            }
         }
-        public int DiceValue { get => _dice; }
+        public int DiceValue
+        {
+            get => _dice;
+            private set
+            {
+                _dice = value;
+                this.InvokePropertyChanged();
+            }
+        }
         public void Undo()
         {
             RedoStack.Push(UndoStack.Pop());
@@ -273,7 +311,23 @@
         }
         public void RestartGame()
         {
-
+            if (this.GameStatus == GameStatusEnum.Playing)
+            {
+                this.Spots.ForEach(s =>
+                {
+                    this.Players.ForEach(p =>
+                    {
+                        s.RemovePlayerFromSpot(p);
+                        p.SpotValue = this.Spots[50];
+                    });
+                });
+                this.GameStatus = GameStatusEnum.NotStarted;
+                this.Players.Clear();
+            }
+        }
+        private void InvokePropertyChanged([CallerMemberName] string propertyname = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
     }
 }

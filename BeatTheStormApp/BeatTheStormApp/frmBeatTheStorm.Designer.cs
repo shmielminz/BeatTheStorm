@@ -29,1884 +29,1882 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBeatTheStorm));
-            this.tblMain = new System.Windows.Forms.TableLayoutPanel();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.pnlPlayers = new System.Windows.Forms.Panel();
-            this.optMultiplePlayers = new System.Windows.Forms.RadioButton();
-            this.optPlayComputer = new System.Windows.Forms.RadioButton();
-            this.pnlPlayingModes = new System.Windows.Forms.Panel();
-            this.optModeDiceWithRandomCard = new System.Windows.Forms.RadioButton();
-            this.optModeCardOnly = new System.Windows.Forms.RadioButton();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.tblGame = new System.Windows.Forms.TableLayoutPanel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.lblDirection0_10 = new System.Windows.Forms.Label();
-            this.lblDirection10_20 = new System.Windows.Forms.Label();
-            this.lblDirection20_30 = new System.Windows.Forms.Label();
-            this.lblDirection30_40 = new System.Windows.Forms.Label();
-            this.lblDirection40_Middle = new System.Windows.Forms.Label();
-            this.lblDirectionMiddle_50 = new System.Windows.Forms.Label();
-            this.lblDirection50_60 = new System.Windows.Forms.Label();
-            this.lblDirection60_70 = new System.Windows.Forms.Label();
-            this.lblDirection70_80 = new System.Windows.Forms.Label();
-            this.lblDirectionEnd = new System.Windows.Forms.Label();
-            this.tblSpots = new System.Windows.Forms.TableLayoutPanel();
-            this.lblSpot1 = new System.Windows.Forms.Label();
-            this.lblSpot2 = new System.Windows.Forms.Label();
-            this.lblSpot3 = new System.Windows.Forms.Label();
-            this.lblSpot4 = new System.Windows.Forms.Label();
-            this.lblSpot5 = new System.Windows.Forms.Label();
-            this.lblSpot6 = new System.Windows.Forms.Label();
-            this.lblSpot7 = new System.Windows.Forms.Label();
-            this.lblSpot8 = new System.Windows.Forms.Label();
-            this.lblSpot9 = new System.Windows.Forms.Label();
-            this.lblSpot10 = new System.Windows.Forms.Label();
-            this.lblSpot20 = new System.Windows.Forms.Label();
-            this.lblSpot19 = new System.Windows.Forms.Label();
-            this.lblSpot18 = new System.Windows.Forms.Label();
-            this.lblSpot17 = new System.Windows.Forms.Label();
-            this.lblSpot16 = new System.Windows.Forms.Label();
-            this.lblSpot15 = new System.Windows.Forms.Label();
-            this.lblSpot14 = new System.Windows.Forms.Label();
-            this.lblSpot13 = new System.Windows.Forms.Label();
-            this.lblSpot12 = new System.Windows.Forms.Label();
-            this.lblSpot11 = new System.Windows.Forms.Label();
-            this.lblSpot21 = new System.Windows.Forms.Label();
-            this.lblSpot22 = new System.Windows.Forms.Label();
-            this.lblSpot23 = new System.Windows.Forms.Label();
-            this.lblSpot24 = new System.Windows.Forms.Label();
-            this.lblSpot25 = new System.Windows.Forms.Label();
-            this.lblSpot26 = new System.Windows.Forms.Label();
-            this.lblSpot27 = new System.Windows.Forms.Label();
-            this.lblSpot28 = new System.Windows.Forms.Label();
-            this.lblSpot29 = new System.Windows.Forms.Label();
-            this.lblSpot30 = new System.Windows.Forms.Label();
-            this.lblSpot40 = new System.Windows.Forms.Label();
-            this.lblSpot39 = new System.Windows.Forms.Label();
-            this.lblSpot38 = new System.Windows.Forms.Label();
-            this.lblSpot37 = new System.Windows.Forms.Label();
-            this.lblSpot36 = new System.Windows.Forms.Label();
-            this.lblSpot35 = new System.Windows.Forms.Label();
-            this.lblSpot34 = new System.Windows.Forms.Label();
-            this.lblSpot33 = new System.Windows.Forms.Label();
-            this.lblSpot32 = new System.Windows.Forms.Label();
-            this.lblSpot31 = new System.Windows.Forms.Label();
-            this.lblSpot41 = new System.Windows.Forms.Label();
-            this.lblSpot42 = new System.Windows.Forms.Label();
-            this.lblSpot43 = new System.Windows.Forms.Label();
-            this.lblSpot44 = new System.Windows.Forms.Label();
-            this.lblSpot45 = new System.Windows.Forms.Label();
-            this.lblSpot46 = new System.Windows.Forms.Label();
-            this.lblSpot47 = new System.Windows.Forms.Label();
-            this.lblSpot48 = new System.Windows.Forms.Label();
-            this.lblSpot49 = new System.Windows.Forms.Label();
-            this.lblSpot50 = new System.Windows.Forms.Label();
-            this.lblSpot51 = new System.Windows.Forms.Label();
-            this.lblSpot61 = new System.Windows.Forms.Label();
-            this.lblSpot60 = new System.Windows.Forms.Label();
-            this.lblSpot59 = new System.Windows.Forms.Label();
-            this.lblSpot58 = new System.Windows.Forms.Label();
-            this.lblSpot57 = new System.Windows.Forms.Label();
-            this.lblSpot56 = new System.Windows.Forms.Label();
-            this.lblSpot55 = new System.Windows.Forms.Label();
-            this.lblSpot54 = new System.Windows.Forms.Label();
-            this.lblSpot53 = new System.Windows.Forms.Label();
-            this.lblSpot52 = new System.Windows.Forms.Label();
-            this.lblSpot62 = new System.Windows.Forms.Label();
-            this.lblSpot63 = new System.Windows.Forms.Label();
-            this.lblSpot64 = new System.Windows.Forms.Label();
-            this.lblSpot65 = new System.Windows.Forms.Label();
-            this.lblSpot66 = new System.Windows.Forms.Label();
-            this.lblSpot67 = new System.Windows.Forms.Label();
-            this.lblSpot68 = new System.Windows.Forms.Label();
-            this.lblSpot69 = new System.Windows.Forms.Label();
-            this.lblSpot70 = new System.Windows.Forms.Label();
-            this.lblSpot71 = new System.Windows.Forms.Label();
-            this.lblSpot81 = new System.Windows.Forms.Label();
-            this.lblSpot80 = new System.Windows.Forms.Label();
-            this.lblSpot79 = new System.Windows.Forms.Label();
-            this.lblSpot78 = new System.Windows.Forms.Label();
-            this.lblSpot77 = new System.Windows.Forms.Label();
-            this.lblSpot76 = new System.Windows.Forms.Label();
-            this.lblSpot75 = new System.Windows.Forms.Label();
-            this.lblSpot74 = new System.Windows.Forms.Label();
-            this.lblSpot73 = new System.Windows.Forms.Label();
-            this.lblSpot72 = new System.Windows.Forms.Label();
-            this.lblSpot82 = new System.Windows.Forms.Label();
-            this.lblSpot83 = new System.Windows.Forms.Label();
-            this.lblSpot84 = new System.Windows.Forms.Label();
-            this.lblSpot85 = new System.Windows.Forms.Label();
-            this.lblSpot86 = new System.Windows.Forms.Label();
-            this.lblSpot87 = new System.Windows.Forms.Label();
-            this.lblSpot88 = new System.Windows.Forms.Label();
-            this.lblSpot89 = new System.Windows.Forms.Label();
-            this.lblSpot90 = new System.Windows.Forms.Label();
-            this.lblSpot91 = new System.Windows.Forms.Label();
-            this.lblSpot101 = new System.Windows.Forms.Label();
-            this.lblSpot100 = new System.Windows.Forms.Label();
-            this.lblSpot99 = new System.Windows.Forms.Label();
-            this.lblSpot98 = new System.Windows.Forms.Label();
-            this.lblSpot97 = new System.Windows.Forms.Label();
-            this.lblSpot96 = new System.Windows.Forms.Label();
-            this.lblSpot95 = new System.Windows.Forms.Label();
-            this.lblSpot94 = new System.Windows.Forms.Label();
-            this.lblSpot93 = new System.Windows.Forms.Label();
-            this.lblSpot92 = new System.Windows.Forms.Label();
-            this.lblCopyright = new System.Windows.Forms.Label();
-            this.tblCards = new System.Windows.Forms.TableLayoutPanel();
-            this.tblPlayer1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblDiceOrCardPlayer1 = new System.Windows.Forms.Label();
-            this.lblPlayer1 = new System.Windows.Forms.Label();
-            this.tblPlayer2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblDiceOrCardPlayer2 = new System.Windows.Forms.Label();
-            this.lblPlayer2 = new System.Windows.Forms.Label();
-            this.btnHelp = new System.Windows.Forms.Button();
-            this.btnRestart = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblDirection80_90 = new System.Windows.Forms.Label();
-            this.tblMain.SuspendLayout();
-            this.pnlPlayers.SuspendLayout();
-            this.pnlPlayingModes.SuspendLayout();
-            this.tblGame.SuspendLayout();
-            this.tblSpots.SuspendLayout();
-            this.tblCards.SuspendLayout();
-            this.tblPlayer1.SuspendLayout();
-            this.tblPlayer2.SuspendLayout();
-            this.SuspendLayout();
+            tblMain = new TableLayoutPanel();
+            lblStatus = new Label();
+            pnlPlayers = new Panel();
+            optMultiplePlayers = new RadioButton();
+            optPlayComputer = new RadioButton();
+            pnlPlayingModes = new Panel();
+            optModeDiceWithRandomCard = new RadioButton();
+            optModeCardOnly = new RadioButton();
+            btnStart = new Button();
+            tblGame = new TableLayoutPanel();
+            label21 = new Label();
+            lblDirection0_10 = new Label();
+            lblDirection10_20 = new Label();
+            lblDirection20_30 = new Label();
+            lblDirection30_40 = new Label();
+            lblDirection40_Middle = new Label();
+            lblDirectionMiddle_50 = new Label();
+            lblDirection50_60 = new Label();
+            lblDirection60_70 = new Label();
+            lblDirection70_80 = new Label();
+            lblDirectionEnd = new Label();
+            tblSpots = new TableLayoutPanel();
+            lblSpot1 = new Label();
+            lblSpot2 = new Label();
+            lblSpot3 = new Label();
+            lblSpot4 = new Label();
+            lblSpot5 = new Label();
+            lblSpot6 = new Label();
+            lblSpot7 = new Label();
+            lblSpot8 = new Label();
+            lblSpot9 = new Label();
+            lblSpot10 = new Label();
+            lblSpot20 = new Label();
+            lblSpot19 = new Label();
+            lblSpot18 = new Label();
+            lblSpot17 = new Label();
+            lblSpot16 = new Label();
+            lblSpot15 = new Label();
+            lblSpot14 = new Label();
+            lblSpot13 = new Label();
+            lblSpot12 = new Label();
+            lblSpot11 = new Label();
+            lblSpot21 = new Label();
+            lblSpot22 = new Label();
+            lblSpot23 = new Label();
+            lblSpot24 = new Label();
+            lblSpot25 = new Label();
+            lblSpot26 = new Label();
+            lblSpot27 = new Label();
+            lblSpot28 = new Label();
+            lblSpot29 = new Label();
+            lblSpot30 = new Label();
+            lblSpot40 = new Label();
+            lblSpot39 = new Label();
+            lblSpot38 = new Label();
+            lblSpot37 = new Label();
+            lblSpot36 = new Label();
+            lblSpot35 = new Label();
+            lblSpot34 = new Label();
+            lblSpot33 = new Label();
+            lblSpot32 = new Label();
+            lblSpot31 = new Label();
+            lblSpot41 = new Label();
+            lblSpot42 = new Label();
+            lblSpot43 = new Label();
+            lblSpot44 = new Label();
+            lblSpot45 = new Label();
+            lblSpot46 = new Label();
+            lblSpot47 = new Label();
+            lblSpot48 = new Label();
+            lblSpot49 = new Label();
+            lblSpot50 = new Label();
+            lblSpot51 = new Label();
+            lblSpot61 = new Label();
+            lblSpot60 = new Label();
+            lblSpot59 = new Label();
+            lblSpot58 = new Label();
+            lblSpot57 = new Label();
+            lblSpot56 = new Label();
+            lblSpot55 = new Label();
+            lblSpot54 = new Label();
+            lblSpot53 = new Label();
+            lblSpot52 = new Label();
+            lblSpot62 = new Label();
+            lblSpot63 = new Label();
+            lblSpot64 = new Label();
+            lblSpot65 = new Label();
+            lblSpot66 = new Label();
+            lblSpot67 = new Label();
+            lblSpot68 = new Label();
+            lblSpot69 = new Label();
+            lblSpot70 = new Label();
+            lblSpot71 = new Label();
+            lblSpot81 = new Label();
+            lblSpot80 = new Label();
+            lblSpot79 = new Label();
+            lblSpot78 = new Label();
+            lblSpot77 = new Label();
+            lblSpot76 = new Label();
+            lblSpot75 = new Label();
+            lblSpot74 = new Label();
+            lblSpot73 = new Label();
+            lblSpot72 = new Label();
+            lblSpot82 = new Label();
+            lblSpot83 = new Label();
+            lblSpot84 = new Label();
+            lblSpot85 = new Label();
+            lblSpot86 = new Label();
+            lblSpot87 = new Label();
+            lblSpot88 = new Label();
+            lblSpot89 = new Label();
+            lblSpot90 = new Label();
+            lblSpot91 = new Label();
+            lblSpot101 = new Label();
+            lblSpot100 = new Label();
+            lblSpot99 = new Label();
+            lblSpot98 = new Label();
+            lblSpot97 = new Label();
+            lblSpot96 = new Label();
+            lblSpot95 = new Label();
+            lblSpot94 = new Label();
+            lblSpot93 = new Label();
+            lblSpot92 = new Label();
+            lblDirection80_90 = new Label();
+            lblCopyright = new Label();
+            tblCards = new TableLayoutPanel();
+            tblPlayer1 = new TableLayoutPanel();
+            lblDiceOrCardPlayer1 = new Label();
+            lblPlayer1 = new Label();
+            tblPlayer2 = new TableLayoutPanel();
+            lblDiceOrCardPlayer2 = new Label();
+            lblPlayer2 = new Label();
+            btnHelp = new Button();
+            btnRestart = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            tblMain.SuspendLayout();
+            pnlPlayers.SuspendLayout();
+            pnlPlayingModes.SuspendLayout();
+            tblGame.SuspendLayout();
+            tblSpots.SuspendLayout();
+            tblCards.SuspendLayout();
+            tblPlayer1.SuspendLayout();
+            tblPlayer2.SuspendLayout();
+            SuspendLayout();
             // 
             // tblMain
             // 
-            this.tblMain.ColumnCount = 5;
-            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.82373F));
-            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.82373F));
-            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.82373F));
-            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.303596F));
-            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.2252F));
-            this.tblMain.Controls.Add(this.lblStatus, 0, 0);
-            this.tblMain.Controls.Add(this.pnlPlayers, 1, 0);
-            this.tblMain.Controls.Add(this.pnlPlayingModes, 2, 0);
-            this.tblMain.Controls.Add(this.btnStart, 3, 0);
-            this.tblMain.Controls.Add(this.tblGame, 0, 2);
-            this.tblMain.Controls.Add(this.lblCopyright, 0, 3);
-            this.tblMain.Controls.Add(this.tblCards, 4, 0);
-            this.tblMain.Controls.Add(this.btnHelp, 2, 3);
-            this.tblMain.Controls.Add(this.btnRestart, 3, 3);
-            this.tblMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblMain.Location = new System.Drawing.Point(0, 0);
-            this.tblMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tblMain.Name = "tblMain";
-            this.tblMain.RowCount = 4;
-            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblMain.Size = new System.Drawing.Size(1924, 1050);
-            this.tblMain.TabIndex = 0;
+            tblMain.ColumnCount = 5;
+            tblMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 22.82373F));
+            tblMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 22.82373F));
+            tblMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 22.82373F));
+            tblMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 7.303596F));
+            tblMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.2252F));
+            tblMain.Controls.Add(lblStatus, 0, 0);
+            tblMain.Controls.Add(pnlPlayers, 1, 0);
+            tblMain.Controls.Add(pnlPlayingModes, 2, 0);
+            tblMain.Controls.Add(btnStart, 3, 0);
+            tblMain.Controls.Add(tblGame, 0, 2);
+            tblMain.Controls.Add(lblCopyright, 0, 3);
+            tblMain.Controls.Add(tblCards, 4, 0);
+            tblMain.Controls.Add(btnHelp, 2, 3);
+            tblMain.Controls.Add(btnRestart, 3, 3);
+            tblMain.Dock = DockStyle.Fill;
+            tblMain.Location = new Point(0, 0);
+            tblMain.Margin = new Padding(4, 5, 4, 5);
+            tblMain.Name = "tblMain";
+            tblMain.RowCount = 4;
+            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 5F));
+            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 5F));
+            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
+            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tblMain.Size = new Size(1924, 1050);
+            tblMain.TabIndex = 0;
             // 
             // lblStatus
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.BackColor = System.Drawing.Color.Cornsilk;
-            this.lblStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblStatus.Location = new System.Drawing.Point(4, 0);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblStatus.Name = "lblStatus";
-            this.tblMain.SetRowSpan(this.lblStatus, 2);
-            this.lblStatus.Size = new System.Drawing.Size(431, 104);
-            this.lblStatus.TabIndex = 0;
-            this.lblStatus.Text = "Choose playing mode and click start";
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblStatus.AutoSize = true;
+            lblStatus.BackColor = Color.Cornsilk;
+            lblStatus.Dock = DockStyle.Fill;
+            lblStatus.Font = new Font("Segoe UI", 14F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblStatus.Location = new Point(4, 0);
+            lblStatus.Margin = new Padding(4, 0, 4, 0);
+            lblStatus.Name = "lblStatus";
+            tblMain.SetRowSpan(lblStatus, 2);
+            lblStatus.Size = new Size(431, 104);
+            lblStatus.TabIndex = 0;
+            lblStatus.Text = "Choose playing mode and click start";
+            lblStatus.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pnlPlayers
             // 
-            this.pnlPlayers.Controls.Add(this.optMultiplePlayers);
-            this.pnlPlayers.Controls.Add(this.optPlayComputer);
-            this.pnlPlayers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPlayers.Location = new System.Drawing.Point(442, 3);
-            this.pnlPlayers.Name = "pnlPlayers";
-            this.tblMain.SetRowSpan(this.pnlPlayers, 2);
-            this.pnlPlayers.Size = new System.Drawing.Size(433, 98);
-            this.pnlPlayers.TabIndex = 1;
+            pnlPlayers.Controls.Add(optMultiplePlayers);
+            pnlPlayers.Controls.Add(optPlayComputer);
+            pnlPlayers.Dock = DockStyle.Fill;
+            pnlPlayers.Location = new Point(442, 3);
+            pnlPlayers.Name = "pnlPlayers";
+            tblMain.SetRowSpan(pnlPlayers, 2);
+            pnlPlayers.Size = new Size(433, 98);
+            pnlPlayers.TabIndex = 1;
             // 
             // optMultiplePlayers
             // 
-            this.optMultiplePlayers.AutoSize = true;
-            this.optMultiplePlayers.Checked = true;
-            this.optMultiplePlayers.Location = new System.Drawing.Point(53, 53);
-            this.optMultiplePlayers.Name = "optMultiplePlayers";
-            this.optMultiplePlayers.Size = new System.Drawing.Size(153, 42);
-            this.optMultiplePlayers.TabIndex = 1;
-            this.optMultiplePlayers.TabStop = true;
-            this.optMultiplePlayers.Text = "2 Players";
-            this.optMultiplePlayers.UseVisualStyleBackColor = true;
+            optMultiplePlayers.AutoSize = true;
+            optMultiplePlayers.Checked = true;
+            optMultiplePlayers.Location = new Point(53, 53);
+            optMultiplePlayers.Name = "optMultiplePlayers";
+            optMultiplePlayers.Size = new Size(153, 42);
+            optMultiplePlayers.TabIndex = 1;
+            optMultiplePlayers.TabStop = true;
+            optMultiplePlayers.Text = "2 Players";
+            optMultiplePlayers.UseVisualStyleBackColor = true;
             // 
             // optPlayComputer
             // 
-            this.optPlayComputer.AutoSize = true;
-            this.optPlayComputer.Location = new System.Drawing.Point(53, 5);
-            this.optPlayComputer.Name = "optPlayComputer";
-            this.optPlayComputer.Size = new System.Drawing.Size(320, 42);
-            this.optPlayComputer.TabIndex = 0;
-            this.optPlayComputer.Text = "Play against Computer";
-            this.optPlayComputer.UseVisualStyleBackColor = true;
+            optPlayComputer.AutoSize = true;
+            optPlayComputer.Location = new Point(53, 5);
+            optPlayComputer.Name = "optPlayComputer";
+            optPlayComputer.Size = new Size(320, 42);
+            optPlayComputer.TabIndex = 0;
+            optPlayComputer.Text = "Play against Computer";
+            optPlayComputer.UseVisualStyleBackColor = true;
             // 
             // pnlPlayingModes
             // 
-            this.pnlPlayingModes.Controls.Add(this.optModeDiceWithRandomCard);
-            this.pnlPlayingModes.Controls.Add(this.optModeCardOnly);
-            this.pnlPlayingModes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPlayingModes.Location = new System.Drawing.Point(881, 3);
-            this.pnlPlayingModes.Name = "pnlPlayingModes";
-            this.tblMain.SetRowSpan(this.pnlPlayingModes, 2);
-            this.pnlPlayingModes.Size = new System.Drawing.Size(433, 98);
-            this.pnlPlayingModes.TabIndex = 2;
+            pnlPlayingModes.Controls.Add(optModeDiceWithRandomCard);
+            pnlPlayingModes.Controls.Add(optModeCardOnly);
+            pnlPlayingModes.Dock = DockStyle.Fill;
+            pnlPlayingModes.Location = new Point(881, 3);
+            pnlPlayingModes.Name = "pnlPlayingModes";
+            tblMain.SetRowSpan(pnlPlayingModes, 2);
+            pnlPlayingModes.Size = new Size(433, 98);
+            pnlPlayingModes.TabIndex = 2;
             // 
             // optModeDiceWithRandomCard
             // 
-            this.optModeDiceWithRandomCard.AutoSize = true;
-            this.optModeDiceWithRandomCard.Checked = true;
-            this.optModeDiceWithRandomCard.Location = new System.Drawing.Point(55, 53);
-            this.optModeDiceWithRandomCard.Name = "optModeDiceWithRandomCard";
-            this.optModeDiceWithRandomCard.Size = new System.Drawing.Size(333, 42);
-            this.optModeDiceWithRandomCard.TabIndex = 1;
-            this.optModeDiceWithRandomCard.TabStop = true;
-            this.optModeDiceWithRandomCard.Text = "Dice with Random Card";
-            this.optModeDiceWithRandomCard.UseVisualStyleBackColor = true;
+            optModeDiceWithRandomCard.AutoSize = true;
+            optModeDiceWithRandomCard.Checked = true;
+            optModeDiceWithRandomCard.Location = new Point(55, 53);
+            optModeDiceWithRandomCard.Name = "optModeDiceWithRandomCard";
+            optModeDiceWithRandomCard.Size = new Size(333, 42);
+            optModeDiceWithRandomCard.TabIndex = 1;
+            optModeDiceWithRandomCard.TabStop = true;
+            optModeDiceWithRandomCard.Text = "Dice with Random Card";
+            optModeDiceWithRandomCard.UseVisualStyleBackColor = true;
             // 
             // optModeCardOnly
             // 
-            this.optModeCardOnly.AutoSize = true;
-            this.optModeCardOnly.Location = new System.Drawing.Point(55, 5);
-            this.optModeCardOnly.Name = "optModeCardOnly";
-            this.optModeCardOnly.Size = new System.Drawing.Size(165, 42);
-            this.optModeCardOnly.TabIndex = 0;
-            this.optModeCardOnly.Text = "Card Only";
-            this.optModeCardOnly.UseVisualStyleBackColor = true;
+            optModeCardOnly.AutoSize = true;
+            optModeCardOnly.Location = new Point(55, 5);
+            optModeCardOnly.Name = "optModeCardOnly";
+            optModeCardOnly.Size = new Size(165, 42);
+            optModeCardOnly.TabIndex = 0;
+            optModeCardOnly.Text = "Card Only";
+            optModeCardOnly.UseVisualStyleBackColor = true;
             // 
             // btnStart
             // 
-            this.btnStart.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnStart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnStart.Location = new System.Drawing.Point(1320, 3);
-            this.btnStart.Name = "btnStart";
-            this.tblMain.SetRowSpan(this.btnStart, 2);
-            this.btnStart.Size = new System.Drawing.Size(134, 98);
-            this.btnStart.TabIndex = 3;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = false;
+            btnStart.BackColor = Color.LimeGreen;
+            btnStart.Dock = DockStyle.Fill;
+            btnStart.Location = new Point(1320, 3);
+            btnStart.Name = "btnStart";
+            tblMain.SetRowSpan(btnStart, 2);
+            btnStart.Size = new Size(134, 98);
+            btnStart.TabIndex = 3;
+            btnStart.Text = "Start";
+            btnStart.UseVisualStyleBackColor = false;
             // 
             // tblGame
             // 
-            this.tblGame.ColumnCount = 3;
-            this.tblMain.SetColumnSpan(this.tblGame, 4);
-            this.tblGame.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblGame.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tblGame.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblGame.Controls.Add(this.label21, 0, 10);
-            this.tblGame.Controls.Add(this.lblDirection0_10, 2, 9);
-            this.tblGame.Controls.Add(this.lblDirection10_20, 0, 8);
-            this.tblGame.Controls.Add(this.lblDirection20_30, 2, 7);
-            this.tblGame.Controls.Add(this.lblDirection30_40, 0, 6);
-            this.tblGame.Controls.Add(this.lblDirection40_Middle, 2, 5);
-            this.tblGame.Controls.Add(this.lblDirectionMiddle_50, 0, 4);
-            this.tblGame.Controls.Add(this.lblDirection50_60, 2, 3);
-            this.tblGame.Controls.Add(this.lblDirection60_70, 0, 2);
-            this.tblGame.Controls.Add(this.lblDirection70_80, 2, 1);
-            this.tblGame.Controls.Add(this.lblDirectionEnd, 2, 0);
-            this.tblGame.Controls.Add(this.tblSpots, 1, 0);
-            this.tblGame.Controls.Add(this.lblDirection80_90, 0, 0);
-            this.tblGame.Location = new System.Drawing.Point(3, 107);
-            this.tblGame.Name = "tblGame";
-            this.tblGame.RowCount = 11;
-            this.tblGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tblGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tblGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tblGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tblGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tblGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tblGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tblGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tblGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tblGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tblGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
-            this.tblGame.Size = new System.Drawing.Size(1451, 834);
-            this.tblGame.TabIndex = 4;
+            tblGame.ColumnCount = 3;
+            tblMain.SetColumnSpan(tblGame, 4);
+            tblGame.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tblGame.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
+            tblGame.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tblGame.Controls.Add(label21, 0, 10);
+            tblGame.Controls.Add(lblDirection0_10, 2, 9);
+            tblGame.Controls.Add(lblDirection10_20, 0, 8);
+            tblGame.Controls.Add(lblDirection20_30, 2, 7);
+            tblGame.Controls.Add(lblDirection30_40, 0, 6);
+            tblGame.Controls.Add(lblDirection40_Middle, 2, 5);
+            tblGame.Controls.Add(lblDirectionMiddle_50, 0, 4);
+            tblGame.Controls.Add(lblDirection50_60, 2, 3);
+            tblGame.Controls.Add(lblDirection60_70, 0, 2);
+            tblGame.Controls.Add(lblDirection70_80, 2, 1);
+            tblGame.Controls.Add(lblDirectionEnd, 2, 0);
+            tblGame.Controls.Add(tblSpots, 1, 0);
+            tblGame.Controls.Add(lblDirection80_90, 0, 0);
+            tblGame.Location = new Point(3, 107);
+            tblGame.Name = "tblGame";
+            tblGame.RowCount = 11;
+            tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090908F));
+            tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090908F));
+            tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090908F));
+            tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090908F));
+            tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090908F));
+            tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090908F));
+            tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090908F));
+            tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090908F));
+            tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090908F));
+            tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090908F));
+            tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090908F));
+            tblGame.Size = new Size(1451, 834);
+            tblGame.TabIndex = 4;
             // 
             // label21
             // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(31, 773);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(83, 38);
-            this.label21.TabIndex = 121;
-            this.label21.Text = "Loser";
+            label21.Anchor = AnchorStyles.None;
+            label21.AutoSize = true;
+            label21.Location = new Point(31, 773);
+            label21.Name = "label21";
+            label21.Size = new Size(83, 38);
+            label21.TabIndex = 121;
+            label21.Text = "Loser";
             // 
             // lblDirection0_10
             // 
-            this.lblDirection0_10.AutoSize = true;
-            this.lblDirection0_10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDirection0_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDirection0_10.Location = new System.Drawing.Point(1308, 675);
-            this.lblDirection0_10.Name = "lblDirection0_10";
-            this.tblGame.SetRowSpan(this.lblDirection0_10, 2);
-            this.lblDirection0_10.Size = new System.Drawing.Size(140, 159);
-            this.lblDirection0_10.TabIndex = 120;
-            this.lblDirection0_10.Text = "↩️";
-            this.lblDirection0_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            lblDirection0_10.AutoSize = true;
+            lblDirection0_10.Dock = DockStyle.Fill;
+            lblDirection0_10.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDirection0_10.Location = new Point(1308, 675);
+            lblDirection0_10.Name = "lblDirection0_10";
+            tblGame.SetRowSpan(lblDirection0_10, 2);
+            lblDirection0_10.Size = new Size(140, 159);
+            lblDirection0_10.TabIndex = 120;
+            lblDirection0_10.Text = "↩️";
+            lblDirection0_10.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblDirection10_20
             // 
-            this.lblDirection10_20.AutoSize = true;
-            this.lblDirection10_20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDirection10_20.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDirection10_20.Location = new System.Drawing.Point(3, 600);
-            this.lblDirection10_20.Name = "lblDirection10_20";
-            this.tblGame.SetRowSpan(this.lblDirection10_20, 2);
-            this.lblDirection10_20.Size = new System.Drawing.Size(139, 150);
-            this.lblDirection10_20.TabIndex = 117;
-            this.lblDirection10_20.Text = "↪️";
-            this.lblDirection10_20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblDirection10_20.AutoSize = true;
+            lblDirection10_20.Dock = DockStyle.Fill;
+            lblDirection10_20.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDirection10_20.Location = new Point(3, 600);
+            lblDirection10_20.Name = "lblDirection10_20";
+            tblGame.SetRowSpan(lblDirection10_20, 2);
+            lblDirection10_20.Size = new Size(139, 150);
+            lblDirection10_20.TabIndex = 117;
+            lblDirection10_20.Text = "↪️";
+            lblDirection10_20.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lblDirection20_30
             // 
-            this.lblDirection20_30.AutoSize = true;
-            this.lblDirection20_30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDirection20_30.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDirection20_30.Location = new System.Drawing.Point(1308, 525);
-            this.lblDirection20_30.Name = "lblDirection20_30";
-            this.tblGame.SetRowSpan(this.lblDirection20_30, 2);
-            this.lblDirection20_30.Size = new System.Drawing.Size(140, 150);
-            this.lblDirection20_30.TabIndex = 116;
-            this.lblDirection20_30.Text = "↩️";
-            this.lblDirection20_30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            lblDirection20_30.AutoSize = true;
+            lblDirection20_30.Dock = DockStyle.Fill;
+            lblDirection20_30.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDirection20_30.Location = new Point(1308, 525);
+            lblDirection20_30.Name = "lblDirection20_30";
+            tblGame.SetRowSpan(lblDirection20_30, 2);
+            lblDirection20_30.Size = new Size(140, 150);
+            lblDirection20_30.TabIndex = 116;
+            lblDirection20_30.Text = "↩️";
+            lblDirection20_30.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblDirection30_40
             // 
-            this.lblDirection30_40.AutoSize = true;
-            this.lblDirection30_40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDirection30_40.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDirection30_40.Location = new System.Drawing.Point(3, 450);
-            this.lblDirection30_40.Name = "lblDirection30_40";
-            this.tblGame.SetRowSpan(this.lblDirection30_40, 2);
-            this.lblDirection30_40.Size = new System.Drawing.Size(139, 150);
-            this.lblDirection30_40.TabIndex = 113;
-            this.lblDirection30_40.Text = "↪️";
-            this.lblDirection30_40.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblDirection30_40.AutoSize = true;
+            lblDirection30_40.Dock = DockStyle.Fill;
+            lblDirection30_40.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDirection30_40.Location = new Point(3, 450);
+            lblDirection30_40.Name = "lblDirection30_40";
+            tblGame.SetRowSpan(lblDirection30_40, 2);
+            lblDirection30_40.Size = new Size(139, 150);
+            lblDirection30_40.TabIndex = 113;
+            lblDirection30_40.Text = "↪️";
+            lblDirection30_40.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lblDirection40_Middle
             // 
-            this.lblDirection40_Middle.AutoSize = true;
-            this.lblDirection40_Middle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDirection40_Middle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDirection40_Middle.Location = new System.Drawing.Point(1308, 375);
-            this.lblDirection40_Middle.Name = "lblDirection40_Middle";
-            this.tblGame.SetRowSpan(this.lblDirection40_Middle, 2);
-            this.lblDirection40_Middle.Size = new System.Drawing.Size(140, 150);
-            this.lblDirection40_Middle.TabIndex = 112;
-            this.lblDirection40_Middle.Text = "↩️";
-            this.lblDirection40_Middle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            lblDirection40_Middle.AutoSize = true;
+            lblDirection40_Middle.Dock = DockStyle.Fill;
+            lblDirection40_Middle.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDirection40_Middle.Location = new Point(1308, 375);
+            lblDirection40_Middle.Name = "lblDirection40_Middle";
+            tblGame.SetRowSpan(lblDirection40_Middle, 2);
+            lblDirection40_Middle.Size = new Size(140, 150);
+            lblDirection40_Middle.TabIndex = 112;
+            lblDirection40_Middle.Text = "↩️";
+            lblDirection40_Middle.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblDirectionMiddle_50
             // 
-            this.lblDirectionMiddle_50.AutoSize = true;
-            this.lblDirectionMiddle_50.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDirectionMiddle_50.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDirectionMiddle_50.Location = new System.Drawing.Point(3, 300);
-            this.lblDirectionMiddle_50.Name = "lblDirectionMiddle_50";
-            this.tblGame.SetRowSpan(this.lblDirectionMiddle_50, 2);
-            this.lblDirectionMiddle_50.Size = new System.Drawing.Size(139, 150);
-            this.lblDirectionMiddle_50.TabIndex = 109;
-            this.lblDirectionMiddle_50.Text = "↪️";
-            this.lblDirectionMiddle_50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblDirectionMiddle_50.AutoSize = true;
+            lblDirectionMiddle_50.Dock = DockStyle.Fill;
+            lblDirectionMiddle_50.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDirectionMiddle_50.Location = new Point(3, 300);
+            lblDirectionMiddle_50.Name = "lblDirectionMiddle_50";
+            tblGame.SetRowSpan(lblDirectionMiddle_50, 2);
+            lblDirectionMiddle_50.Size = new Size(139, 150);
+            lblDirectionMiddle_50.TabIndex = 109;
+            lblDirectionMiddle_50.Text = "↪️";
+            lblDirectionMiddle_50.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lblDirection50_60
             // 
-            this.lblDirection50_60.AutoSize = true;
-            this.lblDirection50_60.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDirection50_60.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDirection50_60.Location = new System.Drawing.Point(1308, 225);
-            this.lblDirection50_60.Name = "lblDirection50_60";
-            this.tblGame.SetRowSpan(this.lblDirection50_60, 2);
-            this.lblDirection50_60.Size = new System.Drawing.Size(140, 150);
-            this.lblDirection50_60.TabIndex = 108;
-            this.lblDirection50_60.Text = "↩️";
-            this.lblDirection50_60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            lblDirection50_60.AutoSize = true;
+            lblDirection50_60.Dock = DockStyle.Fill;
+            lblDirection50_60.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDirection50_60.Location = new Point(1308, 225);
+            lblDirection50_60.Name = "lblDirection50_60";
+            tblGame.SetRowSpan(lblDirection50_60, 2);
+            lblDirection50_60.Size = new Size(140, 150);
+            lblDirection50_60.TabIndex = 108;
+            lblDirection50_60.Text = "↩️";
+            lblDirection50_60.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblDirection60_70
             // 
-            this.lblDirection60_70.AutoSize = true;
-            this.lblDirection60_70.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDirection60_70.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDirection60_70.Location = new System.Drawing.Point(3, 150);
-            this.lblDirection60_70.Name = "lblDirection60_70";
-            this.tblGame.SetRowSpan(this.lblDirection60_70, 2);
-            this.lblDirection60_70.Size = new System.Drawing.Size(139, 150);
-            this.lblDirection60_70.TabIndex = 105;
-            this.lblDirection60_70.Text = "↪️";
-            this.lblDirection60_70.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblDirection60_70.AutoSize = true;
+            lblDirection60_70.Dock = DockStyle.Fill;
+            lblDirection60_70.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDirection60_70.Location = new Point(3, 150);
+            lblDirection60_70.Name = "lblDirection60_70";
+            tblGame.SetRowSpan(lblDirection60_70, 2);
+            lblDirection60_70.Size = new Size(139, 150);
+            lblDirection60_70.TabIndex = 105;
+            lblDirection60_70.Text = "↪️";
+            lblDirection60_70.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lblDirection70_80
             // 
-            this.lblDirection70_80.AutoSize = true;
-            this.lblDirection70_80.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDirection70_80.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDirection70_80.Location = new System.Drawing.Point(1308, 75);
-            this.lblDirection70_80.Name = "lblDirection70_80";
-            this.tblGame.SetRowSpan(this.lblDirection70_80, 2);
-            this.lblDirection70_80.Size = new System.Drawing.Size(140, 150);
-            this.lblDirection70_80.TabIndex = 104;
-            this.lblDirection70_80.Text = "↩️";
-            this.lblDirection70_80.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            lblDirection70_80.AutoSize = true;
+            lblDirection70_80.Dock = DockStyle.Fill;
+            lblDirection70_80.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDirection70_80.Location = new Point(1308, 75);
+            lblDirection70_80.Name = "lblDirection70_80";
+            tblGame.SetRowSpan(lblDirection70_80, 2);
+            lblDirection70_80.Size = new Size(140, 150);
+            lblDirection70_80.TabIndex = 104;
+            lblDirection70_80.Text = "↩️";
+            lblDirection70_80.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblDirectionEnd
             // 
-            this.lblDirectionEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDirectionEnd.AutoSize = true;
-            this.lblDirectionEnd.Location = new System.Drawing.Point(1324, 18);
-            this.lblDirectionEnd.Name = "lblDirectionEnd";
-            this.lblDirectionEnd.Size = new System.Drawing.Size(107, 38);
-            this.lblDirectionEnd.TabIndex = 102;
-            this.lblDirectionEnd.Text = "Winner";
+            lblDirectionEnd.Anchor = AnchorStyles.None;
+            lblDirectionEnd.AutoSize = true;
+            lblDirectionEnd.Location = new Point(1324, 18);
+            lblDirectionEnd.Name = "lblDirectionEnd";
+            lblDirectionEnd.Size = new Size(107, 38);
+            lblDirectionEnd.TabIndex = 102;
+            lblDirectionEnd.Text = "Winner";
             // 
             // tblSpots
             // 
-            this.tblSpots.ColumnCount = 10;
-            this.tblSpots.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblSpots.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblSpots.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblSpots.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblSpots.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblSpots.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblSpots.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblSpots.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblSpots.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblSpots.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblSpots.Controls.Add(this.lblSpot1, 0, 10);
-            this.tblSpots.Controls.Add(this.lblSpot2, 1, 10);
-            this.tblSpots.Controls.Add(this.lblSpot3, 2, 10);
-            this.tblSpots.Controls.Add(this.lblSpot4, 3, 10);
-            this.tblSpots.Controls.Add(this.lblSpot5, 4, 10);
-            this.tblSpots.Controls.Add(this.lblSpot6, 5, 10);
-            this.tblSpots.Controls.Add(this.lblSpot7, 6, 10);
-            this.tblSpots.Controls.Add(this.lblSpot8, 7, 10);
-            this.tblSpots.Controls.Add(this.lblSpot9, 8, 10);
-            this.tblSpots.Controls.Add(this.lblSpot10, 9, 10);
-            this.tblSpots.Controls.Add(this.lblSpot20, 0, 9);
-            this.tblSpots.Controls.Add(this.lblSpot19, 1, 9);
-            this.tblSpots.Controls.Add(this.lblSpot18, 2, 9);
-            this.tblSpots.Controls.Add(this.lblSpot17, 3, 9);
-            this.tblSpots.Controls.Add(this.lblSpot16, 4, 9);
-            this.tblSpots.Controls.Add(this.lblSpot15, 5, 9);
-            this.tblSpots.Controls.Add(this.lblSpot14, 6, 9);
-            this.tblSpots.Controls.Add(this.lblSpot13, 7, 9);
-            this.tblSpots.Controls.Add(this.lblSpot12, 8, 9);
-            this.tblSpots.Controls.Add(this.lblSpot11, 9, 9);
-            this.tblSpots.Controls.Add(this.lblSpot21, 0, 8);
-            this.tblSpots.Controls.Add(this.lblSpot22, 1, 8);
-            this.tblSpots.Controls.Add(this.lblSpot23, 2, 8);
-            this.tblSpots.Controls.Add(this.lblSpot24, 3, 8);
-            this.tblSpots.Controls.Add(this.lblSpot25, 4, 8);
-            this.tblSpots.Controls.Add(this.lblSpot26, 5, 8);
-            this.tblSpots.Controls.Add(this.lblSpot27, 6, 8);
-            this.tblSpots.Controls.Add(this.lblSpot28, 7, 8);
-            this.tblSpots.Controls.Add(this.lblSpot29, 8, 8);
-            this.tblSpots.Controls.Add(this.lblSpot30, 9, 8);
-            this.tblSpots.Controls.Add(this.lblSpot40, 0, 7);
-            this.tblSpots.Controls.Add(this.lblSpot39, 1, 7);
-            this.tblSpots.Controls.Add(this.lblSpot38, 2, 7);
-            this.tblSpots.Controls.Add(this.lblSpot37, 3, 7);
-            this.tblSpots.Controls.Add(this.lblSpot36, 4, 7);
-            this.tblSpots.Controls.Add(this.lblSpot35, 5, 7);
-            this.tblSpots.Controls.Add(this.lblSpot34, 6, 7);
-            this.tblSpots.Controls.Add(this.lblSpot33, 7, 7);
-            this.tblSpots.Controls.Add(this.lblSpot32, 8, 7);
-            this.tblSpots.Controls.Add(this.lblSpot31, 9, 7);
-            this.tblSpots.Controls.Add(this.lblSpot41, 0, 6);
-            this.tblSpots.Controls.Add(this.lblSpot42, 1, 6);
-            this.tblSpots.Controls.Add(this.lblSpot43, 2, 6);
-            this.tblSpots.Controls.Add(this.lblSpot44, 3, 6);
-            this.tblSpots.Controls.Add(this.lblSpot45, 4, 6);
-            this.tblSpots.Controls.Add(this.lblSpot46, 5, 6);
-            this.tblSpots.Controls.Add(this.lblSpot47, 6, 6);
-            this.tblSpots.Controls.Add(this.lblSpot48, 7, 6);
-            this.tblSpots.Controls.Add(this.lblSpot49, 8, 6);
-            this.tblSpots.Controls.Add(this.lblSpot50, 9, 6);
-            this.tblSpots.Controls.Add(this.lblSpot51, 0, 5);
-            this.tblSpots.Controls.Add(this.lblSpot61, 9, 4);
-            this.tblSpots.Controls.Add(this.lblSpot60, 8, 4);
-            this.tblSpots.Controls.Add(this.lblSpot59, 7, 4);
-            this.tblSpots.Controls.Add(this.lblSpot58, 6, 4);
-            this.tblSpots.Controls.Add(this.lblSpot57, 5, 4);
-            this.tblSpots.Controls.Add(this.lblSpot56, 4, 4);
-            this.tblSpots.Controls.Add(this.lblSpot55, 3, 4);
-            this.tblSpots.Controls.Add(this.lblSpot54, 2, 4);
-            this.tblSpots.Controls.Add(this.lblSpot53, 1, 4);
-            this.tblSpots.Controls.Add(this.lblSpot52, 0, 4);
-            this.tblSpots.Controls.Add(this.lblSpot62, 9, 3);
-            this.tblSpots.Controls.Add(this.lblSpot63, 8, 3);
-            this.tblSpots.Controls.Add(this.lblSpot64, 7, 3);
-            this.tblSpots.Controls.Add(this.lblSpot65, 6, 3);
-            this.tblSpots.Controls.Add(this.lblSpot66, 5, 3);
-            this.tblSpots.Controls.Add(this.lblSpot67, 4, 3);
-            this.tblSpots.Controls.Add(this.lblSpot68, 3, 3);
-            this.tblSpots.Controls.Add(this.lblSpot69, 2, 3);
-            this.tblSpots.Controls.Add(this.lblSpot70, 1, 3);
-            this.tblSpots.Controls.Add(this.lblSpot71, 0, 3);
-            this.tblSpots.Controls.Add(this.lblSpot81, 9, 2);
-            this.tblSpots.Controls.Add(this.lblSpot80, 8, 2);
-            this.tblSpots.Controls.Add(this.lblSpot79, 7, 2);
-            this.tblSpots.Controls.Add(this.lblSpot78, 6, 2);
-            this.tblSpots.Controls.Add(this.lblSpot77, 5, 2);
-            this.tblSpots.Controls.Add(this.lblSpot76, 4, 2);
-            this.tblSpots.Controls.Add(this.lblSpot75, 3, 2);
-            this.tblSpots.Controls.Add(this.lblSpot74, 2, 2);
-            this.tblSpots.Controls.Add(this.lblSpot73, 1, 2);
-            this.tblSpots.Controls.Add(this.lblSpot72, 0, 2);
-            this.tblSpots.Controls.Add(this.lblSpot82, 9, 1);
-            this.tblSpots.Controls.Add(this.lblSpot83, 8, 1);
-            this.tblSpots.Controls.Add(this.lblSpot84, 7, 1);
-            this.tblSpots.Controls.Add(this.lblSpot85, 6, 1);
-            this.tblSpots.Controls.Add(this.lblSpot86, 5, 1);
-            this.tblSpots.Controls.Add(this.lblSpot87, 4, 1);
-            this.tblSpots.Controls.Add(this.lblSpot88, 3, 1);
-            this.tblSpots.Controls.Add(this.lblSpot89, 2, 1);
-            this.tblSpots.Controls.Add(this.lblSpot90, 1, 1);
-            this.tblSpots.Controls.Add(this.lblSpot91, 0, 1);
-            this.tblSpots.Controls.Add(this.lblSpot101, 9, 0);
-            this.tblSpots.Controls.Add(this.lblSpot100, 8, 0);
-            this.tblSpots.Controls.Add(this.lblSpot99, 7, 0);
-            this.tblSpots.Controls.Add(this.lblSpot98, 6, 0);
-            this.tblSpots.Controls.Add(this.lblSpot97, 5, 0);
-            this.tblSpots.Controls.Add(this.lblSpot96, 4, 0);
-            this.tblSpots.Controls.Add(this.lblSpot95, 3, 0);
-            this.tblSpots.Controls.Add(this.lblSpot94, 2, 0);
-            this.tblSpots.Controls.Add(this.lblSpot93, 1, 0);
-            this.tblSpots.Controls.Add(this.lblSpot92, 0, 0);
-            this.tblSpots.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblSpots.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tblSpots.Location = new System.Drawing.Point(148, 3);
-            this.tblSpots.Name = "tblSpots";
-            this.tblSpots.RowCount = 11;
-            this.tblGame.SetRowSpan(this.tblSpots, 11);
-            this.tblSpots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tblSpots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tblSpots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tblSpots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tblSpots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tblSpots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tblSpots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tblSpots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tblSpots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tblSpots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tblSpots.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tblSpots.Size = new System.Drawing.Size(1154, 828);
-            this.tblSpots.TabIndex = 122;
+            tblSpots.ColumnCount = 10;
+            tblSpots.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tblSpots.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tblSpots.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tblSpots.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tblSpots.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tblSpots.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tblSpots.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tblSpots.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tblSpots.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tblSpots.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tblSpots.Controls.Add(lblSpot1, 0, 10);
+            tblSpots.Controls.Add(lblSpot2, 1, 10);
+            tblSpots.Controls.Add(lblSpot3, 2, 10);
+            tblSpots.Controls.Add(lblSpot4, 3, 10);
+            tblSpots.Controls.Add(lblSpot5, 4, 10);
+            tblSpots.Controls.Add(lblSpot6, 5, 10);
+            tblSpots.Controls.Add(lblSpot7, 6, 10);
+            tblSpots.Controls.Add(lblSpot8, 7, 10);
+            tblSpots.Controls.Add(lblSpot9, 8, 10);
+            tblSpots.Controls.Add(lblSpot10, 9, 10);
+            tblSpots.Controls.Add(lblSpot20, 0, 9);
+            tblSpots.Controls.Add(lblSpot19, 1, 9);
+            tblSpots.Controls.Add(lblSpot18, 2, 9);
+            tblSpots.Controls.Add(lblSpot17, 3, 9);
+            tblSpots.Controls.Add(lblSpot16, 4, 9);
+            tblSpots.Controls.Add(lblSpot15, 5, 9);
+            tblSpots.Controls.Add(lblSpot14, 6, 9);
+            tblSpots.Controls.Add(lblSpot13, 7, 9);
+            tblSpots.Controls.Add(lblSpot12, 8, 9);
+            tblSpots.Controls.Add(lblSpot11, 9, 9);
+            tblSpots.Controls.Add(lblSpot21, 0, 8);
+            tblSpots.Controls.Add(lblSpot22, 1, 8);
+            tblSpots.Controls.Add(lblSpot23, 2, 8);
+            tblSpots.Controls.Add(lblSpot24, 3, 8);
+            tblSpots.Controls.Add(lblSpot25, 4, 8);
+            tblSpots.Controls.Add(lblSpot26, 5, 8);
+            tblSpots.Controls.Add(lblSpot27, 6, 8);
+            tblSpots.Controls.Add(lblSpot28, 7, 8);
+            tblSpots.Controls.Add(lblSpot29, 8, 8);
+            tblSpots.Controls.Add(lblSpot30, 9, 8);
+            tblSpots.Controls.Add(lblSpot40, 0, 7);
+            tblSpots.Controls.Add(lblSpot39, 1, 7);
+            tblSpots.Controls.Add(lblSpot38, 2, 7);
+            tblSpots.Controls.Add(lblSpot37, 3, 7);
+            tblSpots.Controls.Add(lblSpot36, 4, 7);
+            tblSpots.Controls.Add(lblSpot35, 5, 7);
+            tblSpots.Controls.Add(lblSpot34, 6, 7);
+            tblSpots.Controls.Add(lblSpot33, 7, 7);
+            tblSpots.Controls.Add(lblSpot32, 8, 7);
+            tblSpots.Controls.Add(lblSpot31, 9, 7);
+            tblSpots.Controls.Add(lblSpot41, 0, 6);
+            tblSpots.Controls.Add(lblSpot42, 1, 6);
+            tblSpots.Controls.Add(lblSpot43, 2, 6);
+            tblSpots.Controls.Add(lblSpot44, 3, 6);
+            tblSpots.Controls.Add(lblSpot45, 4, 6);
+            tblSpots.Controls.Add(lblSpot46, 5, 6);
+            tblSpots.Controls.Add(lblSpot47, 6, 6);
+            tblSpots.Controls.Add(lblSpot48, 7, 6);
+            tblSpots.Controls.Add(lblSpot49, 8, 6);
+            tblSpots.Controls.Add(lblSpot50, 9, 6);
+            tblSpots.Controls.Add(lblSpot51, 0, 5);
+            tblSpots.Controls.Add(lblSpot61, 9, 4);
+            tblSpots.Controls.Add(lblSpot60, 8, 4);
+            tblSpots.Controls.Add(lblSpot59, 7, 4);
+            tblSpots.Controls.Add(lblSpot58, 6, 4);
+            tblSpots.Controls.Add(lblSpot57, 5, 4);
+            tblSpots.Controls.Add(lblSpot56, 4, 4);
+            tblSpots.Controls.Add(lblSpot55, 3, 4);
+            tblSpots.Controls.Add(lblSpot54, 2, 4);
+            tblSpots.Controls.Add(lblSpot53, 1, 4);
+            tblSpots.Controls.Add(lblSpot52, 0, 4);
+            tblSpots.Controls.Add(lblSpot62, 9, 3);
+            tblSpots.Controls.Add(lblSpot63, 8, 3);
+            tblSpots.Controls.Add(lblSpot64, 7, 3);
+            tblSpots.Controls.Add(lblSpot65, 6, 3);
+            tblSpots.Controls.Add(lblSpot66, 5, 3);
+            tblSpots.Controls.Add(lblSpot67, 4, 3);
+            tblSpots.Controls.Add(lblSpot68, 3, 3);
+            tblSpots.Controls.Add(lblSpot69, 2, 3);
+            tblSpots.Controls.Add(lblSpot70, 1, 3);
+            tblSpots.Controls.Add(lblSpot71, 0, 3);
+            tblSpots.Controls.Add(lblSpot81, 9, 2);
+            tblSpots.Controls.Add(lblSpot80, 8, 2);
+            tblSpots.Controls.Add(lblSpot79, 7, 2);
+            tblSpots.Controls.Add(lblSpot78, 6, 2);
+            tblSpots.Controls.Add(lblSpot77, 5, 2);
+            tblSpots.Controls.Add(lblSpot76, 4, 2);
+            tblSpots.Controls.Add(lblSpot75, 3, 2);
+            tblSpots.Controls.Add(lblSpot74, 2, 2);
+            tblSpots.Controls.Add(lblSpot73, 1, 2);
+            tblSpots.Controls.Add(lblSpot72, 0, 2);
+            tblSpots.Controls.Add(lblSpot82, 9, 1);
+            tblSpots.Controls.Add(lblSpot83, 8, 1);
+            tblSpots.Controls.Add(lblSpot84, 7, 1);
+            tblSpots.Controls.Add(lblSpot85, 6, 1);
+            tblSpots.Controls.Add(lblSpot86, 5, 1);
+            tblSpots.Controls.Add(lblSpot87, 4, 1);
+            tblSpots.Controls.Add(lblSpot88, 3, 1);
+            tblSpots.Controls.Add(lblSpot89, 2, 1);
+            tblSpots.Controls.Add(lblSpot90, 1, 1);
+            tblSpots.Controls.Add(lblSpot91, 0, 1);
+            tblSpots.Controls.Add(lblSpot101, 9, 0);
+            tblSpots.Controls.Add(lblSpot100, 8, 0);
+            tblSpots.Controls.Add(lblSpot99, 7, 0);
+            tblSpots.Controls.Add(lblSpot98, 6, 0);
+            tblSpots.Controls.Add(lblSpot97, 5, 0);
+            tblSpots.Controls.Add(lblSpot96, 4, 0);
+            tblSpots.Controls.Add(lblSpot95, 3, 0);
+            tblSpots.Controls.Add(lblSpot94, 2, 0);
+            tblSpots.Controls.Add(lblSpot93, 1, 0);
+            tblSpots.Controls.Add(lblSpot92, 0, 0);
+            tblSpots.Dock = DockStyle.Fill;
+            tblSpots.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            tblSpots.Location = new Point(148, 3);
+            tblSpots.Name = "tblSpots";
+            tblSpots.RowCount = 11;
+            tblGame.SetRowSpan(tblSpots, 11);
+            tblSpots.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090909F));
+            tblSpots.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090909F));
+            tblSpots.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090909F));
+            tblSpots.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090909F));
+            tblSpots.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090909F));
+            tblSpots.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090909F));
+            tblSpots.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090909F));
+            tblSpots.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090909F));
+            tblSpots.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090909F));
+            tblSpots.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090909F));
+            tblSpots.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090909F));
+            tblSpots.Size = new Size(1154, 828);
+            tblSpots.TabIndex = 122;
             // 
             // lblSpot1
             // 
-            this.lblSpot1.AutoSize = true;
-            this.lblSpot1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot1.Location = new System.Drawing.Point(3, 750);
-            this.lblSpot1.Name = "lblSpot1";
-            this.lblSpot1.Size = new System.Drawing.Size(109, 78);
-            this.lblSpot1.TabIndex = 100;
-            this.lblSpot1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot1.AutoSize = true;
+            lblSpot1.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot1.Dock = DockStyle.Fill;
+            lblSpot1.Location = new Point(3, 750);
+            lblSpot1.Name = "lblSpot1";
+            lblSpot1.Size = new Size(109, 78);
+            lblSpot1.TabIndex = 100;
+            lblSpot1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot2
             // 
-            this.lblSpot2.AutoSize = true;
-            this.lblSpot2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot2.Location = new System.Drawing.Point(118, 750);
-            this.lblSpot2.Name = "lblSpot2";
-            this.lblSpot2.Size = new System.Drawing.Size(109, 78);
-            this.lblSpot2.TabIndex = 99;
-            this.lblSpot2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot2.AutoSize = true;
+            lblSpot2.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot2.Dock = DockStyle.Fill;
+            lblSpot2.Location = new Point(118, 750);
+            lblSpot2.Name = "lblSpot2";
+            lblSpot2.Size = new Size(109, 78);
+            lblSpot2.TabIndex = 99;
+            lblSpot2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot3
             // 
-            this.lblSpot3.AutoSize = true;
-            this.lblSpot3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot3.Location = new System.Drawing.Point(233, 750);
-            this.lblSpot3.Name = "lblSpot3";
-            this.lblSpot3.Size = new System.Drawing.Size(109, 78);
-            this.lblSpot3.TabIndex = 98;
-            this.lblSpot3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot3.AutoSize = true;
+            lblSpot3.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot3.Dock = DockStyle.Fill;
+            lblSpot3.Location = new Point(233, 750);
+            lblSpot3.Name = "lblSpot3";
+            lblSpot3.Size = new Size(109, 78);
+            lblSpot3.TabIndex = 98;
+            lblSpot3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot4
             // 
-            this.lblSpot4.AutoSize = true;
-            this.lblSpot4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot4.Location = new System.Drawing.Point(348, 750);
-            this.lblSpot4.Name = "lblSpot4";
-            this.lblSpot4.Size = new System.Drawing.Size(109, 78);
-            this.lblSpot4.TabIndex = 97;
-            this.lblSpot4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot4.AutoSize = true;
+            lblSpot4.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot4.Dock = DockStyle.Fill;
+            lblSpot4.Location = new Point(348, 750);
+            lblSpot4.Name = "lblSpot4";
+            lblSpot4.Size = new Size(109, 78);
+            lblSpot4.TabIndex = 97;
+            lblSpot4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot5
             // 
-            this.lblSpot5.AutoSize = true;
-            this.lblSpot5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot5.Location = new System.Drawing.Point(463, 750);
-            this.lblSpot5.Name = "lblSpot5";
-            this.lblSpot5.Size = new System.Drawing.Size(109, 78);
-            this.lblSpot5.TabIndex = 96;
-            this.lblSpot5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot5.AutoSize = true;
+            lblSpot5.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot5.Dock = DockStyle.Fill;
+            lblSpot5.Location = new Point(463, 750);
+            lblSpot5.Name = "lblSpot5";
+            lblSpot5.Size = new Size(109, 78);
+            lblSpot5.TabIndex = 96;
+            lblSpot5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot6
             // 
-            this.lblSpot6.AutoSize = true;
-            this.lblSpot6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot6.Location = new System.Drawing.Point(578, 750);
-            this.lblSpot6.Name = "lblSpot6";
-            this.lblSpot6.Size = new System.Drawing.Size(109, 78);
-            this.lblSpot6.TabIndex = 95;
-            this.lblSpot6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot6.AutoSize = true;
+            lblSpot6.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot6.Dock = DockStyle.Fill;
+            lblSpot6.Location = new Point(578, 750);
+            lblSpot6.Name = "lblSpot6";
+            lblSpot6.Size = new Size(109, 78);
+            lblSpot6.TabIndex = 95;
+            lblSpot6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot7
             // 
-            this.lblSpot7.AutoSize = true;
-            this.lblSpot7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot7.Location = new System.Drawing.Point(693, 750);
-            this.lblSpot7.Name = "lblSpot7";
-            this.lblSpot7.Size = new System.Drawing.Size(109, 78);
-            this.lblSpot7.TabIndex = 94;
-            this.lblSpot7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot7.AutoSize = true;
+            lblSpot7.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot7.Dock = DockStyle.Fill;
+            lblSpot7.Location = new Point(693, 750);
+            lblSpot7.Name = "lblSpot7";
+            lblSpot7.Size = new Size(109, 78);
+            lblSpot7.TabIndex = 94;
+            lblSpot7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot8
             // 
-            this.lblSpot8.AutoSize = true;
-            this.lblSpot8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot8.Location = new System.Drawing.Point(808, 750);
-            this.lblSpot8.Name = "lblSpot8";
-            this.lblSpot8.Size = new System.Drawing.Size(109, 78);
-            this.lblSpot8.TabIndex = 93;
-            this.lblSpot8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot8.AutoSize = true;
+            lblSpot8.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot8.Dock = DockStyle.Fill;
+            lblSpot8.Location = new Point(808, 750);
+            lblSpot8.Name = "lblSpot8";
+            lblSpot8.Size = new Size(109, 78);
+            lblSpot8.TabIndex = 93;
+            lblSpot8.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot9
             // 
-            this.lblSpot9.AutoSize = true;
-            this.lblSpot9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot9.Location = new System.Drawing.Point(923, 750);
-            this.lblSpot9.Name = "lblSpot9";
-            this.lblSpot9.Size = new System.Drawing.Size(109, 78);
-            this.lblSpot9.TabIndex = 92;
-            this.lblSpot9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot9.AutoSize = true;
+            lblSpot9.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot9.Dock = DockStyle.Fill;
+            lblSpot9.Location = new Point(923, 750);
+            lblSpot9.Name = "lblSpot9";
+            lblSpot9.Size = new Size(109, 78);
+            lblSpot9.TabIndex = 92;
+            lblSpot9.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot10
             // 
-            this.lblSpot10.AutoSize = true;
-            this.lblSpot10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot10.Location = new System.Drawing.Point(1038, 750);
-            this.lblSpot10.Name = "lblSpot10";
-            this.lblSpot10.Size = new System.Drawing.Size(113, 78);
-            this.lblSpot10.TabIndex = 91;
-            this.lblSpot10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot10.AutoSize = true;
+            lblSpot10.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot10.Dock = DockStyle.Fill;
+            lblSpot10.Location = new Point(1038, 750);
+            lblSpot10.Name = "lblSpot10";
+            lblSpot10.Size = new Size(113, 78);
+            lblSpot10.TabIndex = 91;
+            lblSpot10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot20
             // 
-            this.lblSpot20.AutoSize = true;
-            this.lblSpot20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot20.Location = new System.Drawing.Point(3, 675);
-            this.lblSpot20.Name = "lblSpot20";
-            this.lblSpot20.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot20.TabIndex = 90;
-            this.lblSpot20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot20.AutoSize = true;
+            lblSpot20.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot20.Dock = DockStyle.Fill;
+            lblSpot20.Location = new Point(3, 675);
+            lblSpot20.Name = "lblSpot20";
+            lblSpot20.Size = new Size(109, 75);
+            lblSpot20.TabIndex = 90;
+            lblSpot20.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot19
             // 
-            this.lblSpot19.AutoSize = true;
-            this.lblSpot19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot19.Location = new System.Drawing.Point(118, 675);
-            this.lblSpot19.Name = "lblSpot19";
-            this.lblSpot19.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot19.TabIndex = 89;
-            this.lblSpot19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot19.AutoSize = true;
+            lblSpot19.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot19.Dock = DockStyle.Fill;
+            lblSpot19.Location = new Point(118, 675);
+            lblSpot19.Name = "lblSpot19";
+            lblSpot19.Size = new Size(109, 75);
+            lblSpot19.TabIndex = 89;
+            lblSpot19.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot18
             // 
-            this.lblSpot18.AutoSize = true;
-            this.lblSpot18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot18.Location = new System.Drawing.Point(233, 675);
-            this.lblSpot18.Name = "lblSpot18";
-            this.lblSpot18.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot18.TabIndex = 88;
-            this.lblSpot18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot18.AutoSize = true;
+            lblSpot18.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot18.Dock = DockStyle.Fill;
+            lblSpot18.Location = new Point(233, 675);
+            lblSpot18.Name = "lblSpot18";
+            lblSpot18.Size = new Size(109, 75);
+            lblSpot18.TabIndex = 88;
+            lblSpot18.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot17
             // 
-            this.lblSpot17.AutoSize = true;
-            this.lblSpot17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot17.Location = new System.Drawing.Point(348, 675);
-            this.lblSpot17.Name = "lblSpot17";
-            this.lblSpot17.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot17.TabIndex = 87;
-            this.lblSpot17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot17.AutoSize = true;
+            lblSpot17.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot17.Dock = DockStyle.Fill;
+            lblSpot17.Location = new Point(348, 675);
+            lblSpot17.Name = "lblSpot17";
+            lblSpot17.Size = new Size(109, 75);
+            lblSpot17.TabIndex = 87;
+            lblSpot17.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot16
             // 
-            this.lblSpot16.AutoSize = true;
-            this.lblSpot16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot16.Location = new System.Drawing.Point(463, 675);
-            this.lblSpot16.Name = "lblSpot16";
-            this.lblSpot16.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot16.TabIndex = 86;
-            this.lblSpot16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot16.AutoSize = true;
+            lblSpot16.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot16.Dock = DockStyle.Fill;
+            lblSpot16.Location = new Point(463, 675);
+            lblSpot16.Name = "lblSpot16";
+            lblSpot16.Size = new Size(109, 75);
+            lblSpot16.TabIndex = 86;
+            lblSpot16.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot15
             // 
-            this.lblSpot15.AutoSize = true;
-            this.lblSpot15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot15.Location = new System.Drawing.Point(578, 675);
-            this.lblSpot15.Name = "lblSpot15";
-            this.lblSpot15.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot15.TabIndex = 85;
-            this.lblSpot15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot15.AutoSize = true;
+            lblSpot15.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot15.Dock = DockStyle.Fill;
+            lblSpot15.Location = new Point(578, 675);
+            lblSpot15.Name = "lblSpot15";
+            lblSpot15.Size = new Size(109, 75);
+            lblSpot15.TabIndex = 85;
+            lblSpot15.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot14
             // 
-            this.lblSpot14.AutoSize = true;
-            this.lblSpot14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot14.Location = new System.Drawing.Point(693, 675);
-            this.lblSpot14.Name = "lblSpot14";
-            this.lblSpot14.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot14.TabIndex = 84;
-            this.lblSpot14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot14.AutoSize = true;
+            lblSpot14.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot14.Dock = DockStyle.Fill;
+            lblSpot14.Location = new Point(693, 675);
+            lblSpot14.Name = "lblSpot14";
+            lblSpot14.Size = new Size(109, 75);
+            lblSpot14.TabIndex = 84;
+            lblSpot14.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot13
             // 
-            this.lblSpot13.AutoSize = true;
-            this.lblSpot13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot13.Location = new System.Drawing.Point(808, 675);
-            this.lblSpot13.Name = "lblSpot13";
-            this.lblSpot13.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot13.TabIndex = 83;
-            this.lblSpot13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot13.AutoSize = true;
+            lblSpot13.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot13.Dock = DockStyle.Fill;
+            lblSpot13.Location = new Point(808, 675);
+            lblSpot13.Name = "lblSpot13";
+            lblSpot13.Size = new Size(109, 75);
+            lblSpot13.TabIndex = 83;
+            lblSpot13.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot12
             // 
-            this.lblSpot12.AutoSize = true;
-            this.lblSpot12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot12.Location = new System.Drawing.Point(923, 675);
-            this.lblSpot12.Name = "lblSpot12";
-            this.lblSpot12.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot12.TabIndex = 82;
-            this.lblSpot12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot12.AutoSize = true;
+            lblSpot12.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot12.Dock = DockStyle.Fill;
+            lblSpot12.Location = new Point(923, 675);
+            lblSpot12.Name = "lblSpot12";
+            lblSpot12.Size = new Size(109, 75);
+            lblSpot12.TabIndex = 82;
+            lblSpot12.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot11
             // 
-            this.lblSpot11.AutoSize = true;
-            this.lblSpot11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot11.Location = new System.Drawing.Point(1038, 675);
-            this.lblSpot11.Name = "lblSpot11";
-            this.lblSpot11.Size = new System.Drawing.Size(113, 75);
-            this.lblSpot11.TabIndex = 81;
-            this.lblSpot11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot11.AutoSize = true;
+            lblSpot11.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot11.Dock = DockStyle.Fill;
+            lblSpot11.Location = new Point(1038, 675);
+            lblSpot11.Name = "lblSpot11";
+            lblSpot11.Size = new Size(113, 75);
+            lblSpot11.TabIndex = 81;
+            lblSpot11.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot21
             // 
-            this.lblSpot21.AutoSize = true;
-            this.lblSpot21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot21.Location = new System.Drawing.Point(3, 600);
-            this.lblSpot21.Name = "lblSpot21";
-            this.lblSpot21.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot21.TabIndex = 80;
-            this.lblSpot21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot21.AutoSize = true;
+            lblSpot21.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot21.Dock = DockStyle.Fill;
+            lblSpot21.Location = new Point(3, 600);
+            lblSpot21.Name = "lblSpot21";
+            lblSpot21.Size = new Size(109, 75);
+            lblSpot21.TabIndex = 80;
+            lblSpot21.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot22
             // 
-            this.lblSpot22.AutoSize = true;
-            this.lblSpot22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot22.Location = new System.Drawing.Point(118, 600);
-            this.lblSpot22.Name = "lblSpot22";
-            this.lblSpot22.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot22.TabIndex = 79;
-            this.lblSpot22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot22.AutoSize = true;
+            lblSpot22.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot22.Dock = DockStyle.Fill;
+            lblSpot22.Location = new Point(118, 600);
+            lblSpot22.Name = "lblSpot22";
+            lblSpot22.Size = new Size(109, 75);
+            lblSpot22.TabIndex = 79;
+            lblSpot22.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot23
             // 
-            this.lblSpot23.AutoSize = true;
-            this.lblSpot23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot23.Location = new System.Drawing.Point(233, 600);
-            this.lblSpot23.Name = "lblSpot23";
-            this.lblSpot23.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot23.TabIndex = 78;
-            this.lblSpot23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot23.AutoSize = true;
+            lblSpot23.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot23.Dock = DockStyle.Fill;
+            lblSpot23.Location = new Point(233, 600);
+            lblSpot23.Name = "lblSpot23";
+            lblSpot23.Size = new Size(109, 75);
+            lblSpot23.TabIndex = 78;
+            lblSpot23.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot24
             // 
-            this.lblSpot24.AutoSize = true;
-            this.lblSpot24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot24.Location = new System.Drawing.Point(348, 600);
-            this.lblSpot24.Name = "lblSpot24";
-            this.lblSpot24.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot24.TabIndex = 77;
-            this.lblSpot24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot24.AutoSize = true;
+            lblSpot24.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot24.Dock = DockStyle.Fill;
+            lblSpot24.Location = new Point(348, 600);
+            lblSpot24.Name = "lblSpot24";
+            lblSpot24.Size = new Size(109, 75);
+            lblSpot24.TabIndex = 77;
+            lblSpot24.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot25
             // 
-            this.lblSpot25.AutoSize = true;
-            this.lblSpot25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot25.Location = new System.Drawing.Point(463, 600);
-            this.lblSpot25.Name = "lblSpot25";
-            this.lblSpot25.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot25.TabIndex = 76;
-            this.lblSpot25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot25.AutoSize = true;
+            lblSpot25.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot25.Dock = DockStyle.Fill;
+            lblSpot25.Location = new Point(463, 600);
+            lblSpot25.Name = "lblSpot25";
+            lblSpot25.Size = new Size(109, 75);
+            lblSpot25.TabIndex = 76;
+            lblSpot25.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot26
             // 
-            this.lblSpot26.AutoSize = true;
-            this.lblSpot26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot26.Location = new System.Drawing.Point(578, 600);
-            this.lblSpot26.Name = "lblSpot26";
-            this.lblSpot26.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot26.TabIndex = 75;
-            this.lblSpot26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot26.AutoSize = true;
+            lblSpot26.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot26.Dock = DockStyle.Fill;
+            lblSpot26.Location = new Point(578, 600);
+            lblSpot26.Name = "lblSpot26";
+            lblSpot26.Size = new Size(109, 75);
+            lblSpot26.TabIndex = 75;
+            lblSpot26.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot27
             // 
-            this.lblSpot27.AutoSize = true;
-            this.lblSpot27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot27.Location = new System.Drawing.Point(693, 600);
-            this.lblSpot27.Name = "lblSpot27";
-            this.lblSpot27.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot27.TabIndex = 74;
-            this.lblSpot27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot27.AutoSize = true;
+            lblSpot27.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot27.Dock = DockStyle.Fill;
+            lblSpot27.Location = new Point(693, 600);
+            lblSpot27.Name = "lblSpot27";
+            lblSpot27.Size = new Size(109, 75);
+            lblSpot27.TabIndex = 74;
+            lblSpot27.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot28
             // 
-            this.lblSpot28.AutoSize = true;
-            this.lblSpot28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot28.Location = new System.Drawing.Point(808, 600);
-            this.lblSpot28.Name = "lblSpot28";
-            this.lblSpot28.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot28.TabIndex = 73;
-            this.lblSpot28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot28.AutoSize = true;
+            lblSpot28.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot28.Dock = DockStyle.Fill;
+            lblSpot28.Location = new Point(808, 600);
+            lblSpot28.Name = "lblSpot28";
+            lblSpot28.Size = new Size(109, 75);
+            lblSpot28.TabIndex = 73;
+            lblSpot28.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot29
             // 
-            this.lblSpot29.AutoSize = true;
-            this.lblSpot29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot29.Location = new System.Drawing.Point(923, 600);
-            this.lblSpot29.Name = "lblSpot29";
-            this.lblSpot29.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot29.TabIndex = 72;
-            this.lblSpot29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot29.AutoSize = true;
+            lblSpot29.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot29.Dock = DockStyle.Fill;
+            lblSpot29.Location = new Point(923, 600);
+            lblSpot29.Name = "lblSpot29";
+            lblSpot29.Size = new Size(109, 75);
+            lblSpot29.TabIndex = 72;
+            lblSpot29.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot30
             // 
-            this.lblSpot30.AutoSize = true;
-            this.lblSpot30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot30.Location = new System.Drawing.Point(1038, 600);
-            this.lblSpot30.Name = "lblSpot30";
-            this.lblSpot30.Size = new System.Drawing.Size(113, 75);
-            this.lblSpot30.TabIndex = 71;
-            this.lblSpot30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot30.AutoSize = true;
+            lblSpot30.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot30.Dock = DockStyle.Fill;
+            lblSpot30.Location = new Point(1038, 600);
+            lblSpot30.Name = "lblSpot30";
+            lblSpot30.Size = new Size(113, 75);
+            lblSpot30.TabIndex = 71;
+            lblSpot30.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot40
             // 
-            this.lblSpot40.AutoSize = true;
-            this.lblSpot40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot40.Location = new System.Drawing.Point(3, 525);
-            this.lblSpot40.Name = "lblSpot40";
-            this.lblSpot40.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot40.TabIndex = 70;
-            this.lblSpot40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot40.AutoSize = true;
+            lblSpot40.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot40.Dock = DockStyle.Fill;
+            lblSpot40.Location = new Point(3, 525);
+            lblSpot40.Name = "lblSpot40";
+            lblSpot40.Size = new Size(109, 75);
+            lblSpot40.TabIndex = 70;
+            lblSpot40.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot39
             // 
-            this.lblSpot39.AutoSize = true;
-            this.lblSpot39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot39.Location = new System.Drawing.Point(118, 525);
-            this.lblSpot39.Name = "lblSpot39";
-            this.lblSpot39.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot39.TabIndex = 69;
-            this.lblSpot39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot39.AutoSize = true;
+            lblSpot39.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot39.Dock = DockStyle.Fill;
+            lblSpot39.Location = new Point(118, 525);
+            lblSpot39.Name = "lblSpot39";
+            lblSpot39.Size = new Size(109, 75);
+            lblSpot39.TabIndex = 69;
+            lblSpot39.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot38
             // 
-            this.lblSpot38.AutoSize = true;
-            this.lblSpot38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot38.Location = new System.Drawing.Point(233, 525);
-            this.lblSpot38.Name = "lblSpot38";
-            this.lblSpot38.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot38.TabIndex = 68;
-            this.lblSpot38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot38.AutoSize = true;
+            lblSpot38.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot38.Dock = DockStyle.Fill;
+            lblSpot38.Location = new Point(233, 525);
+            lblSpot38.Name = "lblSpot38";
+            lblSpot38.Size = new Size(109, 75);
+            lblSpot38.TabIndex = 68;
+            lblSpot38.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot37
             // 
-            this.lblSpot37.AutoSize = true;
-            this.lblSpot37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot37.Location = new System.Drawing.Point(348, 525);
-            this.lblSpot37.Name = "lblSpot37";
-            this.lblSpot37.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot37.TabIndex = 67;
-            this.lblSpot37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot37.AutoSize = true;
+            lblSpot37.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot37.Dock = DockStyle.Fill;
+            lblSpot37.Location = new Point(348, 525);
+            lblSpot37.Name = "lblSpot37";
+            lblSpot37.Size = new Size(109, 75);
+            lblSpot37.TabIndex = 67;
+            lblSpot37.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot36
             // 
-            this.lblSpot36.AutoSize = true;
-            this.lblSpot36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot36.Location = new System.Drawing.Point(463, 525);
-            this.lblSpot36.Name = "lblSpot36";
-            this.lblSpot36.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot36.TabIndex = 66;
-            this.lblSpot36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot36.AutoSize = true;
+            lblSpot36.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot36.Dock = DockStyle.Fill;
+            lblSpot36.Location = new Point(463, 525);
+            lblSpot36.Name = "lblSpot36";
+            lblSpot36.Size = new Size(109, 75);
+            lblSpot36.TabIndex = 66;
+            lblSpot36.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot35
             // 
-            this.lblSpot35.AutoSize = true;
-            this.lblSpot35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot35.Location = new System.Drawing.Point(578, 525);
-            this.lblSpot35.Name = "lblSpot35";
-            this.lblSpot35.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot35.TabIndex = 65;
-            this.lblSpot35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot35.AutoSize = true;
+            lblSpot35.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot35.Dock = DockStyle.Fill;
+            lblSpot35.Location = new Point(578, 525);
+            lblSpot35.Name = "lblSpot35";
+            lblSpot35.Size = new Size(109, 75);
+            lblSpot35.TabIndex = 65;
+            lblSpot35.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot34
             // 
-            this.lblSpot34.AutoSize = true;
-            this.lblSpot34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot34.Location = new System.Drawing.Point(693, 525);
-            this.lblSpot34.Name = "lblSpot34";
-            this.lblSpot34.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot34.TabIndex = 64;
-            this.lblSpot34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot34.AutoSize = true;
+            lblSpot34.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot34.Dock = DockStyle.Fill;
+            lblSpot34.Location = new Point(693, 525);
+            lblSpot34.Name = "lblSpot34";
+            lblSpot34.Size = new Size(109, 75);
+            lblSpot34.TabIndex = 64;
+            lblSpot34.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot33
             // 
-            this.lblSpot33.AutoSize = true;
-            this.lblSpot33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot33.Location = new System.Drawing.Point(808, 525);
-            this.lblSpot33.Name = "lblSpot33";
-            this.lblSpot33.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot33.TabIndex = 63;
-            this.lblSpot33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot33.AutoSize = true;
+            lblSpot33.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot33.Dock = DockStyle.Fill;
+            lblSpot33.Location = new Point(808, 525);
+            lblSpot33.Name = "lblSpot33";
+            lblSpot33.Size = new Size(109, 75);
+            lblSpot33.TabIndex = 63;
+            lblSpot33.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot32
             // 
-            this.lblSpot32.AutoSize = true;
-            this.lblSpot32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot32.Location = new System.Drawing.Point(923, 525);
-            this.lblSpot32.Name = "lblSpot32";
-            this.lblSpot32.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot32.TabIndex = 62;
-            this.lblSpot32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot32.AutoSize = true;
+            lblSpot32.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot32.Dock = DockStyle.Fill;
+            lblSpot32.Location = new Point(923, 525);
+            lblSpot32.Name = "lblSpot32";
+            lblSpot32.Size = new Size(109, 75);
+            lblSpot32.TabIndex = 62;
+            lblSpot32.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot31
             // 
-            this.lblSpot31.AutoSize = true;
-            this.lblSpot31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot31.Location = new System.Drawing.Point(1038, 525);
-            this.lblSpot31.Name = "lblSpot31";
-            this.lblSpot31.Size = new System.Drawing.Size(113, 75);
-            this.lblSpot31.TabIndex = 61;
-            this.lblSpot31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot31.AutoSize = true;
+            lblSpot31.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot31.Dock = DockStyle.Fill;
+            lblSpot31.Location = new Point(1038, 525);
+            lblSpot31.Name = "lblSpot31";
+            lblSpot31.Size = new Size(113, 75);
+            lblSpot31.TabIndex = 61;
+            lblSpot31.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot41
             // 
-            this.lblSpot41.AutoSize = true;
-            this.lblSpot41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot41.Location = new System.Drawing.Point(3, 450);
-            this.lblSpot41.Name = "lblSpot41";
-            this.lblSpot41.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot41.TabIndex = 60;
-            this.lblSpot41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot41.AutoSize = true;
+            lblSpot41.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot41.Dock = DockStyle.Fill;
+            lblSpot41.Location = new Point(3, 450);
+            lblSpot41.Name = "lblSpot41";
+            lblSpot41.Size = new Size(109, 75);
+            lblSpot41.TabIndex = 60;
+            lblSpot41.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot42
             // 
-            this.lblSpot42.AutoSize = true;
-            this.lblSpot42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot42.Location = new System.Drawing.Point(118, 450);
-            this.lblSpot42.Name = "lblSpot42";
-            this.lblSpot42.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot42.TabIndex = 59;
-            this.lblSpot42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot42.AutoSize = true;
+            lblSpot42.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot42.Dock = DockStyle.Fill;
+            lblSpot42.Location = new Point(118, 450);
+            lblSpot42.Name = "lblSpot42";
+            lblSpot42.Size = new Size(109, 75);
+            lblSpot42.TabIndex = 59;
+            lblSpot42.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot43
             // 
-            this.lblSpot43.AutoSize = true;
-            this.lblSpot43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot43.Location = new System.Drawing.Point(233, 450);
-            this.lblSpot43.Name = "lblSpot43";
-            this.lblSpot43.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot43.TabIndex = 58;
-            this.lblSpot43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot43.AutoSize = true;
+            lblSpot43.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot43.Dock = DockStyle.Fill;
+            lblSpot43.Location = new Point(233, 450);
+            lblSpot43.Name = "lblSpot43";
+            lblSpot43.Size = new Size(109, 75);
+            lblSpot43.TabIndex = 58;
+            lblSpot43.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot44
             // 
-            this.lblSpot44.AutoSize = true;
-            this.lblSpot44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot44.Location = new System.Drawing.Point(348, 450);
-            this.lblSpot44.Name = "lblSpot44";
-            this.lblSpot44.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot44.TabIndex = 57;
-            this.lblSpot44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot44.AutoSize = true;
+            lblSpot44.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot44.Dock = DockStyle.Fill;
+            lblSpot44.Location = new Point(348, 450);
+            lblSpot44.Name = "lblSpot44";
+            lblSpot44.Size = new Size(109, 75);
+            lblSpot44.TabIndex = 57;
+            lblSpot44.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot45
             // 
-            this.lblSpot45.AutoSize = true;
-            this.lblSpot45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot45.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot45.Location = new System.Drawing.Point(463, 450);
-            this.lblSpot45.Name = "lblSpot45";
-            this.lblSpot45.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot45.TabIndex = 56;
-            this.lblSpot45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot45.AutoSize = true;
+            lblSpot45.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot45.Dock = DockStyle.Fill;
+            lblSpot45.Location = new Point(463, 450);
+            lblSpot45.Name = "lblSpot45";
+            lblSpot45.Size = new Size(109, 75);
+            lblSpot45.TabIndex = 56;
+            lblSpot45.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot46
             // 
-            this.lblSpot46.AutoSize = true;
-            this.lblSpot46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot46.Location = new System.Drawing.Point(578, 450);
-            this.lblSpot46.Name = "lblSpot46";
-            this.lblSpot46.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot46.TabIndex = 55;
-            this.lblSpot46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot46.AutoSize = true;
+            lblSpot46.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot46.Dock = DockStyle.Fill;
+            lblSpot46.Location = new Point(578, 450);
+            lblSpot46.Name = "lblSpot46";
+            lblSpot46.Size = new Size(109, 75);
+            lblSpot46.TabIndex = 55;
+            lblSpot46.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot47
             // 
-            this.lblSpot47.AutoSize = true;
-            this.lblSpot47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot47.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot47.Location = new System.Drawing.Point(693, 450);
-            this.lblSpot47.Name = "lblSpot47";
-            this.lblSpot47.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot47.TabIndex = 54;
-            this.lblSpot47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot47.AutoSize = true;
+            lblSpot47.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot47.Dock = DockStyle.Fill;
+            lblSpot47.Location = new Point(693, 450);
+            lblSpot47.Name = "lblSpot47";
+            lblSpot47.Size = new Size(109, 75);
+            lblSpot47.TabIndex = 54;
+            lblSpot47.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot48
             // 
-            this.lblSpot48.AutoSize = true;
-            this.lblSpot48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot48.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot48.Location = new System.Drawing.Point(808, 450);
-            this.lblSpot48.Name = "lblSpot48";
-            this.lblSpot48.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot48.TabIndex = 53;
-            this.lblSpot48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot48.AutoSize = true;
+            lblSpot48.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot48.Dock = DockStyle.Fill;
+            lblSpot48.Location = new Point(808, 450);
+            lblSpot48.Name = "lblSpot48";
+            lblSpot48.Size = new Size(109, 75);
+            lblSpot48.TabIndex = 53;
+            lblSpot48.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot49
             // 
-            this.lblSpot49.AutoSize = true;
-            this.lblSpot49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot49.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot49.Location = new System.Drawing.Point(923, 450);
-            this.lblSpot49.Name = "lblSpot49";
-            this.lblSpot49.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot49.TabIndex = 52;
-            this.lblSpot49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot49.AutoSize = true;
+            lblSpot49.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot49.Dock = DockStyle.Fill;
+            lblSpot49.Location = new Point(923, 450);
+            lblSpot49.Name = "lblSpot49";
+            lblSpot49.Size = new Size(109, 75);
+            lblSpot49.TabIndex = 52;
+            lblSpot49.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot50
             // 
-            this.lblSpot50.AutoSize = true;
-            this.lblSpot50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot50.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot50.Location = new System.Drawing.Point(1038, 450);
-            this.lblSpot50.Name = "lblSpot50";
-            this.lblSpot50.Size = new System.Drawing.Size(113, 75);
-            this.lblSpot50.TabIndex = 51;
-            this.lblSpot50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot50.AutoSize = true;
+            lblSpot50.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot50.Dock = DockStyle.Fill;
+            lblSpot50.Location = new Point(1038, 450);
+            lblSpot50.Name = "lblSpot50";
+            lblSpot50.Size = new Size(113, 75);
+            lblSpot50.TabIndex = 51;
+            lblSpot50.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot51
             // 
-            this.lblSpot51.AutoSize = true;
-            this.lblSpot51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tblSpots.SetColumnSpan(this.lblSpot51, 10);
-            this.lblSpot51.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot51.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSpot51.Location = new System.Drawing.Point(3, 375);
-            this.lblSpot51.Name = "lblSpot51";
-            this.lblSpot51.Size = new System.Drawing.Size(1148, 75);
-            this.lblSpot51.TabIndex = 50;
-            this.lblSpot51.Text = "AB";
-            this.lblSpot51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot51.AutoSize = true;
+            lblSpot51.BorderStyle = BorderStyle.FixedSingle;
+            tblSpots.SetColumnSpan(lblSpot51, 10);
+            lblSpot51.Dock = DockStyle.Fill;
+            lblSpot51.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSpot51.Location = new Point(3, 375);
+            lblSpot51.Name = "lblSpot51";
+            lblSpot51.Size = new Size(1148, 75);
+            lblSpot51.TabIndex = 50;
+            lblSpot51.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot61
             // 
-            this.lblSpot61.AutoSize = true;
-            this.lblSpot61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot61.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot61.Location = new System.Drawing.Point(1038, 300);
-            this.lblSpot61.Name = "lblSpot61";
-            this.lblSpot61.Size = new System.Drawing.Size(113, 75);
-            this.lblSpot61.TabIndex = 49;
-            this.lblSpot61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot61.AutoSize = true;
+            lblSpot61.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot61.Dock = DockStyle.Fill;
+            lblSpot61.Location = new Point(1038, 300);
+            lblSpot61.Name = "lblSpot61";
+            lblSpot61.Size = new Size(113, 75);
+            lblSpot61.TabIndex = 49;
+            lblSpot61.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot60
             // 
-            this.lblSpot60.AutoSize = true;
-            this.lblSpot60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot60.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot60.Location = new System.Drawing.Point(923, 300);
-            this.lblSpot60.Name = "lblSpot60";
-            this.lblSpot60.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot60.TabIndex = 48;
-            this.lblSpot60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot60.AutoSize = true;
+            lblSpot60.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot60.Dock = DockStyle.Fill;
+            lblSpot60.Location = new Point(923, 300);
+            lblSpot60.Name = "lblSpot60";
+            lblSpot60.Size = new Size(109, 75);
+            lblSpot60.TabIndex = 48;
+            lblSpot60.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot59
             // 
-            this.lblSpot59.AutoSize = true;
-            this.lblSpot59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot59.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot59.Location = new System.Drawing.Point(808, 300);
-            this.lblSpot59.Name = "lblSpot59";
-            this.lblSpot59.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot59.TabIndex = 47;
-            this.lblSpot59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot59.AutoSize = true;
+            lblSpot59.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot59.Dock = DockStyle.Fill;
+            lblSpot59.Location = new Point(808, 300);
+            lblSpot59.Name = "lblSpot59";
+            lblSpot59.Size = new Size(109, 75);
+            lblSpot59.TabIndex = 47;
+            lblSpot59.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot58
             // 
-            this.lblSpot58.AutoSize = true;
-            this.lblSpot58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot58.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot58.Location = new System.Drawing.Point(693, 300);
-            this.lblSpot58.Name = "lblSpot58";
-            this.lblSpot58.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot58.TabIndex = 46;
-            this.lblSpot58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot58.AutoSize = true;
+            lblSpot58.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot58.Dock = DockStyle.Fill;
+            lblSpot58.Location = new Point(693, 300);
+            lblSpot58.Name = "lblSpot58";
+            lblSpot58.Size = new Size(109, 75);
+            lblSpot58.TabIndex = 46;
+            lblSpot58.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot57
             // 
-            this.lblSpot57.AutoSize = true;
-            this.lblSpot57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot57.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot57.Location = new System.Drawing.Point(578, 300);
-            this.lblSpot57.Name = "lblSpot57";
-            this.lblSpot57.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot57.TabIndex = 45;
-            this.lblSpot57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot57.AutoSize = true;
+            lblSpot57.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot57.Dock = DockStyle.Fill;
+            lblSpot57.Location = new Point(578, 300);
+            lblSpot57.Name = "lblSpot57";
+            lblSpot57.Size = new Size(109, 75);
+            lblSpot57.TabIndex = 45;
+            lblSpot57.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot56
             // 
-            this.lblSpot56.AutoSize = true;
-            this.lblSpot56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot56.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot56.Location = new System.Drawing.Point(463, 300);
-            this.lblSpot56.Name = "lblSpot56";
-            this.lblSpot56.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot56.TabIndex = 44;
-            this.lblSpot56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot56.AutoSize = true;
+            lblSpot56.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot56.Dock = DockStyle.Fill;
+            lblSpot56.Location = new Point(463, 300);
+            lblSpot56.Name = "lblSpot56";
+            lblSpot56.Size = new Size(109, 75);
+            lblSpot56.TabIndex = 44;
+            lblSpot56.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot55
             // 
-            this.lblSpot55.AutoSize = true;
-            this.lblSpot55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot55.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot55.Location = new System.Drawing.Point(348, 300);
-            this.lblSpot55.Name = "lblSpot55";
-            this.lblSpot55.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot55.TabIndex = 43;
-            this.lblSpot55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot55.AutoSize = true;
+            lblSpot55.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot55.Dock = DockStyle.Fill;
+            lblSpot55.Location = new Point(348, 300);
+            lblSpot55.Name = "lblSpot55";
+            lblSpot55.Size = new Size(109, 75);
+            lblSpot55.TabIndex = 43;
+            lblSpot55.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot54
             // 
-            this.lblSpot54.AutoSize = true;
-            this.lblSpot54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot54.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot54.Location = new System.Drawing.Point(233, 300);
-            this.lblSpot54.Name = "lblSpot54";
-            this.lblSpot54.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot54.TabIndex = 42;
-            this.lblSpot54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot54.AutoSize = true;
+            lblSpot54.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot54.Dock = DockStyle.Fill;
+            lblSpot54.Location = new Point(233, 300);
+            lblSpot54.Name = "lblSpot54";
+            lblSpot54.Size = new Size(109, 75);
+            lblSpot54.TabIndex = 42;
+            lblSpot54.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot53
             // 
-            this.lblSpot53.AutoSize = true;
-            this.lblSpot53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot53.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot53.Location = new System.Drawing.Point(118, 300);
-            this.lblSpot53.Name = "lblSpot53";
-            this.lblSpot53.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot53.TabIndex = 41;
-            this.lblSpot53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot53.AutoSize = true;
+            lblSpot53.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot53.Dock = DockStyle.Fill;
+            lblSpot53.Location = new Point(118, 300);
+            lblSpot53.Name = "lblSpot53";
+            lblSpot53.Size = new Size(109, 75);
+            lblSpot53.TabIndex = 41;
+            lblSpot53.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot52
             // 
-            this.lblSpot52.AutoSize = true;
-            this.lblSpot52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot52.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot52.Location = new System.Drawing.Point(3, 300);
-            this.lblSpot52.Name = "lblSpot52";
-            this.lblSpot52.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot52.TabIndex = 40;
-            this.lblSpot52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot52.AutoSize = true;
+            lblSpot52.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot52.Dock = DockStyle.Fill;
+            lblSpot52.Location = new Point(3, 300);
+            lblSpot52.Name = "lblSpot52";
+            lblSpot52.Size = new Size(109, 75);
+            lblSpot52.TabIndex = 40;
+            lblSpot52.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot62
             // 
-            this.lblSpot62.AutoSize = true;
-            this.lblSpot62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot62.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot62.Location = new System.Drawing.Point(1038, 225);
-            this.lblSpot62.Name = "lblSpot62";
-            this.lblSpot62.Size = new System.Drawing.Size(113, 75);
-            this.lblSpot62.TabIndex = 39;
-            this.lblSpot62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot62.AutoSize = true;
+            lblSpot62.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot62.Dock = DockStyle.Fill;
+            lblSpot62.Location = new Point(1038, 225);
+            lblSpot62.Name = "lblSpot62";
+            lblSpot62.Size = new Size(113, 75);
+            lblSpot62.TabIndex = 39;
+            lblSpot62.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot63
             // 
-            this.lblSpot63.AutoSize = true;
-            this.lblSpot63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot63.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot63.Location = new System.Drawing.Point(923, 225);
-            this.lblSpot63.Name = "lblSpot63";
-            this.lblSpot63.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot63.TabIndex = 38;
-            this.lblSpot63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot63.AutoSize = true;
+            lblSpot63.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot63.Dock = DockStyle.Fill;
+            lblSpot63.Location = new Point(923, 225);
+            lblSpot63.Name = "lblSpot63";
+            lblSpot63.Size = new Size(109, 75);
+            lblSpot63.TabIndex = 38;
+            lblSpot63.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot64
             // 
-            this.lblSpot64.AutoSize = true;
-            this.lblSpot64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot64.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot64.Location = new System.Drawing.Point(808, 225);
-            this.lblSpot64.Name = "lblSpot64";
-            this.lblSpot64.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot64.TabIndex = 37;
-            this.lblSpot64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot64.AutoSize = true;
+            lblSpot64.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot64.Dock = DockStyle.Fill;
+            lblSpot64.Location = new Point(808, 225);
+            lblSpot64.Name = "lblSpot64";
+            lblSpot64.Size = new Size(109, 75);
+            lblSpot64.TabIndex = 37;
+            lblSpot64.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot65
             // 
-            this.lblSpot65.AutoSize = true;
-            this.lblSpot65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot65.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot65.Location = new System.Drawing.Point(693, 225);
-            this.lblSpot65.Name = "lblSpot65";
-            this.lblSpot65.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot65.TabIndex = 36;
-            this.lblSpot65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot65.AutoSize = true;
+            lblSpot65.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot65.Dock = DockStyle.Fill;
+            lblSpot65.Location = new Point(693, 225);
+            lblSpot65.Name = "lblSpot65";
+            lblSpot65.Size = new Size(109, 75);
+            lblSpot65.TabIndex = 36;
+            lblSpot65.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot66
             // 
-            this.lblSpot66.AutoSize = true;
-            this.lblSpot66.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot66.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot66.Location = new System.Drawing.Point(578, 225);
-            this.lblSpot66.Name = "lblSpot66";
-            this.lblSpot66.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot66.TabIndex = 35;
-            this.lblSpot66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot66.AutoSize = true;
+            lblSpot66.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot66.Dock = DockStyle.Fill;
+            lblSpot66.Location = new Point(578, 225);
+            lblSpot66.Name = "lblSpot66";
+            lblSpot66.Size = new Size(109, 75);
+            lblSpot66.TabIndex = 35;
+            lblSpot66.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot67
             // 
-            this.lblSpot67.AutoSize = true;
-            this.lblSpot67.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot67.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot67.Location = new System.Drawing.Point(463, 225);
-            this.lblSpot67.Name = "lblSpot67";
-            this.lblSpot67.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot67.TabIndex = 34;
-            this.lblSpot67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot67.AutoSize = true;
+            lblSpot67.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot67.Dock = DockStyle.Fill;
+            lblSpot67.Location = new Point(463, 225);
+            lblSpot67.Name = "lblSpot67";
+            lblSpot67.Size = new Size(109, 75);
+            lblSpot67.TabIndex = 34;
+            lblSpot67.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot68
             // 
-            this.lblSpot68.AutoSize = true;
-            this.lblSpot68.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot68.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot68.Location = new System.Drawing.Point(348, 225);
-            this.lblSpot68.Name = "lblSpot68";
-            this.lblSpot68.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot68.TabIndex = 33;
-            this.lblSpot68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot68.AutoSize = true;
+            lblSpot68.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot68.Dock = DockStyle.Fill;
+            lblSpot68.Location = new Point(348, 225);
+            lblSpot68.Name = "lblSpot68";
+            lblSpot68.Size = new Size(109, 75);
+            lblSpot68.TabIndex = 33;
+            lblSpot68.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot69
             // 
-            this.lblSpot69.AutoSize = true;
-            this.lblSpot69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot69.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot69.Location = new System.Drawing.Point(233, 225);
-            this.lblSpot69.Name = "lblSpot69";
-            this.lblSpot69.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot69.TabIndex = 32;
-            this.lblSpot69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot69.AutoSize = true;
+            lblSpot69.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot69.Dock = DockStyle.Fill;
+            lblSpot69.Location = new Point(233, 225);
+            lblSpot69.Name = "lblSpot69";
+            lblSpot69.Size = new Size(109, 75);
+            lblSpot69.TabIndex = 32;
+            lblSpot69.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot70
             // 
-            this.lblSpot70.AutoSize = true;
-            this.lblSpot70.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot70.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot70.Location = new System.Drawing.Point(118, 225);
-            this.lblSpot70.Name = "lblSpot70";
-            this.lblSpot70.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot70.TabIndex = 31;
-            this.lblSpot70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot70.AutoSize = true;
+            lblSpot70.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot70.Dock = DockStyle.Fill;
+            lblSpot70.Location = new Point(118, 225);
+            lblSpot70.Name = "lblSpot70";
+            lblSpot70.Size = new Size(109, 75);
+            lblSpot70.TabIndex = 31;
+            lblSpot70.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot71
             // 
-            this.lblSpot71.AutoSize = true;
-            this.lblSpot71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot71.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot71.Location = new System.Drawing.Point(3, 225);
-            this.lblSpot71.Name = "lblSpot71";
-            this.lblSpot71.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot71.TabIndex = 30;
-            this.lblSpot71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot71.AutoSize = true;
+            lblSpot71.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot71.Dock = DockStyle.Fill;
+            lblSpot71.Location = new Point(3, 225);
+            lblSpot71.Name = "lblSpot71";
+            lblSpot71.Size = new Size(109, 75);
+            lblSpot71.TabIndex = 30;
+            lblSpot71.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot81
             // 
-            this.lblSpot81.AutoSize = true;
-            this.lblSpot81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot81.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot81.Location = new System.Drawing.Point(1038, 150);
-            this.lblSpot81.Name = "lblSpot81";
-            this.lblSpot81.Size = new System.Drawing.Size(113, 75);
-            this.lblSpot81.TabIndex = 29;
-            this.lblSpot81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot81.AutoSize = true;
+            lblSpot81.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot81.Dock = DockStyle.Fill;
+            lblSpot81.Location = new Point(1038, 150);
+            lblSpot81.Name = "lblSpot81";
+            lblSpot81.Size = new Size(113, 75);
+            lblSpot81.TabIndex = 29;
+            lblSpot81.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot80
             // 
-            this.lblSpot80.AutoSize = true;
-            this.lblSpot80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot80.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot80.Location = new System.Drawing.Point(923, 150);
-            this.lblSpot80.Name = "lblSpot80";
-            this.lblSpot80.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot80.TabIndex = 28;
-            this.lblSpot80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot80.AutoSize = true;
+            lblSpot80.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot80.Dock = DockStyle.Fill;
+            lblSpot80.Location = new Point(923, 150);
+            lblSpot80.Name = "lblSpot80";
+            lblSpot80.Size = new Size(109, 75);
+            lblSpot80.TabIndex = 28;
+            lblSpot80.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot79
             // 
-            this.lblSpot79.AutoSize = true;
-            this.lblSpot79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot79.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot79.Location = new System.Drawing.Point(808, 150);
-            this.lblSpot79.Name = "lblSpot79";
-            this.lblSpot79.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot79.TabIndex = 27;
-            this.lblSpot79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot79.AutoSize = true;
+            lblSpot79.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot79.Dock = DockStyle.Fill;
+            lblSpot79.Location = new Point(808, 150);
+            lblSpot79.Name = "lblSpot79";
+            lblSpot79.Size = new Size(109, 75);
+            lblSpot79.TabIndex = 27;
+            lblSpot79.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot78
             // 
-            this.lblSpot78.AutoSize = true;
-            this.lblSpot78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot78.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot78.Location = new System.Drawing.Point(693, 150);
-            this.lblSpot78.Name = "lblSpot78";
-            this.lblSpot78.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot78.TabIndex = 26;
-            this.lblSpot78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot78.AutoSize = true;
+            lblSpot78.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot78.Dock = DockStyle.Fill;
+            lblSpot78.Location = new Point(693, 150);
+            lblSpot78.Name = "lblSpot78";
+            lblSpot78.Size = new Size(109, 75);
+            lblSpot78.TabIndex = 26;
+            lblSpot78.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot77
             // 
-            this.lblSpot77.AutoSize = true;
-            this.lblSpot77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot77.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot77.Location = new System.Drawing.Point(578, 150);
-            this.lblSpot77.Name = "lblSpot77";
-            this.lblSpot77.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot77.TabIndex = 25;
-            this.lblSpot77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot77.AutoSize = true;
+            lblSpot77.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot77.Dock = DockStyle.Fill;
+            lblSpot77.Location = new Point(578, 150);
+            lblSpot77.Name = "lblSpot77";
+            lblSpot77.Size = new Size(109, 75);
+            lblSpot77.TabIndex = 25;
+            lblSpot77.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot76
             // 
-            this.lblSpot76.AutoSize = true;
-            this.lblSpot76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot76.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot76.Location = new System.Drawing.Point(463, 150);
-            this.lblSpot76.Name = "lblSpot76";
-            this.lblSpot76.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot76.TabIndex = 24;
-            this.lblSpot76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot76.AutoSize = true;
+            lblSpot76.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot76.Dock = DockStyle.Fill;
+            lblSpot76.Location = new Point(463, 150);
+            lblSpot76.Name = "lblSpot76";
+            lblSpot76.Size = new Size(109, 75);
+            lblSpot76.TabIndex = 24;
+            lblSpot76.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot75
             // 
-            this.lblSpot75.AutoSize = true;
-            this.lblSpot75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot75.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot75.Location = new System.Drawing.Point(348, 150);
-            this.lblSpot75.Name = "lblSpot75";
-            this.lblSpot75.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot75.TabIndex = 23;
-            this.lblSpot75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot75.AutoSize = true;
+            lblSpot75.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot75.Dock = DockStyle.Fill;
+            lblSpot75.Location = new Point(348, 150);
+            lblSpot75.Name = "lblSpot75";
+            lblSpot75.Size = new Size(109, 75);
+            lblSpot75.TabIndex = 23;
+            lblSpot75.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot74
             // 
-            this.lblSpot74.AutoSize = true;
-            this.lblSpot74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot74.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot74.Location = new System.Drawing.Point(233, 150);
-            this.lblSpot74.Name = "lblSpot74";
-            this.lblSpot74.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot74.TabIndex = 22;
-            this.lblSpot74.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot74.AutoSize = true;
+            lblSpot74.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot74.Dock = DockStyle.Fill;
+            lblSpot74.Location = new Point(233, 150);
+            lblSpot74.Name = "lblSpot74";
+            lblSpot74.Size = new Size(109, 75);
+            lblSpot74.TabIndex = 22;
+            lblSpot74.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot73
             // 
-            this.lblSpot73.AutoSize = true;
-            this.lblSpot73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot73.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot73.Location = new System.Drawing.Point(118, 150);
-            this.lblSpot73.Name = "lblSpot73";
-            this.lblSpot73.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot73.TabIndex = 21;
-            this.lblSpot73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot73.AutoSize = true;
+            lblSpot73.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot73.Dock = DockStyle.Fill;
+            lblSpot73.Location = new Point(118, 150);
+            lblSpot73.Name = "lblSpot73";
+            lblSpot73.Size = new Size(109, 75);
+            lblSpot73.TabIndex = 21;
+            lblSpot73.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot72
             // 
-            this.lblSpot72.AutoSize = true;
-            this.lblSpot72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot72.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot72.Location = new System.Drawing.Point(3, 150);
-            this.lblSpot72.Name = "lblSpot72";
-            this.lblSpot72.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot72.TabIndex = 20;
-            this.lblSpot72.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot72.AutoSize = true;
+            lblSpot72.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot72.Dock = DockStyle.Fill;
+            lblSpot72.Location = new Point(3, 150);
+            lblSpot72.Name = "lblSpot72";
+            lblSpot72.Size = new Size(109, 75);
+            lblSpot72.TabIndex = 20;
+            lblSpot72.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot82
             // 
-            this.lblSpot82.AutoSize = true;
-            this.lblSpot82.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot82.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot82.Location = new System.Drawing.Point(1038, 75);
-            this.lblSpot82.Name = "lblSpot82";
-            this.lblSpot82.Size = new System.Drawing.Size(113, 75);
-            this.lblSpot82.TabIndex = 19;
-            this.lblSpot82.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot82.AutoSize = true;
+            lblSpot82.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot82.Dock = DockStyle.Fill;
+            lblSpot82.Location = new Point(1038, 75);
+            lblSpot82.Name = "lblSpot82";
+            lblSpot82.Size = new Size(113, 75);
+            lblSpot82.TabIndex = 19;
+            lblSpot82.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot83
             // 
-            this.lblSpot83.AutoSize = true;
-            this.lblSpot83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot83.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot83.Location = new System.Drawing.Point(923, 75);
-            this.lblSpot83.Name = "lblSpot83";
-            this.lblSpot83.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot83.TabIndex = 18;
-            this.lblSpot83.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot83.AutoSize = true;
+            lblSpot83.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot83.Dock = DockStyle.Fill;
+            lblSpot83.Location = new Point(923, 75);
+            lblSpot83.Name = "lblSpot83";
+            lblSpot83.Size = new Size(109, 75);
+            lblSpot83.TabIndex = 18;
+            lblSpot83.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot84
             // 
-            this.lblSpot84.AutoSize = true;
-            this.lblSpot84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot84.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot84.Location = new System.Drawing.Point(808, 75);
-            this.lblSpot84.Name = "lblSpot84";
-            this.lblSpot84.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot84.TabIndex = 17;
-            this.lblSpot84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot84.AutoSize = true;
+            lblSpot84.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot84.Dock = DockStyle.Fill;
+            lblSpot84.Location = new Point(808, 75);
+            lblSpot84.Name = "lblSpot84";
+            lblSpot84.Size = new Size(109, 75);
+            lblSpot84.TabIndex = 17;
+            lblSpot84.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot85
             // 
-            this.lblSpot85.AutoSize = true;
-            this.lblSpot85.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot85.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot85.Location = new System.Drawing.Point(693, 75);
-            this.lblSpot85.Name = "lblSpot85";
-            this.lblSpot85.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot85.TabIndex = 16;
-            this.lblSpot85.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot85.AutoSize = true;
+            lblSpot85.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot85.Dock = DockStyle.Fill;
+            lblSpot85.Location = new Point(693, 75);
+            lblSpot85.Name = "lblSpot85";
+            lblSpot85.Size = new Size(109, 75);
+            lblSpot85.TabIndex = 16;
+            lblSpot85.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot86
             // 
-            this.lblSpot86.AutoSize = true;
-            this.lblSpot86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot86.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot86.Location = new System.Drawing.Point(578, 75);
-            this.lblSpot86.Name = "lblSpot86";
-            this.lblSpot86.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot86.TabIndex = 15;
-            this.lblSpot86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot86.AutoSize = true;
+            lblSpot86.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot86.Dock = DockStyle.Fill;
+            lblSpot86.Location = new Point(578, 75);
+            lblSpot86.Name = "lblSpot86";
+            lblSpot86.Size = new Size(109, 75);
+            lblSpot86.TabIndex = 15;
+            lblSpot86.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot87
             // 
-            this.lblSpot87.AutoSize = true;
-            this.lblSpot87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot87.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot87.Location = new System.Drawing.Point(463, 75);
-            this.lblSpot87.Name = "lblSpot87";
-            this.lblSpot87.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot87.TabIndex = 14;
-            this.lblSpot87.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot87.AutoSize = true;
+            lblSpot87.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot87.Dock = DockStyle.Fill;
+            lblSpot87.Location = new Point(463, 75);
+            lblSpot87.Name = "lblSpot87";
+            lblSpot87.Size = new Size(109, 75);
+            lblSpot87.TabIndex = 14;
+            lblSpot87.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot88
             // 
-            this.lblSpot88.AutoSize = true;
-            this.lblSpot88.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot88.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot88.Location = new System.Drawing.Point(348, 75);
-            this.lblSpot88.Name = "lblSpot88";
-            this.lblSpot88.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot88.TabIndex = 13;
-            this.lblSpot88.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot88.AutoSize = true;
+            lblSpot88.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot88.Dock = DockStyle.Fill;
+            lblSpot88.Location = new Point(348, 75);
+            lblSpot88.Name = "lblSpot88";
+            lblSpot88.Size = new Size(109, 75);
+            lblSpot88.TabIndex = 13;
+            lblSpot88.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot89
             // 
-            this.lblSpot89.AutoSize = true;
-            this.lblSpot89.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot89.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot89.Location = new System.Drawing.Point(233, 75);
-            this.lblSpot89.Name = "lblSpot89";
-            this.lblSpot89.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot89.TabIndex = 12;
-            this.lblSpot89.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot89.AutoSize = true;
+            lblSpot89.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot89.Dock = DockStyle.Fill;
+            lblSpot89.Location = new Point(233, 75);
+            lblSpot89.Name = "lblSpot89";
+            lblSpot89.Size = new Size(109, 75);
+            lblSpot89.TabIndex = 12;
+            lblSpot89.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot90
             // 
-            this.lblSpot90.AutoSize = true;
-            this.lblSpot90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot90.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot90.Location = new System.Drawing.Point(118, 75);
-            this.lblSpot90.Name = "lblSpot90";
-            this.lblSpot90.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot90.TabIndex = 11;
-            this.lblSpot90.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot90.AutoSize = true;
+            lblSpot90.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot90.Dock = DockStyle.Fill;
+            lblSpot90.Location = new Point(118, 75);
+            lblSpot90.Name = "lblSpot90";
+            lblSpot90.Size = new Size(109, 75);
+            lblSpot90.TabIndex = 11;
+            lblSpot90.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot91
             // 
-            this.lblSpot91.AutoSize = true;
-            this.lblSpot91.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot91.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot91.Location = new System.Drawing.Point(3, 75);
-            this.lblSpot91.Name = "lblSpot91";
-            this.lblSpot91.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot91.TabIndex = 10;
-            this.lblSpot91.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot91.AutoSize = true;
+            lblSpot91.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot91.Dock = DockStyle.Fill;
+            lblSpot91.Location = new Point(3, 75);
+            lblSpot91.Name = "lblSpot91";
+            lblSpot91.Size = new Size(109, 75);
+            lblSpot91.TabIndex = 10;
+            lblSpot91.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot101
             // 
-            this.lblSpot101.AutoSize = true;
-            this.lblSpot101.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot101.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot101.Location = new System.Drawing.Point(1038, 0);
-            this.lblSpot101.Name = "lblSpot101";
-            this.lblSpot101.Size = new System.Drawing.Size(113, 75);
-            this.lblSpot101.TabIndex = 9;
-            this.lblSpot101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot101.AutoSize = true;
+            lblSpot101.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot101.Dock = DockStyle.Fill;
+            lblSpot101.Location = new Point(1038, 0);
+            lblSpot101.Name = "lblSpot101";
+            lblSpot101.Size = new Size(113, 75);
+            lblSpot101.TabIndex = 9;
+            lblSpot101.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot100
             // 
-            this.lblSpot100.AutoSize = true;
-            this.lblSpot100.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot100.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot100.Location = new System.Drawing.Point(923, 0);
-            this.lblSpot100.Name = "lblSpot100";
-            this.lblSpot100.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot100.TabIndex = 8;
-            this.lblSpot100.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot100.AutoSize = true;
+            lblSpot100.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot100.Dock = DockStyle.Fill;
+            lblSpot100.Location = new Point(923, 0);
+            lblSpot100.Name = "lblSpot100";
+            lblSpot100.Size = new Size(109, 75);
+            lblSpot100.TabIndex = 8;
+            lblSpot100.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot99
             // 
-            this.lblSpot99.AutoSize = true;
-            this.lblSpot99.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot99.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot99.Location = new System.Drawing.Point(808, 0);
-            this.lblSpot99.Name = "lblSpot99";
-            this.lblSpot99.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot99.TabIndex = 7;
-            this.lblSpot99.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot99.AutoSize = true;
+            lblSpot99.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot99.Dock = DockStyle.Fill;
+            lblSpot99.Location = new Point(808, 0);
+            lblSpot99.Name = "lblSpot99";
+            lblSpot99.Size = new Size(109, 75);
+            lblSpot99.TabIndex = 7;
+            lblSpot99.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot98
             // 
-            this.lblSpot98.AutoSize = true;
-            this.lblSpot98.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot98.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot98.Location = new System.Drawing.Point(693, 0);
-            this.lblSpot98.Name = "lblSpot98";
-            this.lblSpot98.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot98.TabIndex = 6;
-            this.lblSpot98.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot98.AutoSize = true;
+            lblSpot98.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot98.Dock = DockStyle.Fill;
+            lblSpot98.Location = new Point(693, 0);
+            lblSpot98.Name = "lblSpot98";
+            lblSpot98.Size = new Size(109, 75);
+            lblSpot98.TabIndex = 6;
+            lblSpot98.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot97
             // 
-            this.lblSpot97.AutoSize = true;
-            this.lblSpot97.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot97.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot97.Location = new System.Drawing.Point(578, 0);
-            this.lblSpot97.Name = "lblSpot97";
-            this.lblSpot97.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot97.TabIndex = 5;
-            this.lblSpot97.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot97.AutoSize = true;
+            lblSpot97.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot97.Dock = DockStyle.Fill;
+            lblSpot97.Location = new Point(578, 0);
+            lblSpot97.Name = "lblSpot97";
+            lblSpot97.Size = new Size(109, 75);
+            lblSpot97.TabIndex = 5;
+            lblSpot97.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot96
             // 
-            this.lblSpot96.AutoSize = true;
-            this.lblSpot96.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot96.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot96.Location = new System.Drawing.Point(463, 0);
-            this.lblSpot96.Name = "lblSpot96";
-            this.lblSpot96.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot96.TabIndex = 4;
-            this.lblSpot96.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot96.AutoSize = true;
+            lblSpot96.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot96.Dock = DockStyle.Fill;
+            lblSpot96.Location = new Point(463, 0);
+            lblSpot96.Name = "lblSpot96";
+            lblSpot96.Size = new Size(109, 75);
+            lblSpot96.TabIndex = 4;
+            lblSpot96.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot95
             // 
-            this.lblSpot95.AutoSize = true;
-            this.lblSpot95.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot95.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot95.Location = new System.Drawing.Point(348, 0);
-            this.lblSpot95.Name = "lblSpot95";
-            this.lblSpot95.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot95.TabIndex = 3;
-            this.lblSpot95.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot95.AutoSize = true;
+            lblSpot95.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot95.Dock = DockStyle.Fill;
+            lblSpot95.Location = new Point(348, 0);
+            lblSpot95.Name = "lblSpot95";
+            lblSpot95.Size = new Size(109, 75);
+            lblSpot95.TabIndex = 3;
+            lblSpot95.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot94
             // 
-            this.lblSpot94.AutoSize = true;
-            this.lblSpot94.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot94.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot94.Location = new System.Drawing.Point(233, 0);
-            this.lblSpot94.Name = "lblSpot94";
-            this.lblSpot94.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot94.TabIndex = 2;
-            this.lblSpot94.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot94.AutoSize = true;
+            lblSpot94.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot94.Dock = DockStyle.Fill;
+            lblSpot94.Location = new Point(233, 0);
+            lblSpot94.Name = "lblSpot94";
+            lblSpot94.Size = new Size(109, 75);
+            lblSpot94.TabIndex = 2;
+            lblSpot94.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot93
             // 
-            this.lblSpot93.AutoSize = true;
-            this.lblSpot93.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot93.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot93.Location = new System.Drawing.Point(118, 0);
-            this.lblSpot93.Name = "lblSpot93";
-            this.lblSpot93.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot93.TabIndex = 1;
-            this.lblSpot93.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSpot93.AutoSize = true;
+            lblSpot93.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot93.Dock = DockStyle.Fill;
+            lblSpot93.Location = new Point(118, 0);
+            lblSpot93.Name = "lblSpot93";
+            lblSpot93.Size = new Size(109, 75);
+            lblSpot93.TabIndex = 1;
+            lblSpot93.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSpot92
             // 
-            this.lblSpot92.AutoSize = true;
-            this.lblSpot92.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSpot92.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSpot92.Location = new System.Drawing.Point(3, 0);
-            this.lblSpot92.Name = "lblSpot92";
-            this.lblSpot92.Size = new System.Drawing.Size(109, 75);
-            this.lblSpot92.TabIndex = 0;
-            this.lblSpot92.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCopyright
-            // 
-            this.lblCopyright.AutoSize = true;
-            this.lblCopyright.BackColor = System.Drawing.Color.Gainsboro;
-            this.tblMain.SetColumnSpan(this.lblCopyright, 2);
-            this.lblCopyright.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCopyright.Location = new System.Drawing.Point(3, 944);
-            this.lblCopyright.Name = "lblCopyright";
-            this.lblCopyright.Size = new System.Drawing.Size(872, 106);
-            this.lblCopyright.TabIndex = 5;
-            this.lblCopyright.Text = "© Copyright 2022 by Shmiel Minz";
-            this.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tblCards
-            // 
-            this.tblCards.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tblCards.ColumnCount = 1;
-            this.tblCards.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblCards.Controls.Add(this.tblPlayer1, 0, 0);
-            this.tblCards.Controls.Add(this.tblPlayer2, 0, 1);
-            this.tblCards.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblCards.Location = new System.Drawing.Point(1460, 3);
-            this.tblCards.Name = "tblCards";
-            this.tblCards.RowCount = 2;
-            this.tblMain.SetRowSpan(this.tblCards, 4);
-            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblCards.Size = new System.Drawing.Size(461, 1044);
-            this.tblCards.TabIndex = 7;
-            // 
-            // tblPlayer1
-            // 
-            this.tblPlayer1.BackColor = System.Drawing.SystemColors.Control;
-            this.tblPlayer1.ColumnCount = 1;
-            this.tblPlayer1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblPlayer1.Controls.Add(this.lblDiceOrCardPlayer1, 0, 1);
-            this.tblPlayer1.Controls.Add(this.lblPlayer1, 0, 0);
-            this.tblPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblPlayer1.Location = new System.Drawing.Point(3, 3);
-            this.tblPlayer1.Name = "tblPlayer1";
-            this.tblPlayer1.RowCount = 4;
-            this.tblPlayer1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblPlayer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblPlayer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tblPlayer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblPlayer1.Size = new System.Drawing.Size(455, 516);
-            this.tblPlayer1.TabIndex = 0;
-            // 
-            // lblDiceOrCardPlayer1
-            // 
-            this.lblDiceOrCardPlayer1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDiceOrCardPlayer1.AutoSize = true;
-            this.lblDiceOrCardPlayer1.Location = new System.Drawing.Point(227, 80);
-            this.lblDiceOrCardPlayer1.Name = "lblDiceOrCardPlayer1";
-            this.lblDiceOrCardPlayer1.Size = new System.Drawing.Size(0, 38);
-            this.lblDiceOrCardPlayer1.TabIndex = 0;
-            // 
-            // lblPlayer1
-            // 
-            this.lblPlayer1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPlayer1.AutoSize = true;
-            this.lblPlayer1.Location = new System.Drawing.Point(168, 10);
-            this.lblPlayer1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 5);
-            this.lblPlayer1.Name = "lblPlayer1";
-            this.lblPlayer1.Size = new System.Drawing.Size(119, 38);
-            this.lblPlayer1.TabIndex = 1;
-            this.lblPlayer1.Text = "Player A";
-            // 
-            // tblPlayer2
-            // 
-            this.tblPlayer2.BackColor = System.Drawing.SystemColors.Control;
-            this.tblPlayer2.ColumnCount = 1;
-            this.tblPlayer2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblPlayer2.Controls.Add(this.lblDiceOrCardPlayer2, 0, 1);
-            this.tblPlayer2.Controls.Add(this.lblPlayer2, 0, 0);
-            this.tblPlayer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblPlayer2.Location = new System.Drawing.Point(3, 525);
-            this.tblPlayer2.Name = "tblPlayer2";
-            this.tblPlayer2.RowCount = 4;
-            this.tblPlayer2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblPlayer2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblPlayer2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tblPlayer2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblPlayer2.Size = new System.Drawing.Size(455, 516);
-            this.tblPlayer2.TabIndex = 1;
-            // 
-            // lblDiceOrCardPlayer2
-            // 
-            this.lblDiceOrCardPlayer2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDiceOrCardPlayer2.AutoSize = true;
-            this.lblDiceOrCardPlayer2.Location = new System.Drawing.Point(227, 80);
-            this.lblDiceOrCardPlayer2.Name = "lblDiceOrCardPlayer2";
-            this.lblDiceOrCardPlayer2.Size = new System.Drawing.Size(0, 38);
-            this.lblDiceOrCardPlayer2.TabIndex = 1;
-            // 
-            // lblPlayer2
-            // 
-            this.lblPlayer2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPlayer2.AutoSize = true;
-            this.lblPlayer2.Location = new System.Drawing.Point(169, 10);
-            this.lblPlayer2.Margin = new System.Windows.Forms.Padding(3, 10, 3, 5);
-            this.lblPlayer2.Name = "lblPlayer2";
-            this.lblPlayer2.Size = new System.Drawing.Size(117, 38);
-            this.lblPlayer2.TabIndex = 2;
-            this.lblPlayer2.Text = "Player B";
-            // 
-            // btnHelp
-            // 
-            this.btnHelp.BackColor = System.Drawing.Color.LightGray;
-            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHelp.Location = new System.Drawing.Point(881, 947);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(433, 100);
-            this.btnHelp.TabIndex = 6;
-            this.btnHelp.Text = "Help";
-            this.btnHelp.UseVisualStyleBackColor = false;
-            // 
-            // btnRestart
-            // 
-            this.btnRestart.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnRestart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRestart.Location = new System.Drawing.Point(1320, 947);
-            this.btnRestart.Name = "btnRestart";
-            this.btnRestart.Size = new System.Drawing.Size(134, 100);
-            this.btnRestart.TabIndex = 8;
-            this.btnRestart.Text = "Restart";
-            this.btnRestart.UseVisualStyleBackColor = false;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel1.TabIndex = 0;
+            lblSpot92.AutoSize = true;
+            lblSpot92.BorderStyle = BorderStyle.FixedSingle;
+            lblSpot92.Dock = DockStyle.Fill;
+            lblSpot92.Location = new Point(3, 0);
+            lblSpot92.Name = "lblSpot92";
+            lblSpot92.Size = new Size(109, 75);
+            lblSpot92.TabIndex = 0;
+            lblSpot92.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblDirection80_90
             // 
-            this.lblDirection80_90.AutoSize = true;
-            this.lblDirection80_90.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDirection80_90.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDirection80_90.Location = new System.Drawing.Point(3, 0);
-            this.lblDirection80_90.Name = "lblDirection80_90";
-            this.tblGame.SetRowSpan(this.lblDirection80_90, 2);
-            this.lblDirection80_90.Size = new System.Drawing.Size(139, 150);
-            this.lblDirection80_90.TabIndex = 123;
-            this.lblDirection80_90.Text = "↪️";
-            this.lblDirection80_90.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblDirection80_90.AutoSize = true;
+            lblDirection80_90.Dock = DockStyle.Fill;
+            lblDirection80_90.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDirection80_90.Location = new Point(3, 0);
+            lblDirection80_90.Name = "lblDirection80_90";
+            tblGame.SetRowSpan(lblDirection80_90, 2);
+            lblDirection80_90.Size = new Size(139, 150);
+            lblDirection80_90.TabIndex = 123;
+            lblDirection80_90.Text = "↪️";
+            lblDirection80_90.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lblCopyright
+            // 
+            lblCopyright.AutoSize = true;
+            lblCopyright.BackColor = Color.Gainsboro;
+            tblMain.SetColumnSpan(lblCopyright, 2);
+            lblCopyright.Dock = DockStyle.Fill;
+            lblCopyright.Location = new Point(3, 944);
+            lblCopyright.Name = "lblCopyright";
+            lblCopyright.Size = new Size(872, 106);
+            lblCopyright.TabIndex = 5;
+            lblCopyright.Text = "© Copyright 2022 by Shmiel Minz";
+            lblCopyright.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // tblCards
+            // 
+            tblCards.BackColor = SystemColors.ActiveCaptionText;
+            tblCards.ColumnCount = 1;
+            tblCards.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tblCards.Controls.Add(tblPlayer1, 0, 0);
+            tblCards.Controls.Add(tblPlayer2, 0, 1);
+            tblCards.Dock = DockStyle.Fill;
+            tblCards.Location = new Point(1460, 3);
+            tblCards.Name = "tblCards";
+            tblCards.RowCount = 2;
+            tblMain.SetRowSpan(tblCards, 4);
+            tblCards.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tblCards.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tblCards.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tblCards.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tblCards.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tblCards.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tblCards.Size = new Size(461, 1044);
+            tblCards.TabIndex = 7;
+            // 
+            // tblPlayer1
+            // 
+            tblPlayer1.BackColor = SystemColors.Control;
+            tblPlayer1.ColumnCount = 1;
+            tblPlayer1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tblPlayer1.Controls.Add(lblDiceOrCardPlayer1, 0, 1);
+            tblPlayer1.Controls.Add(lblPlayer1, 0, 0);
+            tblPlayer1.Dock = DockStyle.Fill;
+            tblPlayer1.Location = new Point(3, 3);
+            tblPlayer1.Name = "tblPlayer1";
+            tblPlayer1.RowCount = 4;
+            tblPlayer1.RowStyles.Add(new RowStyle());
+            tblPlayer1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tblPlayer1.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
+            tblPlayer1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tblPlayer1.Size = new Size(455, 516);
+            tblPlayer1.TabIndex = 0;
+            // 
+            // lblDiceOrCardPlayer1
+            // 
+            lblDiceOrCardPlayer1.Anchor = AnchorStyles.None;
+            lblDiceOrCardPlayer1.AutoSize = true;
+            lblDiceOrCardPlayer1.Location = new Point(227, 80);
+            lblDiceOrCardPlayer1.Name = "lblDiceOrCardPlayer1";
+            lblDiceOrCardPlayer1.Size = new Size(0, 38);
+            lblDiceOrCardPlayer1.TabIndex = 0;
+            // 
+            // lblPlayer1
+            // 
+            lblPlayer1.Anchor = AnchorStyles.None;
+            lblPlayer1.AutoSize = true;
+            lblPlayer1.Location = new Point(168, 10);
+            lblPlayer1.Margin = new Padding(3, 10, 3, 5);
+            lblPlayer1.Name = "lblPlayer1";
+            lblPlayer1.Size = new Size(119, 38);
+            lblPlayer1.TabIndex = 1;
+            lblPlayer1.Text = "Player A";
+            // 
+            // tblPlayer2
+            // 
+            tblPlayer2.BackColor = SystemColors.Control;
+            tblPlayer2.ColumnCount = 1;
+            tblPlayer2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tblPlayer2.Controls.Add(lblDiceOrCardPlayer2, 0, 1);
+            tblPlayer2.Controls.Add(lblPlayer2, 0, 0);
+            tblPlayer2.Dock = DockStyle.Fill;
+            tblPlayer2.Location = new Point(3, 525);
+            tblPlayer2.Name = "tblPlayer2";
+            tblPlayer2.RowCount = 4;
+            tblPlayer2.RowStyles.Add(new RowStyle());
+            tblPlayer2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tblPlayer2.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
+            tblPlayer2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tblPlayer2.Size = new Size(455, 516);
+            tblPlayer2.TabIndex = 1;
+            // 
+            // lblDiceOrCardPlayer2
+            // 
+            lblDiceOrCardPlayer2.Anchor = AnchorStyles.None;
+            lblDiceOrCardPlayer2.AutoSize = true;
+            lblDiceOrCardPlayer2.Location = new Point(227, 80);
+            lblDiceOrCardPlayer2.Name = "lblDiceOrCardPlayer2";
+            lblDiceOrCardPlayer2.Size = new Size(0, 38);
+            lblDiceOrCardPlayer2.TabIndex = 1;
+            // 
+            // lblPlayer2
+            // 
+            lblPlayer2.Anchor = AnchorStyles.None;
+            lblPlayer2.AutoSize = true;
+            lblPlayer2.Location = new Point(169, 10);
+            lblPlayer2.Margin = new Padding(3, 10, 3, 5);
+            lblPlayer2.Name = "lblPlayer2";
+            lblPlayer2.Size = new Size(117, 38);
+            lblPlayer2.TabIndex = 2;
+            lblPlayer2.Text = "Player B";
+            // 
+            // btnHelp
+            // 
+            btnHelp.BackColor = Color.LightGray;
+            btnHelp.Dock = DockStyle.Fill;
+            btnHelp.Location = new Point(881, 947);
+            btnHelp.Name = "btnHelp";
+            btnHelp.Size = new Size(433, 100);
+            btnHelp.TabIndex = 6;
+            btnHelp.Text = "Help";
+            btnHelp.UseVisualStyleBackColor = false;
+            // 
+            // btnRestart
+            // 
+            btnRestart.BackColor = Color.RosyBrown;
+            btnRestart.Dock = DockStyle.Fill;
+            btnRestart.Location = new Point(1320, 947);
+            btnRestart.Name = "btnRestart";
+            btnRestart.Size = new Size(134, 100);
+            btnRestart.TabIndex = 8;
+            btnRestart.Text = "Restart";
+            btnRestart.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.BackColor = SystemColors.ActiveCaption;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(200, 100);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // frmBeatTheStorm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 38F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1050);
-            this.Controls.Add(this.tblMain);
-            this.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmBeatTheStorm";
-            this.Text = "Beat The Storm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.tblMain.ResumeLayout(false);
-            this.tblMain.PerformLayout();
-            this.pnlPlayers.ResumeLayout(false);
-            this.pnlPlayers.PerformLayout();
-            this.pnlPlayingModes.ResumeLayout(false);
-            this.pnlPlayingModes.PerformLayout();
-            this.tblGame.ResumeLayout(false);
-            this.tblGame.PerformLayout();
-            this.tblSpots.ResumeLayout(false);
-            this.tblSpots.PerformLayout();
-            this.tblCards.ResumeLayout(false);
-            this.tblPlayer1.ResumeLayout(false);
-            this.tblPlayer1.PerformLayout();
-            this.tblPlayer2.ResumeLayout(false);
-            this.tblPlayer2.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(15F, 38F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1924, 1050);
+            Controls.Add(tblMain);
+            Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "frmBeatTheStorm";
+            Text = "Beat The Storm";
+            WindowState = FormWindowState.Maximized;
+            tblMain.ResumeLayout(false);
+            tblMain.PerformLayout();
+            pnlPlayers.ResumeLayout(false);
+            pnlPlayers.PerformLayout();
+            pnlPlayingModes.ResumeLayout(false);
+            pnlPlayingModes.PerformLayout();
+            tblGame.ResumeLayout(false);
+            tblGame.PerformLayout();
+            tblSpots.ResumeLayout(false);
+            tblSpots.PerformLayout();
+            tblCards.ResumeLayout(false);
+            tblPlayer1.ResumeLayout(false);
+            tblPlayer1.PerformLayout();
+            tblPlayer2.ResumeLayout(false);
+            tblPlayer2.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

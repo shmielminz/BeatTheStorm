@@ -8,13 +8,15 @@ namespace BeatTheStormApp
         string imagepath = Application.StartupPath + @"Images\";
         Game game = new();
         List<RadioButton> optbtns = new();
+        List<Label> lstspots;
         bool checkedhandled = false;
         PictureBox picDicePlayer1 = new() { Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.CenterImage };
         PictureBox picDicePlayer2 = new() { Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.CenterImage };
         PictureBox picCardPlayer1 = new() { Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.Zoom };
         PictureBox picCardPlayer2 = new() { Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.Zoom };
-        
-        public frmBeatTheStorm()
+        public bool start = false;
+
+        public frmBeatTheStorm(bool startgame = false)
         {
             InitializeComponent();
             btnStart.Click += BtnStart_Click;
@@ -36,67 +38,65 @@ namespace BeatTheStormApp
                 }
             }
             optbtns.ForEach(o => o.CheckedChanged += Opt_CheckedChanged);
-            lblPlayer1.Text = "Player " + PlayerEnum.A;
-            lblPlayer2.Text = "Player " + PlayerEnum.B;
+            lblPlayer1.DataBindings.Add("Text", game, "GameStatusDescription");
+            lstspots = new() {
+                lblSpot1, lblSpot2, lblSpot3, lblSpot4, lblSpot5, lblSpot6, lblSpot7, lblSpot8, lblSpot9, lblSpot10,
+                lblSpot11, lblSpot12, lblSpot13, lblSpot14, lblSpot15, lblSpot16, lblSpot17, lblSpot18, lblSpot19, lblSpot20,
+                lblSpot21, lblSpot22, lblSpot23, lblSpot24, lblSpot25, lblSpot26, lblSpot27, lblSpot28, lblSpot29, lblSpot30,
+                lblSpot31, lblSpot32, lblSpot33, lblSpot34, lblSpot35, lblSpot36, lblSpot37, lblSpot38, lblSpot39, lblSpot40,
+                lblSpot41, lblSpot42, lblSpot43, lblSpot44, lblSpot45, lblSpot46, lblSpot47, lblSpot48, lblSpot49, lblSpot50,
+                lblSpot51, lblSpot52, lblSpot53, lblSpot54, lblSpot55, lblSpot56, lblSpot57, lblSpot58, lblSpot59, lblSpot60,
+                lblSpot61, lblSpot62, lblSpot63, lblSpot64, lblSpot65, lblSpot66, lblSpot67, lblSpot68, lblSpot69, lblSpot70,
+                lblSpot71, lblSpot72, lblSpot73, lblSpot74, lblSpot75, lblSpot76, lblSpot77, lblSpot78, lblSpot79, lblSpot80,
+                lblSpot81, lblSpot82, lblSpot83, lblSpot84, lblSpot85, lblSpot86, lblSpot87, lblSpot88, lblSpot89, lblSpot90,
+                lblSpot91, lblSpot92, lblSpot93, lblSpot94, lblSpot95, lblSpot96, lblSpot97, lblSpot98, lblSpot99, lblSpot100, lblSpot101
+            };
+            lstspots.ForEach(l =>
+            {
+                Spot spot = game.Spots[lstspots.IndexOf(l)];
+                l.DataBindings.Add("Text", spot, "SpotPlayerDescription");
+            });
+            start = startgame;
+            //lblPlayer2.Text = "Player " + PlayerEnum.B;
         }
 
 
         private void DoTurn()
         {
-            if (gamestatus == GameStatusEnum.Playing)
-            {
-                if (player == PlayerEnum.A)
-                {
-                    picCardPlayer1.ImageLocation = imagepath + game.PlayingCard + ".jpg";
-                }
-                else if (player == PlayerEnum.B)
-                {
-                    picCardPlayer2.ImageLocation = imagepath + game.PlayingCard + ".jpg";
-                }
-                
-            }
-
-            if (gamestatus == GameStatusEnum.Playing)
-            {
-                if (player == PlayerEnum.A)
-                {
-                    tblPlayer2.BackColor = Color.AliceBlue;
-                    tblPlayer1.BackColor = DefaultBackColor;
-                    lblDiceOrCardPlayer1.Text = $"Player {game.CurrentPlayer.PlayerName} turn";
-                    lblDiceOrCardPlayer2.Text = game.GameStatusDescription;
-                }
-                else
-                {
-                    tblPlayer1.BackColor = Color.AliceBlue;
-                    tblPlayer2.BackColor = DefaultBackColor;
-                    lblDiceOrCardPlayer2.Text = $"Player {game.CurrentPlayer.PlayerName} turn";
-                    lblDiceOrCardPlayer1.Text = game.GameStatusDescription;
-                }
-            }
-
-            dicerolled = false;
+            game.DoTurn();
+            picCardPlayer1.ImageLocation = imagepath + game.PlayingCard + ".jpg";
+            picCardPlayer2.ImageLocation = imagepath + game.PreviousCard + ".jpg";
+            picDicePlayer1.ImageLocation = imagepath + "dice" + game.DiceValue + ".jpg";
+            picDicePlayer2.ImageLocation = imagepath + "dice" + game.PreviousDice + ".jpg";
         }
 
         private void RollDice()
         {
-            if (gamemode == GameModeEnum.DiceWithRandomCard && gamestatus == GameStatusEnum.Playing && !dicerolled)
+            game.RollDice();
+            picDicePlayer1.ImageLocation = imagepath + "dice" + game.DiceValue + ".jpg";
+            picDicePlayer2.ImageLocation = imagepath + "dice" + game.PreviousDice + ".jpg";
+        }
+
+        private void AddPlayersToGame()
+        {
+            foreach (Form f in Application.OpenForms)
             {
-                if (player == PlayerEnum.A)
+                if (f.GetType() == typeof(frmSettings))
                 {
-                    picDicePlayer1.ImageLocation = imagepath + "dice" + game.DiceValue + ".jpg";
-                }
-                else if (player == PlayerEnum.B)
-                {
-                    picDicePlayer2.ImageLocation = imagepath + "dice" + dice.ToString() + ".jpg";
+                    frmSettings frm = (frmSettings)f;
+                    game.AddPlayer(new() { PlayerName = frm.player1name, PlayingPiece = frm.player1piece });
+                    game.AddPlayer(new() { PlayerName = frm.player2name, PlayingPiece = frm.player2piece });
                 }
             }
         }
 
         private void StartGame()
         {
-            game.StartGame();
-            game.GameMode = optModeCardOnly.Checked ? GameModeEnum.CardOnly : GameModeEnum.DiceWithRandomCard;
-            game.PlayAgainstComputer = optPlayComputer.Checked;
+            //game.AddPlayer(new() { PlayerName = "Sam", PlayingPiece = "I" });
+            //game.AddPlayer(new() { PlayerName = "Mike", PlayingPiece = "J" });
+            AddPlayersToGame();
+            game.StartGame(optPlayComputer.Checked, optModeCardOnly.Checked ? GameModeEnum.CardOnly : GameModeEnum.DiceWithRandomCard);
+            
             lblStatus.Text = game.GameMode == GameModeEnum.CardOnly ? "Click on card deck to pick a card." : "Throw the dice by clicking on dice";
 
             switch (game.GameMode)
@@ -115,12 +115,8 @@ namespace BeatTheStormApp
                     break;
             }
 
-            lblDiceOrCardPlayer1.Text = $"Player {game.CurrentPlayer.PlayerName} ";
-            lblDiceOrCardPlayer1.Text += game.GameMode == GameModeEnum.CardOnly ? "Pick a Card" : "Throw the Dice";
-            lblDiceOrCardPlayer2.Text = $"Player {game.CurrentPlayer.PlayerName} turn";
-            
             picCardPlayer1.ImageLocation = imagepath + "Hashomrimback.jpg";
-            
+
             picCardPlayer2.ImageLocation = imagepath + "Hashomrimback.jpg";
             if (game.GameMode == GameModeEnum.DiceWithRandomCard)
             {
@@ -141,14 +137,6 @@ namespace BeatTheStormApp
         {
             lblStatus.Text = "Choose playing mode and click start";
             game.RestartGame();
-            picDicePlayer1.Image = null;
-            picCardPlayer1.Image = null;
-            picDicePlayer2.Image = null;
-            picCardPlayer2.Image = null;
-            lblDiceOrCardPlayer1.Text = "";
-            lblDiceOrCardPlayer2.Text = "";
-            picCardPlayer2.Enabled = true;
-            picDicePlayer2.Enabled = true;
         }
 
         private void RadioButtonControl(RadioButton opt)
@@ -179,7 +167,14 @@ namespace BeatTheStormApp
 
         private void BtnStart_Click(object? sender, EventArgs e)
         {
-            StartGame();
+            if (this.MdiParent != null && this.MdiParent is frmMain)
+            {
+                ((frmMain)this.MdiParent).OpenForm(typeof(frmSettings), start, optMultiplePlayers.Checked);
+            }
+            if (start)
+            {
+                StartGame();
+            }
         }
 
         private void Opt_CheckedChanged(object? sender, EventArgs e)
@@ -198,16 +193,7 @@ namespace BeatTheStormApp
 
         private void PicCard_Click(object? sender, EventArgs e)
         {
-            //if (gamestatus == GameStatusEnum.Playing && (dicerolled || gamemode == GameModeEnum.CardOnly))
-            //{
-            //    if (gamemode == GameModeEnum.CardOnly)
-            //    {
-            //        SwitchPlayer();
-            //    }
-            //    if (player == PlayerEnum.A || playermode == PlayerModeEnum.TwoPlayers) { 
             DoTurn();
-            //    }
-            //}
         }
 
         private void BtnHelp_Click(object? sender, EventArgs e)
