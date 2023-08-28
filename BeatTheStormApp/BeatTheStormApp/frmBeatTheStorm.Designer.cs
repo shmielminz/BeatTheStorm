@@ -1795,12 +1795,12 @@
             // 
             lblPlayer1.Anchor = AnchorStyles.None;
             lblPlayer1.AutoSize = true;
-            lblPlayer1.Location = new Point(168, 10);
+            lblPlayer1.Location = new Point(130, 10);
             lblPlayer1.Margin = new Padding(3, 10, 3, 5);
             lblPlayer1.Name = "lblPlayer1";
-            lblPlayer1.Size = new Size(119, 38);
+            lblPlayer1.Size = new Size(194, 38);
             lblPlayer1.TabIndex = 1;
-            lblPlayer1.Text = "Player A";
+            lblPlayer1.Text = "Current player";
             // 
             // tblPlayer2
             // 
@@ -1833,12 +1833,12 @@
             // 
             lblPlayer2.Anchor = AnchorStyles.None;
             lblPlayer2.AutoSize = true;
-            lblPlayer2.Location = new Point(169, 10);
+            lblPlayer2.Location = new Point(124, 10);
             lblPlayer2.Margin = new Padding(3, 10, 3, 5);
             lblPlayer2.Name = "lblPlayer2";
-            lblPlayer2.Size = new Size(117, 38);
+            lblPlayer2.Size = new Size(206, 38);
             lblPlayer2.TabIndex = 2;
-            lblPlayer2.Text = "Player B";
+            lblPlayer2.Text = "Previous player";
             // 
             // btnHelp
             // 

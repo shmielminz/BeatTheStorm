@@ -77,26 +77,16 @@ namespace BeatTheStormApp
             picDicePlayer2.ImageLocation = imagepath + "dice" + game.PreviousDice + ".jpg";
         }
 
-        private void AddPlayersToGame()
-        {
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f.GetType() == typeof(frmSettings))
-                {
-                    frmSettings frm = (frmSettings)f;
-                    game.AddPlayer(new() { PlayerName = frm.player1name, PlayingPiece = frm.player1piece });
-                    game.AddPlayer(new() { PlayerName = frm.player2name, PlayingPiece = frm.player2piece });
-                }
-            }
-        }
-
         private void StartGame()
         {
-            //game.AddPlayer(new() { PlayerName = "Sam", PlayingPiece = "I" });
-            //game.AddPlayer(new() { PlayerName = "Mike", PlayingPiece = "J" });
-            AddPlayersToGame();
+            game.AddPlayer(new() { PlayerName = "Sam", PlayingPiece = "I" });
+            if (!optPlayComputer.Checked)
+            {
+                game.AddPlayer(new() { PlayerName = "Mike", PlayingPiece = "J" });
+            }
+            //AddPlayersToGame();
             game.StartGame(optPlayComputer.Checked, optModeCardOnly.Checked ? GameModeEnum.CardOnly : GameModeEnum.DiceWithRandomCard);
-            
+
             lblStatus.Text = game.GameMode == GameModeEnum.CardOnly ? "Click on card deck to pick a card." : "Throw the dice by clicking on dice";
 
             switch (game.GameMode)
@@ -167,14 +157,7 @@ namespace BeatTheStormApp
 
         private void BtnStart_Click(object? sender, EventArgs e)
         {
-            if (this.MdiParent != null && this.MdiParent is frmMain)
-            {
-                ((frmMain)this.MdiParent).OpenForm(typeof(frmSettings), start, optMultiplePlayers.Checked);
-            }
-            if (start)
-            {
-                StartGame();
-            }
+            StartGame();
         }
 
         private void Opt_CheckedChanged(object? sender, EventArgs e)

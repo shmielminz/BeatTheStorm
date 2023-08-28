@@ -15,18 +15,22 @@
     <ScrollView>
         <Grid Style="{StaticResource Key=page-grid}">
             <VerticalStackLayout Grid.Row="0">
-                <Grid Margin="10,0,10,0" HeightRequest="80" ColumnDefinitions="Auto,Auto,Auto,Auto,*,Auto">
+                <Grid Margin="10,0,10,10" HeightRequest="80" ColumnDefinitions="Auto,Auto,Auto,Auto,*,Auto,Auto" ColumnSpacing="2" BackgroundColor="Azure">
                     <Label Text="Undo" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextDecorations="Underline" Margin="30,0,0,0"/>
                     <Button Style="{StaticResource Key=undo-redo}" Text="{StaticResource undo}" Margin="10,0,0,0" Grid.Column="0"/>
                     <Button Style="{StaticResource Key=undo-redo}" Text="{StaticResource more}" Margin="-30" Grid.Column="1"/>
                     <Label Text="Redo" Grid.Column="2" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextDecorations="Underline" Margin="40,0,0,0"/>
                     <Button Style="{StaticResource Key=undo-redo}" Text="{StaticResource redo}" Margin="20,0,0,0" Grid.Column="2"/>
                     <Button Style="{StaticResource Key=undo-redo}" Text="{StaticResource more}" Margin="-30" Grid.Column="3"/>
-                    <Button Text="End Game" FontSize="Medium" BackgroundColor="PaleVioletRed" Padding="100,0,100,0" HorizontalOptions="End" Grid.Column="4" Margin="0,0,0,20"/>
-                    <Button Style="{StaticResource Key=home-buttons}" Text="{StaticResource help}" BackgroundColor="GreenYellow" Padding="40,0,40,0" HorizontalOptions="End" Grid.Column="5" Margin="0,0,0,20"/>
+                    <Label Text="{Binding GameStatusDescription}" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="4"/>
+                    <Button x:Name="RestartGameBtn" Clicked="RestartGameBtn_Clicked" Text="End Game" FontSize="Medium" BackgroundColor="PaleVioletRed" Padding="10,0,10,0" HorizontalOptions="End" Grid.Column="5" Margin="0,10,0,10"/>
+                    <Button Style="{StaticResource Key=home-buttons}" Text="{StaticResource help}" BackgroundColor="GreenYellow" Padding="10,0,10,0" HorizontalOptions="End" Grid.Column="6" Margin="0,10,0,10"/>
                 </Grid>
-                <Label Text="Current Player: Computer. Score: 20. Moved: Up 2 steps." FontSize="Medium" BackgroundColor="Azure" Padding="10" HorizontalTextAlignment="Center"/>
-                <Grid ColumnDefinitions="2*,*,*,*,*,*,*,*,*,*,*,2*" RowDefinitions="50,50,50,50,50,50,50,50,50,50,50" ColumnSpacing="1" RowSpacing="1">
+                <Grid ColumnDefinitions="3*,*,*,*,*,*,*,*,*,*,*,2*" RowDefinitions="45,45,45,45,45,50,45,45,45,45,45" ColumnSpacing="1" RowSpacing="1">
+                    <Label Grid.Column="0" Grid.Row="0" Text="Current Players Board" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="AliceBlue" FontSize="Title"/>
+                    <Button x:Name="DiceBtn" ImageSource="dice1.jpg" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" Clicked="DiceBtn_Clicked"/>
+                    <Button x:Name="CardBtn" ImageSource="hashomrimback.jpg" Grid.Column="0" Grid.Row="4" Grid.RowSpan="3" Clicked="CardBtn_Clicked"/>
+                    <Label Grid.Column="11" Grid.Row="0" Text="Last 10 steps" BackgroundColor="AliceBlue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Title"/>
                     <Label x:Name="lbl92" Text="{Binding SpotPlayerDescription}" BindingContext="{Binding Path=Spots[91]}" Style="{StaticResource Key=game-front-label}" Grid.Column="1" Grid.Row="0"/>
                     <Label x:Name="lbl93" Text="{Binding SpotPlayerDescription}" BindingContext="{Binding Path=Spots[92]}" Style="{StaticResource Key=game-front-label}" Grid.Column="2" Grid.Row="0"/>
                     <Label x:Name="lbl94" Text="{Binding SpotPlayerDescription}" BindingContext="{Binding Path=Spots[93]}" Style="{StaticResource Key=game-front-label}" Grid.Column="3" Grid.Row="0"/>
@@ -158,7 +162,7 @@
                     <Label Text="28" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="2"/>
                     <Label Text="29" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="2"/>
                     <Label Text="30" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="2"/>
-                    <Label Style="{StaticResource Key=game-back-label}" FontFamily="FAS" Text="{StaticResource game-icon-3}" FontSize="Large" TextColor="Black" Grid.Column="1" Grid.Row="3"/>
+                    <Label Text="20" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="3"/>
                     <Label Text="19" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="3"/>
                     <Label Text="18" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="3"/>
                     <Label Text="17" Style="{StaticResource Key=game-back-label}" Grid.Column="4" Grid.Row="3"/>
@@ -178,7 +182,7 @@
                     <Label Text="8" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="4"/>
                     <Label Text="9" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="4"/>
                     <Label Text="10" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="4"/>
-                    <Label Style="{StaticResource Key=game-back-label}" FontFamily="FAS" Text="{StaticResource game-icon-1}" FontSize="Large" TextColor="Black" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="10"/>
+                    <Label Text="0" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="10"/>
                     <Label Text="-10" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="6"/>
                     <Label Text="-9" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="6"/>
                     <Label Text="-8" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="6"/>
@@ -189,7 +193,7 @@
                     <Label Text="-3" Style="{StaticResource Key=game-back-label}" Grid.Column="8" Grid.Row="6"/>
                     <Label Text="-2" Style="{StaticResource Key=game-back-label}" Grid.Column="9" Grid.Row="6"/>
                     <Label Text="-1" Style="{StaticResource Key=game-back-label}" Grid.Column="10" Grid.Row="6"/>
-                    <Label Style="{StaticResource Key=game-back-label}" FontFamily="FAS" Text="{StaticResource game-icon-2}" FontSize="Large" TextColor="Black" Grid.Column="1" Grid.Row="7"/>
+                    <Label Text="-11" Style="{StaticResource Key=game-back-label}" Grid.Column="1" Grid.Row="7"/>
                     <Label Text="-12" Style="{StaticResource Key=game-back-label}" Grid.Column="2" Grid.Row="7"/>
                     <Label Text="-13" Style="{StaticResource Key=game-back-label}" Grid.Column="3" Grid.Row="7"/>
                     <Label Text="-14" Style="{StaticResource Key=game-back-label}" Grid.Column="4" Grid.Row="7"/>

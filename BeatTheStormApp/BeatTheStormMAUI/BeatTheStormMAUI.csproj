@@ -39,7 +39,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -49,7 +48,90 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\help.svg" />
+	  <MauiImage Remove="Resources\Images\icon.ico" />
+	  <MauiImage Remove="Resources\Images\redo.svg" />
+	  <MauiImage Remove="Resources\Images\Spec_for_Beat_the_Storm.pdf" />
+	  <MauiImage Remove="Resources\Images\undo.svg" />
+	  <MauiImage Remove="Resources\Images\undo_redo_more.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\Aolmail.jpg" />
+	  <None Remove="Resources\Images\Bbcnews.jpg" />
+	  <None Remove="Resources\Images\Bing.jpg" />
+	  <None Remove="Resources\Images\dice1.jpg" />
+	  <None Remove="Resources\Images\dice2.jpg" />
+	  <None Remove="Resources\Images\dice3.jpg" />
+	  <None Remove="Resources\Images\dice4.jpg" />
+	  <None Remove="Resources\Images\dice5.jpg" />
+	  <None Remove="Resources\Images\dice6.jpg" />
+	  <None Remove="Resources\Images\Facebook.jpg" />
+	  <None Remove="Resources\Images\Gmail.jpg" />
+	  <None Remove="Resources\Images\Google.jpg" />
+	  <None Remove="Resources\Images\Googleplay.jpg" />
+	  <None Remove="Resources\Images\Hashomrim1.jpg" />
+	  <None Remove="Resources\Images\Hashomrim10.jpg" />
+	  <None Remove="Resources\Images\Hashomrim11.jpg" />
+	  <None Remove="Resources\Images\Hashomrim12.jpg" />
+	  <None Remove="Resources\Images\Hashomrim13.jpg" />
+	  <None Remove="Resources\Images\Hashomrim14.jpg" />
+	  <None Remove="Resources\Images\Hashomrim15.jpg" />
+	  <None Remove="Resources\Images\Hashomrim16.jpg" />
+	  <None Remove="Resources\Images\Hashomrim17.jpg" />
+	  <None Remove="Resources\Images\Hashomrim18.jpg" />
+	  <None Remove="Resources\Images\Hashomrim19.jpg" />
+	  <None Remove="Resources\Images\Hashomrim2.jpg" />
+	  <None Remove="Resources\Images\Hashomrim20.jpg" />
+	  <None Remove="Resources\Images\Hashomrim21.jpg" />
+	  <None Remove="Resources\Images\Hashomrim22.jpg" />
+	  <None Remove="Resources\Images\Hashomrim23.jpg" />
+	  <None Remove="Resources\Images\Hashomrim24.jpg" />
+	  <None Remove="Resources\Images\Hashomrim25.jpg" />
+	  <None Remove="Resources\Images\Hashomrim26.jpg" />
+	  <None Remove="Resources\Images\Hashomrim3.jpg" />
+	  <None Remove="Resources\Images\Hashomrim4.jpg" />
+	  <None Remove="Resources\Images\Hashomrim5.jpg" />
+	  <None Remove="Resources\Images\Hashomrim6.jpg" />
+	  <None Remove="Resources\Images\Hashomrim7.jpg" />
+	  <None Remove="Resources\Images\Hashomrim8.jpg" />
+	  <None Remove="Resources\Images\Hashomrim9.jpg" />
+	  <None Remove="Resources\Images\Hashomrimback.jpg" />
+	  <None Remove="Resources\Images\icon.ico" />
+	  <None Remove="Resources\Images\Instagram.jpg" />
+	  <None Remove="Resources\Images\Linkedin.jpg" />
+	  <None Remove="Resources\Images\Netflix.jpg" />
+	  <None Remove="Resources\Images\Nytimes.jpg" />
+	  <None Remove="Resources\Images\Outlook.jpg" />
+	  <None Remove="Resources\Images\Pinterest.jpg" />
+	  <None Remove="Resources\Images\Roblox.jpg" />
 	  <None Remove="Resources\Images\rotate-left-solid.svg" />
+	  <None Remove="Resources\Images\Skype.jpg" />
+	  <None Remove="Resources\Images\Slack.jpg" />
+	  <None Remove="Resources\Images\Spec_for_Beat_the_Storm.pdf" />
+	  <None Remove="Resources\Images\Steam.jpg" />
+	  <None Remove="Resources\Images\Telegram.jpg" />
+	  <None Remove="Resources\Images\Tiktok.jpg" />
+	  <None Remove="Resources\Images\Twitch.jpg" />
+	  <None Remove="Resources\Images\Twitter.jpg" />
+	  <None Remove="Resources\Images\Vimeo.jpg" />
+	  <None Remove="Resources\Images\Whatsapp.jpg" />
+	  <None Remove="Resources\Images\Yahoomail.jpg" />
+	  <None Remove="Resources\Images\Youtube.jpg" />
+	  <None Remove="Resources\Images\Zoom.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Resources\Images\help.svg" />
+	  <Content Include="Resources\Images\icon.ico">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\Images\redo.svg" />
+	  <Content Include="Resources\Images\spec_for_beat_the_storm.pdf">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\Images\undo.svg" />
+	  <Content Include="Resources\Images\undo_redo_more.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -58,6 +140,186 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\BeatTheStormSystem\BeatTheStormSystem.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Update="Resources\Images\aolmail.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\bbcnews.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\bing.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\dice1.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\dice2.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\dice3.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\dice4.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\dice5.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\dice6.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\facebook.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\gmail.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\google.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\googleplay.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim1.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim10.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim11.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim12.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim13.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim14.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim15.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim16.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim17.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim18.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim19.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim2.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim20.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim21.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim22.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim23.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim24.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim25.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim26.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim3.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim4.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim5.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim6.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim7.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim8.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrim9.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\hashomrimback.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\instagram.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\linkedin.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\netflix.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\nytimes.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\outlook.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\pinterest.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\roblox.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\skype.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\slack.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\steam.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\telegram.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\tiktok.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\twitch.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\twitter.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\vimeo.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\whatsapp.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\yahoomail.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\youtube.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\zoom.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiImage>
 	</ItemGroup>
 
 	<ItemGroup>

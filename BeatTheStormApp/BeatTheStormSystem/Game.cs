@@ -125,6 +125,7 @@ namespace BeatTheStormSystem
         {
             if (this.GameStatus == GameStatusEnum.NotStarted)
             {
+                _currentplayerindex = 0;
                 this.PlayAgainstComputer = playagainstcomputer;
                 this.GameMode = gamemode;
                 this.GameStatus = GameStatusEnum.Playing;
@@ -318,7 +319,7 @@ namespace BeatTheStormSystem
                     this.Players.ForEach(p =>
                     {
                         s.RemovePlayerFromSpot(p);
-                        p.SpotValue = this.Spots[50];
+                        p.SpotValue = new();
                     });
                 });
                 this.GameStatus = GameStatusEnum.NotStarted;

@@ -6,20 +6,18 @@
     xmlns:local="clr-namespace:BeatTheStormMAUI"
     Shell.FlyoutBehavior="Disabled">
 
-    <TabBar>
         <ShellContent
             Title="Settings"
             ContentTemplate="{DataTemplate local:Settings}"
             Route="Settings"/>
-        
-        <ShellContent
-            Title="Beat The Storm"
-            ContentTemplate="{DataTemplate local:BeatTheStorm}"
-            Route="BeatTheStorm" />
 
         <ShellContent
             Title="Help"
             ContentTemplate="{DataTemplate local:Help}"
             Route="Help"/>
-    </TabBar>
+
+        <ShellContent
+            Title="Beat The Storm"
+            ContentTemplate="{DataTemplate local:BeatTheStorm}"
+            Route="BeatTheStorm" />
 </Shell>
