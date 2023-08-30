@@ -198,15 +198,7 @@
         <Setter Property="MinimumHeightRequest" Value="40"/>
         <Setter Property="Opacity" Value=".5"/>
     </Style>
-
-    <Style TargetType="Label" x:Key="game-special-label" BasedOn="{StaticResource game-front-label}">
-        <Setter Property="Text" Value="?"/>
-        <Setter Property="FontSize" Value="Large"/>
-        <Setter Property="FontAttributes" Value="Bold"/>
-        <Setter Property="HorizontalTextAlignment" Value="Center"/>
-        <Setter Property="VerticalTextAlignment" Value="Center"/>
-    </Style>
-
+    
     <Style TargetType="Label" x:Key="copyright">
         <Setter Property="Grid.Row" Value="1"/>
         <Setter Property="VerticalOptions" Value="End"/>

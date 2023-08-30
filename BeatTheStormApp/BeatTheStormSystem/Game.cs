@@ -12,9 +12,9 @@ namespace BeatTheStormSystem
         int _dice = 0;
         int _currentplayerindex = 0;
         string _card = "";
-        GameModeEnum _gamemode = GameModeEnum.CardOnly;
         List<Dictionary<string, string>> lstcards;
         private Player _currentplayer = new();
+        bool _dicerolled = false;
         public Game()
         {
             for (int i = 0; i < 101; i++)
@@ -78,8 +78,10 @@ namespace BeatTheStormSystem
                 new() { { "Name", "Hashomrim26" }, { "Value", "1" } }
             };
         }
-        private Stack<Dictionary<string, object>> UndoStack = new();
-        private Stack<Dictionary<string, object>> RedoStack = new();
+        private Stack<Dictionary<string, object>> UndoStack { get; set; } = new();
+        private Stack<Dictionary<string, object>> RedoStack { get; set; } = new();
+        private Dictionary<string, object> PlayersMovesWhenInComputerMode { get; set; } = new();
+        public List<Dictionary<string, object>> Last10Moves { get; private set; } = new();
 
 
         public List<Player> Players { get; private set; } = new();
@@ -108,14 +110,50 @@ namespace BeatTheStormSystem
                 this.InvokePropertyChanged("GameStatusDescription");
             }
         }
-        public GameModeEnum GameMode
+        public GameModeEnum GameMode { get; set; }
+        public string PlayingCard
         {
-            get => _gamemode;
-            set
+            get => _card;
+            private set
             {
-                _gamemode = value;
+                _card = value;
+                this.InvokePropertyChanged();
+                this.InvokePropertyChanged("CardImage");
             }
         }
+        public int DiceValue
+        {
+            get => _dice;
+            private set
+            {
+                _dice = value;
+                this.InvokePropertyChanged();
+                this.InvokePropertyChanged("DiceImage");
+            }
+        }
+        public string DiceImage
+        {
+            get
+            {
+                if (this.PlayAgainstComputer && IsComputerTurn())
+                {
+                    return $"dice{this.PlayersMovesWhenInComputerMode["Dice"]}.jpg";
+                }
+                return $"dice{this.DiceValue}.jpg";
+            }
+        }
+        public string CardImage
+        {
+            get
+            {
+                if (this.PlayAgainstComputer && IsComputerTurn())
+                {
+                    return $"{((string)this.PlayersMovesWhenInComputerMode["Card"]).ToLower()}.jpg";
+                }
+                return $"{this.PlayingCard.ToLower()}.jpg";
+            }
+        }
+        //SM Following 2 properties are not used in MAUI and will be removed.
         public string PreviousCard { get; private set; } = "";
         public int PreviousDice { get; private set; }
         public bool PlayAgainstComputer { get; set; }
@@ -123,7 +161,7 @@ namespace BeatTheStormSystem
         public Player Loser { get; private set; } = new();
         public void StartGame(bool playagainstcomputer = false, GameModeEnum gamemode = GameModeEnum.CardOnly)
         {
-            if (this.GameStatus == GameStatusEnum.NotStarted)
+            if (this.GameStatus != GameStatusEnum.Playing)
             {
                 _currentplayerindex = 0;
                 this.PlayAgainstComputer = playagainstcomputer;
@@ -151,62 +189,80 @@ namespace BeatTheStormSystem
         }
         public void TakeTurn(Spot spot)
         {
-            this.PreviousDice = this.DiceValue;
-            this.PreviousCard = this.PlayingCard;
-            int dice = 0;
-            Dictionary<string, string> card = this.GetRandomCard();
-            this.PlayingCard = card["Name"];
-            if (GameMode == GameModeEnum.DiceWithRandomCard)
+            if (_dicerolled || this.GameMode == GameModeEnum.CardOnly)
             {
-                dice = this.DiceValue;
-            }
-            else
-            {
-                if (int.TryParse(card["Value"], out int n))
+                //this.PreviousDice = this.DiceValue;
+                //this.PreviousCard = this.PlayingCard;
+                int dice = 0;
+                Dictionary<string, string> card = this.GetRandomCard();
+                this.PlayingCard = card["Name"];
+                if (GameMode == GameModeEnum.DiceWithRandomCard)
                 {
-                    dice = n;
+                    dice = this.DiceValue;
                 }
-            }
-            int spotnum = this.Spots.IndexOf(spot);
-            if (card["Name"].Contains("Hashomrim"))
-            {
-                if (spotnum == this.Spots.Count - 1)
+                else
                 {
-                    this.Winner = this.CurrentPlayer;
-                    this.GameStatus = GameStatusEnum.Winner;
+                    if (int.TryParse(card["Value"], out int n))
+                    {
+                        dice = n;
+                        this.DiceValue = dice;
+                    }
                 }
-                spotnum += dice;
-            }
-            else
-            {
-                if (spotnum == 0)
+                int spotnum = this.Spots.IndexOf(spot);
+                if (card["Name"].Contains("Hashomrim"))
                 {
-                    this.Loser = this.CurrentPlayer;
-                    this.GameStatus = GameStatusEnum.Loser;
+                    if (spotnum == this.Spots.Count - 1)
+                    {
+                        this.Winner = this.CurrentPlayer;
+                        this.GameStatus = GameStatusEnum.Winner;
+                    }
+                    spotnum += dice;
                 }
-                spotnum -= dice;
-            }
-            if (spotnum >= this.Spots.Count)
-            {
-                spotnum = this.Spots.Count - 1;
-            }
-            else if (spotnum < 0)
-            {
-                spotnum = 0;
-            }
-            TakeSpot(spotnum);
-            UndoStack.Push(new() {
-                { "Player", this.CurrentPlayer },
-                { "FromSpot", spot },
-                { "ToSpot", this.Spots[spotnum] }
-            });
-            if (this.GameStatus == GameStatusEnum.Playing)
-            {
-                SwitchPlayer();
-                if (IsComputerTurn())
+                else
                 {
-                    TakeTurn(this.CurrentPlayer.SpotValue);
+                    if (spotnum == 0)
+                    {
+                        this.Loser = this.CurrentPlayer;
+                        this.GameStatus = GameStatusEnum.Loser;
+                    }
+                    spotnum -= dice;
                 }
+                if (spotnum >= this.Spots.Count)
+                {
+                    spotnum = this.Spots.Count - 1;
+                }
+                else if (spotnum < 0)
+                {
+                    spotnum = 0;
+                }
+                TakeSpot(spotnum);
+                RedoStack.Clear();
+                UndoStack.Push(new() {
+                    { "Player", this.CurrentPlayer },
+                    { "FromSpot", spot },
+                    { "ToSpot", this.Spots[spotnum] },
+                    { "Card", this.PlayingCard },
+                    { "Dice", dice }
+                });
+                Last10Moves.Insert(0, UndoStack.Peek());
+                if (Last10Moves.Count > 10)
+                {
+                    Last10Moves.RemoveAt(Last10Moves.Count - 1);
+                }
+                if (this.GameStatus == GameStatusEnum.Playing)
+                {
+                    SwitchPlayer();
+                    if (IsComputerTurn())
+                    {
+                        _dicerolled = false;
+                        PlayersMovesWhenInComputerMode.Clear();
+                        PlayersMovesWhenInComputerMode.Add("Card", UndoStack.Peek()["Card"]);
+                        PlayersMovesWhenInComputerMode.Add("Dice", UndoStack.Peek()["Dice"]);
+                        RollDice();
+                        TakeTurn(this.CurrentPlayer.SpotValue);
+                    }
+                }
+                _dicerolled = false;
             }
         }
         public void DoTurn()
@@ -235,57 +291,69 @@ namespace BeatTheStormSystem
         }
         public int RollDice()
         {
-            Random rnd = new();
-            int dice = rnd.Next(1, 7);
-            this.DiceValue = dice;
+            int dice = 0;
+            Random rnd = new(DateTime.Now.Microsecond);
+            if (this.GameStatus == GameStatusEnum.Playing)
+            {
+                dice = rnd.Next(1, 7);
+                if (!_dicerolled)
+                {
+                    this.DiceValue = dice;
+                    _dicerolled = true;
+                }
+            }
             return dice;
         }
         public Dictionary<string, string> GetRandomCard()
         {
-            Random rnd = new();
+            Random rnd = new(DateTime.Now.Microsecond);
             int n = rnd.Next(lstcards.Count);
             return lstcards[n];
         }
-        public string PlayingCard
-        {
-            get => _card;
-            private set
-            {
-                _card = value;
-                this.InvokePropertyChanged();
-            }
-        }
-        public int DiceValue
-        {
-            get => _dice;
-            private set
-            {
-                _dice = value;
-                this.InvokePropertyChanged();
-            }
-        }
         public void Undo()
         {
-            RedoStack.Push(UndoStack.Pop());
-            if (PlayAgainstComputer)
+            if (this.GameStatus == GameStatusEnum.Playing)
             {
-                RedoStack.Push(UndoStack.Pop());
+                if (UndoStack.Count > 0)
+                {
+                    RedoStack.Push(UndoStack.Pop());
+                    if (PlayAgainstComputer)
+                    {
+                        this.Last10Moves.RemoveAt(0);
+                        TakeSpot(this.Spots.IndexOf(GetPlayerSpotForUndoRedo(RedoStack, "FromSpot")));
+                        RedoStack.Push(UndoStack.Pop());
+                    }
+                    this.Last10Moves.RemoveAt(0);
+                    TakeSpot(this.Spots.IndexOf(GetPlayerSpotForUndoRedo(RedoStack, "FromSpot")));
+                }
             }
-            this.CurrentPlayer = (Player)RedoStack.Peek()["Player"];
-            Spot s = (Spot)RedoStack.Peek()["FromSpot"];
-            TakeSpot(this.Spots.IndexOf(s));
+        }
+        private Spot GetPlayerSpotForUndoRedo(Stack<Dictionary<string, object>> stack, string fromto)
+        {
+            Spot spot = (Spot)stack.Peek()[fromto];
+            this.CurrentPlayer = (Player)stack.Peek()["Player"];
+            this.PlayingCard = (string)stack.Peek()["Card"];
+            this.DiceValue = (int)stack.Peek()["Dice"];
+            return spot;
         }
         public void Redo()
         {
-            UndoStack.Push(RedoStack.Pop());
-            if (PlayAgainstComputer)
+            if (this.GameStatus == GameStatusEnum.Playing)
             {
-                UndoStack.Push(RedoStack.Pop());
+                if (RedoStack.Count > 0)
+                {
+                    UndoStack.Push(RedoStack.Pop());
+                    if (PlayAgainstComputer)
+                    {
+                        TakeSpot(this.Spots.IndexOf(GetPlayerSpotForUndoRedo(UndoStack, "ToSpot")));
+                        UndoStack.Push(RedoStack.Pop());
+                        Last10Moves.Insert(0, UndoStack.Peek());
+                    }
+                    TakeSpot(this.Spots.IndexOf(GetPlayerSpotForUndoRedo(UndoStack, "ToSpot")));
+                    SwitchPlayer();
+                    Last10Moves.Insert(0, UndoStack.Peek());
+                }
             }
-            this.CurrentPlayer = (Player)UndoStack.Peek()["Player"];
-            Spot s = (Spot)UndoStack.Peek()["ToSpot"];
-            TakeSpot(this.Spots.IndexOf(s));
-            SwitchPlayer();
         }
         public string GameStatusDescription
         {

@@ -9,17 +9,17 @@
                 <Label x:Name="StatusLbl" Text="Choose a playing mode and click Start" FontSize="Header" HorizontalOptions="Center" Margin="20"/>
                 <HorizontalStackLayout HorizontalOptions="Center" Margin="0,10,0,30">
                     <Border>
-                        <VerticalStackLayout>
+                        <VerticalStackLayout RadioButtonGroup.GroupName="PlayerMode">
                             <Label Text="Players" HorizontalTextAlignment="Center" Padding="20" BackgroundColor="Beige"/>
-                            <RadioButton x:Name="MultiplePlayerRdo" Content="Multiple Players" Margin="50,20,50,0"/>
-                            <RadioButton x:Name="PlayComputerRdo" Content="Play against the Computer" Margin="50,0,50,20" IsChecked="True"/>
+                            <RadioButton x:Name="MultiplePlayerRdo" Content="Multiple Players" Margin="50,20,50,0" GroupName="PlayerMode" IsChecked="True"/>
+                            <RadioButton x:Name="PlayComputerRdo" Content="Play against the Computer" Margin="50,0,50,20" GroupName="PlayerMode"/>
                         </VerticalStackLayout>
                     </Border>
                     <Border>
-                        <VerticalStackLayout>
+                        <VerticalStackLayout RadioButtonGroup.GroupName="GameMode">
                             <Label Text="Game mode" HorizontalTextAlignment="Center" Padding="20" BackgroundColor="Beige"/>
-                            <RadioButton x:Name="ModeCardOnlyRdo" Content="Card Only" Margin="50,20,50,0" IsChecked="True"/>
-                            <RadioButton x:Name="ModeDiceWithRandomCardRdo" Content="Dice with Random Card" Margin="50,0,50,20"/>
+                            <RadioButton x:Name="ModeCardOnlyRdo" Content="Card Only" Margin="50,20,50,0" IsChecked="True" GroupName="GameMode"/>
+                            <RadioButton x:Name="ModeDiceWithRandomCardRdo" Content="Dice with Random Card" Margin="50,0,50,20" GroupName="GameMode"/>
                         </VerticalStackLayout>
                     </Border>
                 </HorizontalStackLayout>

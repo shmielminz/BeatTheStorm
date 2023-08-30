@@ -15,6 +15,7 @@ public partial class Settings : ContentPage
     private void Settings_Loaded(object sender, EventArgs e)
     {
         HLayoutPlayer2Name.IsVisible = true;
+        //SM For some reason the xaml doesn't work to set the checked property to true.
         MultiplePlayerRdo.IsChecked = true;
     }
 
