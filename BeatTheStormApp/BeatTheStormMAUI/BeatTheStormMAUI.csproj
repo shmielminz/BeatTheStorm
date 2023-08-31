@@ -48,15 +48,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiImage Remove="Resources\Images\help.svg" />
-	  <MauiImage Remove="Resources\Images\icon.ico" />
-	  <MauiImage Remove="Resources\Images\redo.svg" />
-	  <MauiImage Remove="Resources\Images\spec_for_beat_the_storm.pdf" />
-	  <MauiImage Remove="Resources\Images\undo.svg" />
-	  <MauiImage Remove="Resources\Images\undo_redo_more.svg" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <None Remove="Resources\Images\Aolmail.jpg" />
 	  <None Remove="Resources\Images\Bbcnews.jpg" />
 	  <None Remove="Resources\Images\Bing.jpg" />
@@ -97,6 +88,7 @@
 	  <None Remove="Resources\Images\Hashomrim8.jpg" />
 	  <None Remove="Resources\Images\Hashomrim9.jpg" />
 	  <None Remove="Resources\Images\Hashomrimback.jpg" />
+	  <None Remove="Resources\Images\help.svg" />
 	  <None Remove="Resources\Images\icon.ico" />
 	  <None Remove="Resources\Images\Instagram.jpg" />
 	  <None Remove="Resources\Images\Linkedin.jpg" />
@@ -104,6 +96,7 @@
 	  <None Remove="Resources\Images\Nytimes.jpg" />
 	  <None Remove="Resources\Images\Outlook.jpg" />
 	  <None Remove="Resources\Images\Pinterest.jpg" />
+	  <None Remove="Resources\Images\redo.svg" />
 	  <None Remove="Resources\Images\Roblox.jpg" />
 	  <None Remove="Resources\Images\rotate-left-solid.svg" />
 	  <None Remove="Resources\Images\Skype.jpg" />
@@ -114,6 +107,8 @@
 	  <None Remove="Resources\Images\Tiktok.jpg" />
 	  <None Remove="Resources\Images\Twitch.jpg" />
 	  <None Remove="Resources\Images\Twitter.jpg" />
+	  <None Remove="Resources\Images\undo.svg" />
+	  <None Remove="Resources\Images\undo_redo_more.svg" />
 	  <None Remove="Resources\Images\Vimeo.jpg" />
 	  <None Remove="Resources\Images\Whatsapp.jpg" />
 	  <None Remove="Resources\Images\Yahoomail.jpg" />
@@ -321,10 +316,6 @@
 	  <MauiXaml Update="Settings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Resources\Images\" />
 	</ItemGroup>
 
 </Project>
