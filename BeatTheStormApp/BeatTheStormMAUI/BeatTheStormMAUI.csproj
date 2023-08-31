@@ -51,6 +51,7 @@
 	  <MauiImage Remove="Resources\Images\help.svg" />
 	  <MauiImage Remove="Resources\Images\icon.ico" />
 	  <MauiImage Remove="Resources\Images\redo.svg" />
+	  <MauiImage Remove="Resources\Images\spec_for_beat_the_storm.pdf" />
 	  <MauiImage Remove="Resources\Images\undo.svg" />
 	  <MauiImage Remove="Resources\Images\undo_redo_more.svg" />
 	</ItemGroup>
@@ -128,6 +129,13 @@
 	  <Content Include="Resources\Images\redo.svg" />
 	  <Content Include="Resources\Images\undo.svg" />
 	  <Content Include="Resources\Images\undo_redo_more.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiAsset Include="Resources\Images\spec_for_beat_the_storm.pdf">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiAsset>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -325,9 +333,6 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="BeatTheStorm.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Help.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Settings.xaml">

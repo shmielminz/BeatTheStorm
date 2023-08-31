@@ -51,9 +51,6 @@ public partial class BeatTheStorm : ContentPage
             brd.Content = grd;
             Last10MovesGrd.Add(brd, 0, i);
         }
-        //PlayerLbl.Text = ((Player)last10lst[0]["Player"]).PlayerName;
-        //FromSpotLbl.Text = (game.Spots.IndexOf((Spot)last10lst[0]["FromSpot"]) - 50).ToString();
-        //ToSpotLbl.Text = (game.Spots.IndexOf((Spot)last10lst[0]["ToSpot"]) - 50).ToString();
     }
 
     private void RestartGameBtn_Clicked(object sender, EventArgs e)
@@ -66,13 +63,11 @@ public partial class BeatTheStorm : ContentPage
     private void DiceBtn_Clicked(object sender, EventArgs e)
     {
         game.RollDice();
-        //DiceBtn.ImageSource = $"dice{game.DiceValue}.jpg";
     }
 
-    private void CardBtn_Clicked(object sender, EventArgs e)
+    private async void CardBtn_Clicked(object sender, EventArgs e)
     {
-        game.DoTurn();
-        //CardBtn.ImageSource = $"{game.PlayingCard.ToLower()}.jpg";
+        await game.DoTurn();
         AddToLast10List();
     }
 
@@ -88,13 +83,11 @@ public partial class BeatTheStorm : ContentPage
         AddToLast10List();
     }
 
-    private async void ShowHelp()
+    private async void HelpBtn_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Help());
-    }
-
-    private void HelpBtn_Clicked(object sender, EventArgs e)
-    {
-        ShowHelp();
+        string file = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        file += @"\Resources\Images\spec_for_beat_the_storm.pdf";
+        string popoverTitle = "Read text file";
+        await Launcher.Default.OpenAsync(new OpenFileRequest(popoverTitle, new ReadOnlyFile(file)));
     }
 }

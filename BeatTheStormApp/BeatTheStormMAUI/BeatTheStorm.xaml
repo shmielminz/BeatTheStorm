@@ -16,11 +16,11 @@
         <Grid Style="{StaticResource Key=page-grid}">
             <VerticalStackLayout Grid.Row="0">
                 <Grid Margin="10,0,10,0" HeightRequest="80" ColumnDefinitions="Auto,Auto,Auto,Auto,*,Auto,Auto" ColumnSpacing="2" BackgroundColor="Azure">
-                    <Label Text="Undo" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextDecorations="Underline" Margin="30,0,0,0"/>
-                    <Button x:Name="UndoBtn" Style="{StaticResource Key=undo-redo}" Text="{StaticResource undo}" BackgroundColor="Green" Margin="10,0,0,0" Grid.Column="0" Clicked="UndoBtn_Clicked"/>
+                    <Label Text="Undo" Grid.Column="0"  HorizontalTextAlignment="Center" TextDecorations="Underline" Margin="10,0,0,0"/>
+                    <Button x:Name="UndoBtn" Style="{StaticResource Key=undo-redo}" Text="{StaticResource undo}" BackgroundColor="{Binding BackColorForUndo}" Margin="10,0,0,0" Grid.Column="0" Clicked="UndoBtn_Clicked"/>
                     <!--<Button Style="{StaticResource Key=undo-redo}" Text="{StaticResource more}" Margin="-30" Grid.Column="1"/>-->
-                    <Label Text="Redo" Grid.Column="2" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextDecorations="Underline" Margin="40,0,0,0"/>
-                    <Button x:Name="RedoBtn" Style="{StaticResource Key=undo-redo}" Text="{StaticResource redo}" BackgroundColor="Green" Margin="20,0,0,0" Grid.Column="1" Clicked="RedoBtn_Clicked"/>
+                    <Label Text="Redo" Grid.Column="1" HorizontalTextAlignment="Center" TextDecorations="Underline" Margin="20,0,0,0"/>
+                    <Button x:Name="RedoBtn" Style="{StaticResource Key=undo-redo}" Text="{StaticResource redo}" BackgroundColor="{Binding BackColorForRedo}" Margin="20,0,0,0" Grid.Column="1" Clicked="RedoBtn_Clicked"/>
                     <!--<Button Style="{StaticResource Key=undo-redo}" Text="{StaticResource more}" Margin="-30" Grid.Column="3"/>-->
                     <Label Text="{Binding GameStatusDescription}" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="4"/>
                     <Button x:Name="RestartGameBtn" Clicked="RestartGameBtn_Clicked" Text="End Game" FontSize="Medium" BackgroundColor="PaleVioletRed" Padding="10,0,10,0" HorizontalOptions="End" Grid.Column="5" Margin="0,10,0,10"/>
@@ -28,8 +28,8 @@
                 </Grid>
                 <Grid x:Name="GameGrd" ColumnDefinitions="3*,*,*,*,*,*,*,*,*,*,*,2*" RowDefinitions="45,45,45,45,45,50,45,45,45,45,45" ColumnSpacing="1" RowSpacing="1">
                     <Label Grid.Column="0" Grid.Row="0" Text="Current Players Board" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="AliceBlue" FontSize="Title"/>
-                    <Button x:Name="DiceBtn" ImageSource="{Binding DiceImage}" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" Clicked="DiceBtn_Clicked"/>
-                    <Button x:Name="CardBtn" ImageSource="{Binding CardImage}" Grid.Column="0" Grid.Row="4" Grid.RowSpan="3" Clicked="CardBtn_Clicked"/>
+                    <Button x:Name="DiceBtn" Text="Click here to roll dice" ContentLayout="Top, 10" ImageSource="{Binding DiceImage}" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" Clicked="DiceBtn_Clicked"/>
+                    <Button x:Name="CardBtn" Text="Click here to pick a card" ContentLayout="Top, 10" MaximumHeightRequest="200" MaximumWidthRequest="300" ImageSource="{Binding CardImage}" Grid.Column="0" Grid.Row="4" Grid.RowSpan="5" Clicked="CardBtn_Clicked"/>
                     <Label Grid.Column="11" Grid.Row="0" Text="Last 10 steps" BackgroundColor="AliceBlue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Title"/>
                     <Grid x:Name="Last10MovesGrd" Grid.Column="11" Grid.Row="1" Grid.RowSpan="10" ColumnDefinitions="*" RowDefinitions="*,*,*,*,*,*,*,*,*,*"/>
                     <Label x:Name="lbl92" Text="{Binding SpotPlayerDescription}" BindingContext="{Binding Path=Spots[91]}" Style="{StaticResource Key=game-front-label}" Grid.Column="1" Grid.Row="0"/>

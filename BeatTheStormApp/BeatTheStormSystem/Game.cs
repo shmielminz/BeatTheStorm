@@ -15,6 +15,7 @@ namespace BeatTheStormSystem
         List<Dictionary<string, string>> lstcards;
         private Player _currentplayer = new();
         bool _dicerolled = false;
+        Microsoft.Maui.Graphics.Color _color = new();
         public Game()
         {
             for (int i = 0; i < 101; i++)
@@ -82,7 +83,34 @@ namespace BeatTheStormSystem
         private Stack<Dictionary<string, object>> RedoStack { get; set; } = new();
         private Dictionary<string, object> PlayersMovesWhenInComputerMode { get; set; } = new();
         public List<Dictionary<string, object>> Last10Moves { get; private set; } = new();
-
+        public Microsoft.Maui.Graphics.Color BackColorForUndo
+        {
+            get
+            {
+                if (this.UndoStack.Count > 0)
+                {
+                    return Microsoft.Maui.Graphics.Colors.AliceBlue;
+                }
+                else
+                {
+                    return Microsoft.Maui.Graphics.Colors.DimGray;
+                }
+            }
+        }
+        public Microsoft.Maui.Graphics.Color BackColorForRedo
+        {
+            get
+            {
+                if (this.RedoStack.Count > 0)
+                {
+                    return Microsoft.Maui.Graphics.Colors.AliceBlue;
+                }
+                else
+                {
+                    return Microsoft.Maui.Graphics.Colors.DimGray;
+                }
+            }
+        }
 
         public List<Player> Players { get; private set; } = new();
         public void AddPlayer(Player player)
@@ -135,10 +163,10 @@ namespace BeatTheStormSystem
         {
             get
             {
-                if (this.PlayAgainstComputer && IsComputerTurn())
-                {
-                    return $"dice{this.PlayersMovesWhenInComputerMode["Dice"]}.jpg";
-                }
+                //if (this.PlayAgainstComputer && IsComputerTurn())
+                //{
+                //    return $"dice{this.PlayersMovesWhenInComputerMode["Dice"]}.jpg";
+                //}
                 return $"dice{this.DiceValue}.jpg";
             }
         }
@@ -146,10 +174,10 @@ namespace BeatTheStormSystem
         {
             get
             {
-                if (this.PlayAgainstComputer && IsComputerTurn())
-                {
-                    return $"{((string)this.PlayersMovesWhenInComputerMode["Card"]).ToLower()}.jpg";
-                }
+                //if (this.PlayAgainstComputer && IsComputerTurn())
+                //{
+                //    return $"{((string)this.PlayersMovesWhenInComputerMode["Card"]).ToLower()}.jpg";
+                //}
                 return $"{this.PlayingCard.ToLower()}.jpg";
             }
         }
@@ -181,16 +209,27 @@ namespace BeatTheStormSystem
                 this.RedoStack.Clear();
             }
         }
-        public void TakeSpot(int spotnum)
+        public async Task TakeSpot(int spotnum, bool pause = true)
         {
-            this.CurrentPlayer.SpotValue.RemovePlayerFromSpot(this.CurrentPlayer);
-            this.CurrentPlayer.SpotValue = this.Spots[spotnum];
-            this.Spots[spotnum].AddPlayerToSpot(this.CurrentPlayer);
+            int fromspotnum = this.Spots.IndexOf(this.CurrentPlayer.SpotValue);
+            for (int i = fromspotnum; i != (fromspotnum > spotnum ? spotnum - 1 : spotnum + 1); i += fromspotnum < spotnum ? 1 : -1)
+            {
+                this.CurrentPlayer.SpotValue.RemovePlayerFromSpot(this.CurrentPlayer);
+                this.CurrentPlayer.SpotValue = this.Spots[i];
+                this.Spots[i].AddPlayerToSpot(this.CurrentPlayer);
+                if (pause)
+                {
+                    await System.Threading.Tasks.Task.Delay(1000);
+                }
+            }
+            this.InvokePropertyChanged("BackColorForUndo");
+            this.InvokePropertyChanged("BackColorForRedo");
         }
-        public void TakeTurn(Spot spot)
+        public async Task TakeTurn(Spot spot)
         {
             if (_dicerolled || this.GameMode == GameModeEnum.CardOnly)
             {
+                _dicerolled = false;
                 //this.PreviousDice = this.DiceValue;
                 //this.PreviousCard = this.PlayingCard;
                 int dice = 0;
@@ -235,7 +274,7 @@ namespace BeatTheStormSystem
                 {
                     spotnum = 0;
                 }
-                TakeSpot(spotnum);
+                await TakeSpot(spotnum);
                 RedoStack.Clear();
                 UndoStack.Push(new() {
                     { "Player", this.CurrentPlayer },
@@ -254,22 +293,20 @@ namespace BeatTheStormSystem
                     SwitchPlayer();
                     if (IsComputerTurn())
                     {
-                        _dicerolled = false;
                         PlayersMovesWhenInComputerMode.Clear();
                         PlayersMovesWhenInComputerMode.Add("Card", UndoStack.Peek()["Card"]);
                         PlayersMovesWhenInComputerMode.Add("Dice", UndoStack.Peek()["Dice"]);
                         RollDice();
-                        TakeTurn(this.CurrentPlayer.SpotValue);
+                        await DoTurn();
                     }
                 }
-                _dicerolled = false;
             }
         }
-        public void DoTurn()
+        public async Task DoTurn()
         {
             if (GameStatus == GameStatusEnum.Playing)
             {
-                TakeTurn(this.CurrentPlayer.SpotValue);
+                await TakeTurn(this.CurrentPlayer.SpotValue);
             }
         }
         private void SwitchPlayer()
@@ -310,7 +347,7 @@ namespace BeatTheStormSystem
             int n = rnd.Next(lstcards.Count);
             return lstcards[n];
         }
-        public void Undo()
+        public async void Undo()
         {
             if (this.GameStatus == GameStatusEnum.Playing)
             {
@@ -320,11 +357,11 @@ namespace BeatTheStormSystem
                     if (PlayAgainstComputer)
                     {
                         this.Last10Moves.RemoveAt(0);
-                        TakeSpot(this.Spots.IndexOf(GetPlayerSpotForUndoRedo(RedoStack, "FromSpot")));
+                        await TakeSpot(this.Spots.IndexOf(GetPlayerSpotForUndoRedo(RedoStack, "FromSpot")), false);
                         RedoStack.Push(UndoStack.Pop());
                     }
                     this.Last10Moves.RemoveAt(0);
-                    TakeSpot(this.Spots.IndexOf(GetPlayerSpotForUndoRedo(RedoStack, "FromSpot")));
+                    await TakeSpot(this.Spots.IndexOf(GetPlayerSpotForUndoRedo(RedoStack, "FromSpot")), false);
                 }
             }
         }
@@ -336,7 +373,7 @@ namespace BeatTheStormSystem
             this.DiceValue = (int)stack.Peek()["Dice"];
             return spot;
         }
-        public void Redo()
+        public async void Redo()
         {
             if (this.GameStatus == GameStatusEnum.Playing)
             {
@@ -345,11 +382,11 @@ namespace BeatTheStormSystem
                     UndoStack.Push(RedoStack.Pop());
                     if (PlayAgainstComputer)
                     {
-                        TakeSpot(this.Spots.IndexOf(GetPlayerSpotForUndoRedo(UndoStack, "ToSpot")));
+                        await TakeSpot(this.Spots.IndexOf(GetPlayerSpotForUndoRedo(UndoStack, "ToSpot")), false);
                         UndoStack.Push(RedoStack.Pop());
                         Last10Moves.Insert(0, UndoStack.Peek());
                     }
-                    TakeSpot(this.Spots.IndexOf(GetPlayerSpotForUndoRedo(UndoStack, "ToSpot")));
+                    await TakeSpot(this.Spots.IndexOf(GetPlayerSpotForUndoRedo(UndoStack, "ToSpot")), false);
                     SwitchPlayer();
                     Last10Moves.Insert(0, UndoStack.Peek());
                 }
