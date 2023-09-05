@@ -4,16 +4,16 @@ namespace BeatTheStormMAUI;
 
 public partial class BeatTheStorm : ContentPage
 {
-    Game game = new();
+    Game game;
     List<Player> Players = new();
-	public BeatTheStorm(List<Player> playerlst, bool playagainstcomputer = false, bool cardonly = false)
+	public BeatTheStorm(Game activegame, List<Player> playerlst)
 	{
 		InitializeComponent();
+        game = activegame;
 		this.BindingContext = game;
         Players = playerlst;
-        Players.ForEach(game.AddPlayer);
-        game.StartGame(playagainstcomputer, cardonly ? Game.GameModeEnum.CardOnly : Game.GameModeEnum.DiceWithRandomCard);
-        if (cardonly)
+        
+        if (activegame.GameMode == Game.GameModeEnum.CardOnly)
         {
             DiceBtn.IsVisible = false;
             GameGrd.SetRow(CardBtn, 1);
@@ -24,7 +24,7 @@ public partial class BeatTheStorm : ContentPage
     {
         List<Dictionary<string, object>> last10lst = game.Last10Moves;
         Last10MovesGrd.Clear();
-        for (int i = 0; i < last10lst.Count; i++)
+        for (int i = 0; i < (last10lst.Count > 10 ? 10 : last10lst.Count); i++)
         {
             Border brd = new() { Padding = 1, StrokeThickness = 0.2 };
             Grid grd = new()
@@ -89,5 +89,10 @@ public partial class BeatTheStorm : ContentPage
         file += @"\Resources\Images\spec_for_beat_the_storm.pdf";
         string popoverTitle = "Read text file";
         await Launcher.Default.OpenAsync(new OpenFileRequest(popoverTitle, new ReadOnlyFile(file)));
+    }
+
+    private void PauseGameBtn_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PopAsync();
     }
 }

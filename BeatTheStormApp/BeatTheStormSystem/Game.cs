@@ -6,6 +6,7 @@ namespace BeatTheStormSystem
     public class Game : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
+        public event EventHandler? ScoreChanged;
         public enum GameModeEnum { DiceWithRandomCard, CardOnly }
         public enum GameStatusEnum { NotStarted, Playing, Winner, Loser }
         GameStatusEnum _gamestatus = GameStatusEnum.NotStarted;
@@ -15,9 +16,14 @@ namespace BeatTheStormSystem
         List<Dictionary<string, string>> lstcards;
         private Player _currentplayer = new();
         bool _dicerolled = false;
-        Microsoft.Maui.Graphics.Color _color = new();
+        bool allowclick = true;
+        private static int scoreplayerwins;
+        private static int scoreplayerloses;
+        private static int numgames;
         public Game()
         {
+            numgames++;
+            this.GameName = "Game " + numgames;
             for (int i = 0; i < 101; i++)
             {
                 this.Spots.Add(new Spot());
@@ -112,6 +118,8 @@ namespace BeatTheStormSystem
             }
         }
 
+        public string GameName { get; private set; }
+        public string GameModeHeader { get => "For " + this.GameName; }
         public List<Player> Players { get; private set; } = new();
         public void AddPlayer(Player player)
         {
@@ -126,6 +134,8 @@ namespace BeatTheStormSystem
                 _gamestatus = value;
                 this.InvokePropertyChanged();
                 this.InvokePropertyChanged("GameStatusDescription");
+                this.InvokePropertyChanged("StartButtonText");
+                this.InvokePropertyChanged("StopButtonText");
             }
         }
         public Player CurrentPlayer
@@ -139,6 +149,48 @@ namespace BeatTheStormSystem
             }
         }
         public GameModeEnum GameMode { get; set; }
+
+        public string StopButtonText
+        {
+            get
+            {
+                string s = "";
+                switch (this.GameStatus)
+                {
+                    case GameStatusEnum.NotStarted:
+                        s = "Start ";
+                        break;
+                    case GameStatusEnum.Playing:
+                    case GameStatusEnum.Winner:
+                    case GameStatusEnum.Loser:
+                        s = "Pause ";
+                        break;
+                }
+                s += this.GameName;
+                return s;
+            }
+        }
+        public string StartButtonText
+        {
+            get
+            {
+                string s = "";
+                switch (this.GameStatus)
+                {
+                    case GameStatusEnum.NotStarted:
+                        s = "Start ";
+                        break;
+                    case GameStatusEnum.Playing:
+                    case GameStatusEnum.Winner:
+                    case GameStatusEnum.Loser:
+                        s = "Continue ";
+                        break;
+                }
+                s += this.GameName;
+                return s;
+            }
+        }
+
         public string PlayingCard
         {
             get => _card;
@@ -187,6 +239,7 @@ namespace BeatTheStormSystem
         public bool PlayAgainstComputer { get; set; }
         public Player Winner { get; private set; } = new();
         public Player Loser { get; private set; } = new();
+        public static string Score { get => $"Wins = {scoreplayerwins}: Loses = {scoreplayerloses}"; }
         public void StartGame(bool playagainstcomputer = false, GameModeEnum gamemode = GameModeEnum.CardOnly)
         {
             if (this.GameStatus != GameStatusEnum.Playing)
@@ -198,7 +251,7 @@ namespace BeatTheStormSystem
                 this.CurrentPlayer = this.Players[_currentplayerindex];
                 if (playagainstcomputer)
                 {
-                    this.AddPlayer(new() { PlayerName = "Computer", PlayingPiece = "d" });
+                    this.AddPlayer(new() { PlayerName = "Computer", PlayingPiece = "C" });
                 }
                 this.Players.ForEach(p =>
                 {
@@ -207,6 +260,7 @@ namespace BeatTheStormSystem
                 });
                 this.UndoStack.Clear();
                 this.RedoStack.Clear();
+                this.Last10Moves.Clear();
             }
         }
         public async Task TakeSpot(int spotnum, bool pause = true)
@@ -222,6 +276,7 @@ namespace BeatTheStormSystem
                     await System.Threading.Tasks.Task.Delay(1000);
                 }
             }
+            allowclick = true;
             this.InvokePropertyChanged("BackColorForUndo");
             this.InvokePropertyChanged("BackColorForRedo");
         }
@@ -230,8 +285,8 @@ namespace BeatTheStormSystem
             if (_dicerolled || this.GameMode == GameModeEnum.CardOnly)
             {
                 _dicerolled = false;
-                //this.PreviousDice = this.DiceValue;
-                //this.PreviousCard = this.PlayingCard;
+                this.PreviousDice = this.DiceValue;
+                this.PreviousCard = this.PlayingCard;
                 int dice = 0;
                 Dictionary<string, string> card = this.GetRandomCard();
                 this.PlayingCard = card["Name"];
@@ -254,6 +309,8 @@ namespace BeatTheStormSystem
                     {
                         this.Winner = this.CurrentPlayer;
                         this.GameStatus = GameStatusEnum.Winner;
+                        scoreplayerwins++;
+                        ScoreChanged?.Invoke(this, new EventArgs());
                     }
                     spotnum += dice;
                 }
@@ -263,6 +320,8 @@ namespace BeatTheStormSystem
                     {
                         this.Loser = this.CurrentPlayer;
                         this.GameStatus = GameStatusEnum.Loser;
+                        scoreplayerloses++;
+                        ScoreChanged?.Invoke(this, new EventArgs());
                     }
                     spotnum -= dice;
                 }
@@ -274,7 +333,10 @@ namespace BeatTheStormSystem
                 {
                     spotnum = 0;
                 }
-                await TakeSpot(spotnum);
+                if (this.GameStatus == GameStatusEnum.Playing)
+                {
+                    await TakeSpot(spotnum);
+                }
                 RedoStack.Clear();
                 UndoStack.Push(new() {
                     { "Player", this.CurrentPlayer },
@@ -284,10 +346,6 @@ namespace BeatTheStormSystem
                     { "Dice", dice }
                 });
                 Last10Moves.Insert(0, UndoStack.Peek());
-                if (Last10Moves.Count > 10)
-                {
-                    Last10Moves.RemoveAt(Last10Moves.Count - 1);
-                }
                 if (this.GameStatus == GameStatusEnum.Playing)
                 {
                     SwitchPlayer();
@@ -304,8 +362,9 @@ namespace BeatTheStormSystem
         }
         public async Task DoTurn()
         {
-            if (GameStatus == GameStatusEnum.Playing)
+            if (GameStatus == GameStatusEnum.Playing && allowclick)
             {
+                allowclick = false;
                 await TakeTurn(this.CurrentPlayer.SpotValue);
             }
         }
@@ -330,7 +389,7 @@ namespace BeatTheStormSystem
         {
             int dice = 0;
             Random rnd = new(DateTime.Now.Microsecond);
-            if (this.GameStatus == GameStatusEnum.Playing)
+            if (this.GameStatus == GameStatusEnum.Playing && allowclick)
             {
                 dice = rnd.Next(1, 7);
                 if (!_dicerolled)
@@ -396,20 +455,20 @@ namespace BeatTheStormSystem
         {
             get
             {
-                string s = $"Player {this.CurrentPlayer.PlayerName} ";
+                string s = $"{this.GameName}: ";
                 switch (this.GameStatus)
                 {
                     case GameStatusEnum.Playing:
-                        s += GameMode == GameModeEnum.DiceWithRandomCard ? "Throw the Dice, and pick a Card" : "Pick a Card";
+                        s += $"Player {this.CurrentPlayer.PlayerName}: " + (GameMode == GameModeEnum.DiceWithRandomCard ? "Throw the Dice, and pick a Card" : "Pick a Card");
                         break;
                     case GameStatusEnum.Winner:
-                        s += "Winner!!!";
+                        s += $"Player {this.CurrentPlayer.PlayerName}: Winner!!!";
                         break;
                     case GameStatusEnum.Loser:
-                        s += "Loser";
+                        s += $"Player {this.CurrentPlayer.PlayerName}: Loser";
                         break;
                     case GameStatusEnum.NotStarted:
-                        s = "Choose playing mode and click Start";
+                        s += "Choose playing mode and click Start";
                         break;
                 }
                 return s;
@@ -417,18 +476,23 @@ namespace BeatTheStormSystem
         }
         public void RestartGame()
         {
-            if (this.GameStatus == GameStatusEnum.Playing)
+            if (this.GameStatus != GameStatusEnum.NotStarted)
             {
                 this.Spots.ForEach(s =>
                 {
-                    this.Players.ForEach(p =>
+                    if (s.SpotPlayers.Count > 0)
                     {
-                        s.RemovePlayerFromSpot(p);
-                        p.SpotValue = new();
-                    });
+                        this.Players.ForEach(p =>
+                        {
+                            s.RemovePlayerFromSpot(p);
+                            p.SpotValue = new();
+                        });
+                    }
+
                 });
                 this.GameStatus = GameStatusEnum.NotStarted;
                 this.Players.Clear();
+                allowclick = true;
             }
         }
         private void InvokePropertyChanged([CallerMemberName] string propertyname = "")
