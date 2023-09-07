@@ -11,6 +11,7 @@ public partial class Settings : ContentPage
     {
         InitializeComponent();
         this.Loaded += Settings_Loaded;
+        this.Appearing += Settings_Appearing;
         MultiplePlayerRdo.CheckedChanged += MultiplePlayerRdo_CheckedChanged;
         lstgame.ForEach(g => g.ScoreChanged += G_ScoreChanged);
         Game1Rb.BindingContext = lstgame[0];
@@ -18,6 +19,37 @@ public partial class Settings : ContentPage
         Game3Rb.BindingContext = lstgame[2];
         activegame = lstgame[0];
         this.BindingContext = activegame;
+    }
+
+    private void DisableEnableRadioButtons()
+    {
+        if (activegame.GameStatus != Game.GameStatusEnum.NotStarted)
+        {
+            MultiplePlayerRdo.IsEnabled = false;
+            PlayComputerRdo.IsEnabled = false;
+            ModeCardOnlyRdo.IsEnabled = false;
+            ModeDiceWithRandomCardRdo.IsEnabled = false;
+            Player1NameTxt.IsEnabled = false;
+            Player2NameTxt.IsEnabled = false;
+            PlayingPieceLst.IsEnabled = false;
+            PlayingPiece2Lst.IsEnabled = false;
+        }
+        else
+        {
+            MultiplePlayerRdo.IsEnabled = true;
+            PlayComputerRdo.IsEnabled = true;
+            ModeCardOnlyRdo.IsEnabled = true;
+            ModeDiceWithRandomCardRdo.IsEnabled = true;
+            Player1NameTxt.IsEnabled = true;
+            Player2NameTxt.IsEnabled = true;
+            PlayingPieceLst.IsEnabled = true;
+            PlayingPiece2Lst.IsEnabled = true;
+        }
+    }
+
+    private void Settings_Appearing(object sender, EventArgs e)
+    {
+        DisableEnableRadioButtons();
     }
 
     private void G_ScoreChanged(object sender, EventArgs e)
@@ -31,6 +63,7 @@ public partial class Settings : ContentPage
         //SM For some reason the xaml doesn't work to set the checked property to true.
         MultiplePlayerRdo.IsChecked = true;
         Game1Rb.IsChecked = true;
+        
     }
 
     private void MultiplePlayerRdo_CheckedChanged(object sender, CheckedChangedEventArgs e)
@@ -88,7 +121,7 @@ public partial class Settings : ContentPage
                 players.ForEach(activegame.AddPlayer);
                 activegame.StartGame(playcomputer, cardonly ? Game.GameModeEnum.CardOnly : Game.GameModeEnum.DiceWithRandomCard);
             }
-            await Navigation.PushAsync(new BeatTheStorm(activegame, players));
+            await Navigation.PushModalAsync(new BeatTheStorm(activegame, players));
         }
     }
 
@@ -99,6 +132,7 @@ public partial class Settings : ContentPage
         {
             activegame = (Game)rb.BindingContext;
             this.BindingContext = activegame;
+            DisableEnableRadioButtons();
         }
     }
 }

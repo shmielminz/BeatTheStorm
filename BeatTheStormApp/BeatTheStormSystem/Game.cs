@@ -213,25 +213,11 @@ namespace BeatTheStormSystem
         }
         public string DiceImage
         {
-            get
-            {
-                //if (this.PlayAgainstComputer && IsComputerTurn())
-                //{
-                //    return $"dice{this.PlayersMovesWhenInComputerMode["Dice"]}.jpg";
-                //}
-                return $"dice{this.DiceValue}.jpg";
-            }
+            get=> $"dice{this.DiceValue}.jpg";
         }
         public string CardImage
         {
-            get
-            {
-                //if (this.PlayAgainstComputer && IsComputerTurn())
-                //{
-                //    return $"{((string)this.PlayersMovesWhenInComputerMode["Card"]).ToLower()}.jpg";
-                //}
-                return $"{this.PlayingCard.ToLower()}.jpg";
-            }
+            get => $"{this.PlayingCard.ToLower()}.jpg";
         }
         //SM Following 2 properties are not used in MAUI and will be removed.
         public string PreviousCard { get; private set; } = "";
@@ -271,6 +257,7 @@ namespace BeatTheStormSystem
                 this.CurrentPlayer.SpotValue.RemovePlayerFromSpot(this.CurrentPlayer);
                 this.CurrentPlayer.SpotValue = this.Spots[i];
                 this.Spots[i].AddPlayerToSpot(this.CurrentPlayer);
+                //SM Remove this if statement for test to run.
                 if (pause)
                 {
                     await System.Threading.Tasks.Task.Delay(1000);
@@ -413,6 +400,7 @@ namespace BeatTheStormSystem
                 if (UndoStack.Count > 0)
                 {
                     RedoStack.Push(UndoStack.Pop());
+                    //SM Remove this if statement for test to run.
                     if (PlayAgainstComputer)
                     {
                         this.Last10Moves.RemoveAt(0);
@@ -492,6 +480,8 @@ namespace BeatTheStormSystem
                 });
                 this.GameStatus = GameStatusEnum.NotStarted;
                 this.Players.Clear();
+                this.DiceValue = 0;
+                this.PlayingCard = "";
                 allowclick = true;
             }
         }

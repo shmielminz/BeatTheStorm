@@ -102,6 +102,8 @@
 	  <None Remove="Resources\Images\Skype.jpg" />
 	  <None Remove="Resources\Images\Slack.jpg" />
 	  <None Remove="Resources\Images\Spec_for_Beat_the_Storm.pdf" />
+	  <None Remove="Resources\Images\spec_page_1.png" />
+	  <None Remove="Resources\Images\spec_page_2.png" />
 	  <None Remove="Resources\Images\Steam.jpg" />
 	  <None Remove="Resources\Images\Telegram.jpg" />
 	  <None Remove="Resources\Images\Tiktok.jpg" />
@@ -122,7 +124,6 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
-		<PackageReference Include="Syncfusion.Pdf.NET" Version="22.2.11" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -310,12 +311,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="BeatTheStorm.xaml">
+	  <MauiXaml Update="Help.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Settings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(Configuration)' == 'Release'">
+		<AppxPackageSigningEnabled>true</AppxPackageSigningEnabled>
+		<PackageCertificateThumbprint>8230CFA4DB695E594524ADADA7D7DE45A6275C35</PackageCertificateThumbprint>
+	</PropertyGroup>
+	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(RuntimeIdentifierOverride)' != ''">
+		<RuntimeIdentifier>$(RuntimeIdentifierOverride)</RuntimeIdentifier>
+	</PropertyGroup>
 
 </Project>

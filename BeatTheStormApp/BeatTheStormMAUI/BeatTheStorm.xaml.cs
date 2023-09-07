@@ -18,6 +18,7 @@ public partial class BeatTheStorm : ContentPage
             DiceBtn.IsVisible = false;
             GameGrd.SetRow(CardBtn, 1);
         }
+        AddToLast10List();
     }
 
     private void AddToLast10List()
@@ -42,12 +43,12 @@ public partial class BeatTheStorm : ContentPage
                 },
                 RowSpacing = 1
             };
-            grd.Add(new Label() { Text = "Player" }, 0, 0);
-            grd.Add(new Label() { Text = ((Player)last10lst[i]["Player"]).PlayerName }, 1, 0);
-            grd.Add(new Label() { Text = "From Spot" }, 0, 1);
-            grd.Add(new Label() { Text = (game.Spots.IndexOf((Spot)last10lst[i]["FromSpot"]) - 50).ToString() }, 1, 1);
-            grd.Add(new Label() { Text = "To Spot" }, 0, 2);
-            grd.Add(new Label() { Text = (game.Spots.IndexOf((Spot)last10lst[i]["ToSpot"]) - 50).ToString() }, 1, 2);
+            grd.Add(new Label() { Text = "Player", FontSize = 10 }, 0, 0);
+            grd.Add(new Label() { Text = ((Player)last10lst[i]["Player"]).PlayerName, FontSize = 10 }, 1, 0);
+            grd.Add(new Label() { Text = "From Spot", FontSize = 10 }, 0, 1);
+            grd.Add(new Label() { Text = (game.Spots.IndexOf((Spot)last10lst[i]["FromSpot"]) - 50).ToString(), FontSize = 10 }, 1, 1);
+            grd.Add(new Label() { Text = "To Spot", FontSize = 10 }, 0, 2);
+            grd.Add(new Label() { Text = (game.Spots.IndexOf((Spot)last10lst[i]["ToSpot"]) - 50).ToString(), FontSize = 10 }, 1, 2);
             brd.Content = grd;
             Last10MovesGrd.Add(brd, 0, i);
         }
@@ -57,7 +58,7 @@ public partial class BeatTheStorm : ContentPage
     {
         game.RestartGame();
         Players.Clear();
-        Navigation.PopAsync();
+        Navigation.PopModalAsync();
     }
 
     private void DiceBtn_Clicked(object sender, EventArgs e)
@@ -85,14 +86,11 @@ public partial class BeatTheStorm : ContentPage
 
     private async void HelpBtn_Clicked(object sender, EventArgs e)
     {
-        string file = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        file += @"\Resources\Images\spec_for_beat_the_storm.pdf";
-        string popoverTitle = "Read text file";
-        await Launcher.Default.OpenAsync(new OpenFileRequest(popoverTitle, new ReadOnlyFile(file)));
+        await Navigation.PushModalAsync(new Help());
     }
 
     private void PauseGameBtn_Clicked(object sender, EventArgs e)
     {
-        Navigation.PopAsync();
+        Navigation.PopModalAsync();
     }
 }

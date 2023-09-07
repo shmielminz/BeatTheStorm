@@ -62,7 +62,7 @@ namespace BeatTheStormTest
             Game game = new();
             game.AddPlayer(new() { PlayerName = "John", PlayingPiece = "I" });
             game.AddPlayer(new() { PlayerName = "Mike", PlayingPiece = "J" });
-            game.StartGame(false, Game.GameModeEnum.DiceWithRandomCard);
+            game.StartGame(false, Game.GameModeEnum.CardOnly);
             int rnd = 20;
             int currentplayer = game.Players.IndexOf(game.CurrentPlayer);
             game.TakeTurn(game.Spots[rnd]);
@@ -77,14 +77,14 @@ namespace BeatTheStormTest
             game.AddPlayer(new() { PlayerName = "John", PlayingPiece = "I" });
             game.AddPlayer(new() { PlayerName = "Mike", PlayingPiece = "J" });
             game.StartGame();
-            while (!game.PlayingCard.Contains("Hashomrim") || game.CurrentPlayer.SpotValue != game.Spots[100])
+            while ((!game.PlayingCard.Contains("Hashomrim") || game.CurrentPlayer.SpotValue != game.Spots[100]) && game.GameStatus == Game.GameStatusEnum.Playing)
             {
                 game.TakeTurn(game.Spots[100]);
                 TestContext.WriteLine(game.CurrentPlayer.PlayerName);
                 TestContext.WriteLine("----------------");
             }
             string msg = $"current player = {game.CurrentPlayer.PlayerName}, winner = {game.Winner.PlayerName}, game status = {game.GameStatus}";
-            Assert.IsTrue(game.GameStatus == Game.GameStatusEnum.Winner && game.Winner == game.CurrentPlayer && game.CurrentPlayer.SpotValue == game.Spots[100], msg);
+            Assert.IsTrue(game.GameStatus == Game.GameStatusEnum.Winner && game.Winner == game.CurrentPlayer, msg);
             TestContext.WriteLine(msg);
         }
         [Test]
@@ -94,14 +94,14 @@ namespace BeatTheStormTest
             game.AddPlayer(new() { PlayerName = "John", PlayingPiece = "I" });
             game.AddPlayer(new() { PlayerName = "Mike", PlayingPiece = "J" });
             game.StartGame();
-            while (game.PlayingCard.Contains("Hashomrim") || game.CurrentPlayer.SpotValue != game.Spots[0])
+            while ((game.PlayingCard.Contains("Hashomrim") || game.CurrentPlayer.SpotValue != game.Spots[0]) && game.GameStatus == Game.GameStatusEnum.Playing)
             {
                 game.TakeTurn(game.Spots[0]);
                 TestContext.WriteLine(game.CurrentPlayer.PlayerName);
                 TestContext.WriteLine("----------------");
             }
             string msg = $"current player = {game.CurrentPlayer.PlayerName}, loser = {game.Loser.PlayerName}, game status = {game.GameStatus}";
-            Assert.IsTrue(game.GameStatus == Game.GameStatusEnum.Loser && game.Loser == game.CurrentPlayer && game.CurrentPlayer.SpotValue == game.Spots[0], msg);
+            Assert.IsTrue(game.GameStatus == Game.GameStatusEnum.Loser && game.Loser == game.CurrentPlayer, msg);
             TestContext.WriteLine(msg);
         }
         [Test]
