@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeatTheStormApp", "BeatTheS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeatTheStormMAUI", "BeatTheStormMAUI\BeatTheStormMAUI.csproj", "{A5461332-AAFF-4DBD-89A8-25E97EA25111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeatTheStormTest", "BeatTheStormTest\BeatTheStormTest.csproj", "{838D4920-B917-4BEB-B3EE-BB95EF597FA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeatTheStormTest", "BeatTheStormTest\BeatTheStormTest.csproj", "{838D4920-B917-4BEB-B3EE-BB95EF597FA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeatTheStormSystem", "BeatTheStormSystem\BeatTheStormSystem.csproj", "{44A68E45-705D-4182-A99F-B39B828E87A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeatTheStormSystem", "BeatTheStormSystem\BeatTheStormSystem.csproj", "{44A68E45-705D-4182-A99F-B39B828E87A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeatTheStormWeb", "BeatTheStormWeb\BeatTheStormWeb.csproj", "{81B4240C-C8B7-4E97-BBE1-C74582793C87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{44A68E45-705D-4182-A99F-B39B828E87A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44A68E45-705D-4182-A99F-B39B828E87A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44A68E45-705D-4182-A99F-B39B828E87A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B4240C-C8B7-4E97-BBE1-C74582793C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B4240C-C8B7-4E97-BBE1-C74582793C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B4240C-C8B7-4E97-BBE1-C74582793C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B4240C-C8B7-4E97-BBE1-C74582793C87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

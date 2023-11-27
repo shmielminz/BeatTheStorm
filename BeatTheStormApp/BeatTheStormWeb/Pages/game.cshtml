@@ -1,0 +1,757 @@
+﻿@page
+@model BeatTheStormWeb.Pages.gameModel
+@{
+}
+<div class="row game-status">
+    <div class="container-fluid">
+        <div class="row d-none" id="gameSettings">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Set up Game</button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Game Setup</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="container">
+                        <div class="row">
+                            <h6 class="text-center">Choose playing modes.</h6>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="radio" value="" id="rdPlayer2" name="multipleplayers" checked />
+                                <label for="rdPlayer2">2 Players</label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="radio" value="" id="rdPlayComputer" name="multipleplayers" />
+                                <label for="rdPlayComputer">Play against Computer</label>
+                            </div>
+
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col">
+                                <input type="radio" value="" id="rdCardOnly" name="playingmode" />
+                                <label for="rdCardOnly">Card Only</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="radio" value="" id="rdDiceWithCard" name="playingmode" checked />
+                                <label for="rdDiceWithCard">Dice with Random Card</label>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <button class="btn btn-primary" type="button" id="btnStart" data-bs-dismiss="offcanvas" aria-label="Close">Start</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1 col-md-2 col-sm-3 col-2 col">
+                <button class="btn p-0 text-info" id="undo"><i class="fa-solid fa-rotate-left"></i></button>
+                <button class="btn p-0 text-info" id="redo"><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
+            <div class="col-lg-8 col-md-7 col-sm-5 col-5 col" id="gameStatus"></div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-3 col">
+                <button class="btn bg-warning w-100" id="btnRestart">Restart</button>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2 col-2 col">
+                <a class="btn bg-info w-100" href="./help" target="_blank" role="button"><i class="fa-solid fa-question"></i></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid m-0">
+    <div class="row">
+        <div class="d-md-block col-md-4 col-lg-3" id="gameControls">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 col-6 mt-3 mb-1">
+                        <button id="btnDice" class="img-btn btn bg-info d-block w-100">
+                            <img src="" alt="" id="diceImg" class="img-fluid" />
+                            <br />
+                            Click me to throw Dice
+                        </button>
+                    </div>
+                    <div class="col-md-12 col-6 mt-3 mb-1">
+                        <button id="btnCard" class="img-btn btn bg-info d-block w-100">
+                            <img src="" alt="" id="cardImg" class="img-fluid" />
+                            <br />
+                            Click me to choose a Card
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-7">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">41</div>
+                        <div class="front fa-solid" id="spot91"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">42</div>
+                        <div class="front fa-solid" id="spot92"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">43</div>
+                        <div class="front fa-solid" id="spot93"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">44</div>
+                        <div class="front fa-solid" id="spot94"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">45</div>
+                        <div class="front fa-solid" id="spot95"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">46</div>
+                        <div class="front fa-solid" id="spot96"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">47</div>
+                        <div class="front fa-solid" id="spot97"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">48</div>
+                        <div class="front fa-solid" id="spot98"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">49</div>
+                        <div class="front fa-solid" id="spot99"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">50</div>
+                        <div class="front fa-solid" id="spot100"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">40</div>
+                        <div class="front fa-solid" id="spot90"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">39</div>
+                        <div class="front fa-solid" id="spot89"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">38</div>
+                        <div class="front fa-solid" id="spot88"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">37</div>
+                        <div class="front fa-solid" id="spot87"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">36</div>
+                        <div class="front fa-solid" id="spot86"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">35</div>
+                        <div class="front fa-solid" id="spot85"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">34</div>
+                        <div class="front fa-solid" id="spot84"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">33</div>
+                        <div class="front fa-solid" id="spot83"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">32</div>
+                        <div class="front fa-solid" id="spot82"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">31</div>
+                        <div class="front fa-solid" id="spot81"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">21</div>
+                        <div class="front fa-solid" id="spot71"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">22</div>
+                        <div class="front fa-solid" id="spot72"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">23</div>
+                        <div class="front fa-solid" id="spot73"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">24</div>
+                        <div class="front fa-solid" id="spot74"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">25</div>
+                        <div class="front fa-solid" id="spot75"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">26</div>
+                        <div class="front fa-solid" id="spot76"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">27</div>
+                        <div class="front fa-solid" id="spot77"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">28</div>
+                        <div class="front fa-solid" id="spot78"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">29</div>
+                        <div class="front fa-solid" id="spot79"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">30</div>
+                        <div class="front fa-solid" id="spot80"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">20</div>
+                        <div class="front fa-solid" id="spot70"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">19</div>
+                        <div class="front fa-solid" id="spot69"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">18</div>
+                        <div class="front fa-solid" id="spot68"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">17</div>
+                        <div class="front fa-solid" id="spot67"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">16</div>
+                        <div class="front fa-solid" id="spot66"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">15</div>
+                        <div class="front fa-solid" id="spot65"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">14</div>
+                        <div class="front fa-solid" id="spot64"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">13</div>
+                        <div class="front fa-solid" id="spot63"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">12</div>
+                        <div class="front fa-solid" id="spot62"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">11</div>
+                        <div class="front fa-solid" id="spot61"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">1</div>
+                        <div class="front fa-solid" id="spot51"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">2</div>
+                        <div class="front fa-solid" id="spot52"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">3</div>
+                        <div class="front fa-solid" id="spot53"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">4</div>
+                        <div class="front fa-solid" id="spot54"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">5</div>
+                        <div class="front fa-solid" id="spot55"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">6</div>
+                        <div class="front fa-solid" id="spot56"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">7</div>
+                        <div class="front fa-solid" id="spot57"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">8</div>
+                        <div class="front fa-solid" id="spot58"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">9</div>
+                        <div class="front fa-solid" id="spot59"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">10</div>
+                        <div class="front fa-solid" id="spot60"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">00</div>
+                        <div class="front fa-solid" id="spot50"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">-10</div>
+                        <div class="front fa-solid" id="spot40"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-9</div>
+                        <div class="front fa-solid" id="spot41"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-8</div>
+                        <div class="front fa-solid" id="spot42"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-7</div>
+                        <div class="front fa-solid" id="spot43"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-6</div>
+                        <div class="front fa-solid" id="spot44"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-5</div>
+                        <div class="front fa-solid" id="spot45"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-4</div>
+                        <div class="front fa-solid" id="spot46"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-3</div>
+                        <div class="front fa-solid" id="spot47"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-2</div>
+                        <div class="front fa-solid" id="spot48"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-1</div>
+                        <div class="front fa-solid" id="spot49"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">-11</div>
+                        <div class="front fa-solid" id="spot39"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-12</div>
+                        <div class="front fa-solid" id="spot38"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-13</div>
+                        <div class="front fa-solid" id="spot37"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-14</div>
+                        <div class="front fa-solid" id="spot36"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-15</div>
+                        <div class="front fa-solid" id="spot35"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-16</div>
+                        <div class="front fa-solid" id="spot34"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-17</div>
+                        <div class="front fa-solid" id="spot33"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-18</div>
+                        <div class="front fa-solid" id="spot32"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-19</div>
+                        <div class="front fa-solid" id="spot31"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-20</div>
+                        <div class="front fa-solid" id="spot30"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">-30</div>
+                        <div class="front fa-solid" id="spot20"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-29</div>
+                        <div class="front fa-solid" id="spot21"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-28</div>
+                        <div class="front fa-solid" id="spot22"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-27</div>
+                        <div class="front fa-solid" id="spot23"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-26</div>
+                        <div class="front fa-solid" id="spot24"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-25</div>
+                        <div class="front fa-solid" id="spot25"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-24</div>
+                        <div class="front fa-solid" id="spot26"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-23</div>
+                        <div class="front fa-solid" id="spot27"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-22</div>
+                        <div class="front fa-solid" id="spot28"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-21</div>
+                        <div class="front fa-solid" id="spot29"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">-31</div>
+                        <div class="front fa-solid" id="spot19"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-32</div>
+                        <div class="front fa-solid" id="spot18"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-33</div>
+                        <div class="front fa-solid" id="spot17"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-34</div>
+                        <div class="front fa-solid" id="spot16"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-35</div>
+                        <div class="front fa-solid" id="spot15"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-36</div>
+                        <div class="front fa-solid" id="spot14"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-37</div>
+                        <div class="front fa-solid" id="spot13"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-38</div>
+                        <div class="front fa-solid" id="spot12"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-39</div>
+                        <div class="front fa-solid" id="spot11"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-40</div>
+                        <div class="front fa-solid" id="spot10"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">-50</div>
+                        <div class="front fa-solid" id="spot0"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-49</div>
+                        <div class="front fa-solid" id="spot1"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-48</div>
+                        <div class="front fa-solid" id="spot2"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-47</div>
+                        <div class="front fa-solid" id="spot3"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-46</div>
+                        <div class="front fa-solid" id="spot4"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-45</div>
+                        <div class="front fa-solid" id="spot5"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-44</div>
+                        <div class="front fa-solid" id="spot6"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-43</div>
+                        <div class="front fa-solid" id="spot7"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-42</div>
+                        <div class="front fa-solid" id="spot8"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-41</div>
+                        <div class="front fa-solid" id="spot9"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-lg-block col-lg-1 col-xl-2" id="gameHistory">
+        </div>
+    </div>
+</div>
+<script>
+    //variable assignments.
+    const btnDice = document.querySelector("#btnDice");
+    const btnCard = document.querySelector("#btnCard");
+    const status = document.querySelector("#gameStatus");
+    const diceImg = document.querySelector("#diceImg");
+    const cardImg = document.querySelector("#cardImg");
+    const lstCards = [
+        // SM - cards
+        { name: "Facebook", value: 5 },
+        { name: "Instagram", value: 5 },
+        { name: "Twitter", value: 5 },
+        { name: "Tiktok", value: 5 },
+        { name: "Netflix", value: 5 },
+        { name: "Twitch", value: 5 },
+        { name: "Vimeo", value: 5 },
+        { name: "Whatsapp", value: 4 },
+        { name: "Linkedin", value: 4 },
+        { name: "YouTube", value: 3 },
+        { name: "Roblox", value: 3 },
+        { name: "Skype", value: 3 },
+        { name: "Steam", value: 3 },
+        { name: "Telegram", value: 3 },
+        { name: "Pinterest", value: 3 },
+        { name: "Googleplay", value: 3 },
+        { name: "Zoom", value: 3 },
+        { name: "Bing", value: 2 },
+        { name: "Google", value: 2 },
+        { name: "Bbcnews", value: 2 },
+        { name: "Nytimes", value: 2 },
+        { name: "Gmail", value: 1 },
+        { name: "Slack", value: 1 },
+        { name: "Yahoomail", value: 1 },
+        { name: "Outlook", value: 1 },
+        { name: "Aolmail", value: 1 },
+        // SM + cards
+        { name: "Hashomrim1", value: 5 },
+        { name: "Hashomrim2", value: 5 },
+        { name: "Hashomrim3", value: 5 },
+        { name: "Hashomrim4", value: 5 },
+        { name: "Hashomrim5", value: 5 },
+        { name: "Hashomrim6", value: 5 },
+        { name: "Hashomrim7", value: 4 },
+        { name: "Hashomrim8", value: 4 },
+        { name: "Hashomrim9", value: 3 },
+        { name: "Hashomrim10", value: 3 },
+        { name: "Hashomrim11", value: 3 },
+        { name: "Hashomrim12", value: 3 },
+        { name: "Hashomrim13", value: 3 },
+        { name: "Hashomrim14", value: 3 },
+        { name: "Hashomrim15", value: 3 },
+        { name: "Hashomrim16", value: 3 },
+        { name: "Hashomrim17", value: 2 },
+        { name: "Hashomrim18", value: 2 },
+        { name: "Hashomrim19", value: 2 },
+        { name: "Hashomrim20", value: 2 },
+        { name: "Hashomrim21", value: 1 },
+        { name: "Hashomrim22", value: 1 },
+        { name: "Hashomrim23", value: 1 },
+        { name: "Hashomrim24", value: 1 },
+        { name: "Hashomrim25", value: 1 },
+        { name: "Hashomrim26", value: 1 }
+    ];
+    const player1 = '<i class="fa-solid fa-heart"></i>';
+    let player2 = '<i class="fa-solid fa-dragon"></i>';
+    const winnerStatus = "WINNER";
+    const loserStatus = "LOSER";
+    const playingStatus = "PLAYING";
+    const notStartedStatus = "NOT STARTED";
+    let currentStatus;
+    let currentPlayerSpot;
+    let currentPlayerValue;
+    let currentPlayer;
+    let diceValue;
+    let cardValue;
+    let winner = "";
+    let loser = "";
+    let cardOnly;
+    let playComputer;
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+
+
+    //event hookup
+    btnCard.addEventListener("click", chooseCard);
+    btnDice.addEventListener("click", throwDice);
+    document.querySelector("#btnRestart").addEventListener("click", setupGame);
+    document.querySelector("#btnStart").addEventListener("click", startGame);
+    document.addEventListener("DOMContentLoaded", setupGame);
+
+    function setupGame() {
+        document.querySelector("#gameSettings").classList.remove("d-none");
+        document.querySelectorAll(".front").forEach(s => s.textContent = "");
+        btnDice.disabled = true;
+        btnCard.disabled = true;
+        winner = "";
+        loser = "";
+        currentStatus = notStartedStatus;
+        setStatusLbl();
+        btnDice.classList.remove("d-none");
+        btnCard.parentElement.classList.add("col-6");
+    }
+
+    //functions
+    function startGame() {
+        document.querySelector("#gameSettings").classList.add("d-none");
+        cardOnly = document.querySelector("#rdCardOnly").checked;
+        playComputer = document.querySelector("#rdPlayComputer").checked;
+        let playerSpot = document.querySelector("#spot50");
+        if (playComputer) {
+            player2 = player2.replace("dragon", "computer");
+        } else {
+            player2 = player2.replace("computer", "dragon");
+        }
+        document.querySelectorAll(".front").forEach(s => s.textContent = "");
+        playerSpot.innerHTML += player1;
+        playerSpot.innerHTML += player2;
+        currentPlayerSpot = playerSpot;
+        currentPlayerValue = player1;
+        currentPlayer = "player1";
+        currentStatus = playingStatus;
+        btnDice.disabled = false;
+        btnCard.disabled = !cardOnly;
+        if (cardOnly) {
+            btnDice.classList.add("d-none");
+            btnCard.parentElement.classList.remove("col-6");
+        }
+        setStatusLbl();
+    }
+
+    async function takeTurn() {
+        if (currentStatus == playingStatus) {
+            let currentSpot = parseInt(currentPlayerSpot.id.substring(4));
+            let originalSpot = parseInt(currentPlayerSpot.id.substring(4));
+
+            if (cardValue.includes("Hashomrim")) {
+                if (currentSpot == 100) {
+                    currentStatus = winnerStatus;
+                    winner = currentPlayerValue;
+                    setStatusLbl();
+                    return;
+                }
+                currentSpot += diceValue;
+            }
+            else {
+                if (currentSpot == 0) {
+                    currentStatus = loserStatus;
+                    loser = currentPlayerValue;
+                    setStatusLbl();
+                    return;
+                }
+                currentSpot -= diceValue;
+            }
+            if (currentSpot > 100) {
+                currentSpot = 100;
+            }
+            else if (currentSpot < 0) {
+                currentSpot = 0;
+            }
+            for (let i = originalSpot; i != (originalSpot > currentSpot ? currentSpot - 1 : currentSpot + 1); i += originalSpot < currentSpot ? 1 : -1) {
+                currentPlayerSpot.innerHTML = currentPlayerSpot.innerHTML.replace(currentPlayerValue, "");
+                currentPlayerSpot.classList.remove(currentPlayer);
+                currentPlayerSpot = document.querySelector(`#spot${i}`);
+                currentPlayerSpot.classList.add(currentPlayer);
+                currentPlayerSpot.innerHTML += currentPlayerValue;
+                await delay(1000);
+            }
+
+            switchPlayer();
+            btnDice.disabled = false;
+            btnCard.disabled = !cardOnly;
+            setStatusLbl();
+            if (currentPlayerValue.includes("computer")) {
+                btnDice.disabled = true;
+                btnCard.disabled = true;
+                if (!cardOnly) {
+                    throwDice();
+                }
+                await chooseCard();
+            }
+            document.querySelector("#gameControls").classList.remove("d-none");
+        }
+    }
+
+    async function chooseCard() {
+        if (currentStatus == playingStatus) {
+            const rndIndex = Math.floor(Math.random() * lstCards.length);
+            cardValue = lstCards[rndIndex].name;
+            cardImg.src = `/Images/${cardValue}.jpg`;
+            if (cardOnly) {
+                diceValue = lstCards[rndIndex].value;
+            }
+            btnCard.disabled = true;
+            setStatusLbl();
+            document.querySelector("#gameControls").classList.add("d-none");
+            await takeTurn();
+        }
+    }
+
+    function throwDice() {
+        if (currentStatus == playingStatus) {
+            diceValue = Math.ceil(Math.random() * 6);
+            diceImg.src = `/Images/dice${diceValue}.jpg`;
+            btnDice.disabled = true;
+            btnCard.disabled = false;
+        }
+    }
+
+    function switchPlayer() {
+        const c = playComputer ? "fa-computer" : "fa-dragon";
+        currentPlayerSpot = currentPlayerSpot == document.querySelector("[id^='spot'] .fa-heart").parentElement ? document.querySelector(`[id^='spot'] .${c}`).parentElement : document.querySelector("[id^='spot'] .fa-heart").parentElement;
+        currentPlayerValue = currentPlayerValue == player1 ? player2 : player1;
+        currentPlayer = currentPlayerValue == player1 ? "player2" : "player1";
+    }
+
+    function setStatusLbl() {
+        switch (currentStatus) {
+            case playingStatus:
+                status.innerHTML = `Current Player = ${currentPlayerValue}; dice = ${diceValue}; card = ${cardValue}`;
+                break;
+            case winnerStatus:
+                status.innerHTML = `Winner = ${currentPlayerValue}`;
+                break;
+            case loserStatus:
+                status.innerHTML = `Loser = ${currentPlayerValue}`;
+                break;
+            case notStartedStatus:
+                status.innerHTML = "Please set up game modes and click start.";
+                break;
+        }
+    }
+
+</script>

@@ -1,0 +1,105 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="row">
+    <div class="col-12">
+        <section>
+            <h3 class="fst-italic">Overview:</h3>
+            <article>
+                This documentation describes the software requirements for the new game called Beat the Storm.
+                Which is a game similar to <a class="link-info text-decoration-none" target="_blank" href="https://en.wikipedia.org/wiki/Snakes_and_ladders">Snakes and ladders</a>,
+                where you challenge yourself against your friend or the computer, see who will beat the storm of technology first,
+                and get first to 50 שערי קדושה, or who will fail to fight the storm, and drop to below 50 שערי טומאה.
+            </article>
+        </section>
+        <hr />
+        <section>
+            <img class="img-fluid" src="/Images/Page.png" alt="" />
+        </section>
+        <hr />
+        <section>
+            <h3 class="fst-italic">The Game:</h3>
+            <article>
+                <h5 class="fst-italic">Players:</h5>
+                <p>You first choose the players, there are two options to choose from.</p>
+                <ol>
+                    <li><a class="nav-link link-secondary">Play against a friend.</a></li>
+                    <li><a class="nav-link link-secondary">Play against the computer.</a></li>
+                </ol>
+            </article>
+            <article id="modes">
+                <h5 class="fst-italic">Modes:</h5>
+                <p>Once you choose the second player, you choose the playing mode, you have 2 options.</p>
+                <ol>
+                    <li><a class="nav-link link-secondary" href="#card">Card Only.</a></li>
+                    <li><a class="nav-link link-secondary" href="#dice">Dice with a Random Card.</a></li>
+                </ol>
+            </article>
+        </section>
+        <br />
+        <section id="card">
+            <h4 class="fst-italic">Card Only:</h4>
+            <article>
+                When playing in card only mode. You get a random card, which can be a השומרים card, or a Technology card, 
+                each card has a value, which is the number of moves you should take, but השומרים card gives you moves up, 
+                while Technology card gives you moves down.
+            </article>
+            <article>
+                You start in middle of board, there are 50 steps up, and 50 steps down. 
+                Each step represents a different שער, the 50 up are the 50 שערי קדושה, while 50 down is 50 שערי טומאה.
+            </article>
+            <article>
+                Once you pick a random card, you get a value, and if card was a השומרים card, you go up the value returned from card, 
+                and if card was Technology card, you move down the value returned from card.
+            </article>
+            <article>
+                See <a class="link-primary text-decoration-none" href="#howTo">How to play</a> for details on the aim and how to play the game.
+            </article>
+        </section>
+        <br />
+        <section id="dice">
+            <h4 class="fst-italic">Dice with a Random Card:</h4>
+            <article>
+                You throw the dice, and you get the value of moves to go, but to know if you should move up or down, 
+                you need to pick a random card. 
+                Cards will be same as <a class="link-primary text-decoration-none" href="#card">card only</a> mode, 
+                the only difference is,that the number of moves you get from dice, rather than from card value.
+            </article>
+            <article>
+                And card will determine if you should go up or down, and if card was a השומרים card, you go up the value returned from dice, 
+                and if card was Technology card, you move down the value returned from dice.
+            </article>
+            <article>
+                See <a class="link-primary text-decoration-none" href="#howTo">How to play</a> for details on the aim and how to play the game.
+            </article>
+        </section>
+        <br />
+        <section id="howTo">
+            <h3 class="fst-italic">How to play:</h3>
+            <article>
+                <h5 class="fst-italic">The Start:</h5>
+                <p>
+                    The game starts with all players in middle spot, there are 50 spots up, and 50 spots down, you pick the card, 
+                    as specified in <a class="link-primary text-decoration-none" href="#modes">Modes</a>.
+                </p>
+                <p>
+                    Once you get the card and move up or down, you need to take care not to get caught in the Storm, 
+                    and not to drop to -50, and to move up to +50.
+                </p>
+            </article>
+            <article>
+                <h5 class="fst-italic">The Winner or Loser:</h5>
+                <p>
+                    Once a player reaches +50, the player takes one more turn, and if player gets a plus turn, that player is the Winner.
+                </p>
+                <p>
+                    And same is for loser, if a player gets to -50, the player takes one more turn, and if player gets another minus turn, 
+                    that player is the Loser.
+                </p>
+            </article>
+        </section>
+    </div>
+</div>
