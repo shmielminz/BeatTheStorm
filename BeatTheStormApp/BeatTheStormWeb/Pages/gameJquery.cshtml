@@ -8,16 +8,16 @@
             @* <button class="btn btn-primary w-25 p-3 m-auto" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Setup Game</button> *@
 
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen">
+                <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Game Setup</h5>
-                            @* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="container">
                                 <div class="row">
-                                    <h6 class="text-center">Choose playing modes.</h6>
+                                    <h6 class="text-center">Choose playing modes and click start.</h6>
                                 </div>
                                 <div class="row">
                                     <div class="col">
@@ -62,7 +62,7 @@
             </div>
             <div class="col-lg-8 col-md-7 col-sm-5 col-5 col" id="gameStatus"></div>
             <div class="col-lg-2 col-md-2 col-sm-2 col-3 col">
-                <button class="btn bg-warning w-100" id="btnRestart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Restart</button>
+                <button class="btn bg-primary w-100" id="btnRestart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Restart</button>
             </div>
             <div class="col-lg-1 col-md-1 col-sm-2 col-2 col">
                 <a class="btn bg-info w-100 h-100 fa-solid fa-question" href="./help" target="_blank" role="button"></a>
@@ -631,22 +631,28 @@
             switch(currentStatus){
                 case playingStatus:
                     btn.textContent = "Restart";
+                    btn.classList.replace("bg-primary", "bg-warning");
                     break;
                 default:
                     btn.textContent = "Start";
+                    btn.classList.replace("bg-warning", "bg-primary");
                     break;
             }
         }
 
         function setupGame() {
             document.querySelector("#gameSettings").classList.remove("d-none");
-            document.querySelectorAll(".front").forEach(s => s.textContent = "");
+            document.querySelectorAll(".front").forEach(s => s.innerHTML = "");
             btnDice.attr("disabled", true);
             btnCard.attr("disabled", true);
             winner = "";
             loser = "";
             currentStatus = notStartedStatus;
             setStatusLbl();
+            diceImg.src = "";
+            cardImg.src = "";
+            diceValue = "";
+            cardValue = "";
             btnDice.removeClass("d-none");
             btnCard.parent().addClass("col-6");
         }
@@ -791,7 +797,7 @@
                     status.innerHTML = `Loser = ${currentPlayer}`;
                     break;
                 case notStartedStatus:
-                    status.innerHTML = "Please set up game modes and click start.";
+                    status.innerHTML = "Please set up game modes by clicking start.";
                     break;
             }
             setBtnText();
