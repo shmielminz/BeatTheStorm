@@ -1,0 +1,534 @@
+﻿@page
+@model BeatTheStormWeb.Pages.game_typescriptModel
+@{
+}
+<div class="row game-status">
+    <div class="container-fluid">
+        <div class="row d-none" id="gameSettings">
+            @* <button class="btn btn-primary w-25 p-3 m-auto" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Setup Game</button> *@
+
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Game Setup</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <h6 class="text-center">Choose playing modes and click start.</h6>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="radio" value="" id="rdPlayer2" name="multipleplayers" checked />
+                                        <label for="rdPlayer2">2 Players</label>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="radio" value="" id="rdPlayComputer" name="multipleplayers" />
+                                        <label for="rdPlayComputer">Play against Computer</label>
+                                    </div>
+
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="radio" value="" id="rdCardOnly" name="playingmode" />
+                                        <label for="rdCardOnly">Card Only</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="radio" value="" id="rdDiceWithCard" name="playingmode" checked />
+                                        <label for="rdDiceWithCard">Dice with Random Card</label>
+                                    </div>
+                                </div>
+                                <div class="row mt-5">
+                                    <button class="btn btn-primary" type="button" id="btnStart" data-bs-dismiss="modal" aria-label="Close">Start</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1 col-md-2 col-sm-3 col-2 col">
+                <button class="btn p-0 text-info fa-solid fa-rotate-left" id="undo"></button>
+                <button class="btn p-0 text-info fa-solid fa-rotate-right" id="redo"></button>
+            </div>
+            <div class="col-lg-8 col-md-7 col-sm-5 col-5 col" id="gameStatus"></div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-3 col">
+                <button class="btn bg-primary w-100" id="btnRestart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Restart</button>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2 col-2 col">
+                <a class="btn bg-info w-100 h-100 fa-solid fa-question" href="./help" target="_blank" role="button"></a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="container-fluid m-0">
+    <div class="row">
+        <div class="d-md-block col-md-4 col-lg-3" id="gameControls">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 col-6 mt-3 mb-1">
+                        <button id="btnDice" class="img-btn btn bg-info d-block w-100">
+                            <img src="" alt="" id="diceImg" class="img-fluid" />
+                            <br />
+                            Click me to throw Dice
+                        </button>
+                    </div>
+                    <div class="col-md-12 col-6 mt-3 mb-1">
+                        <button id="btnCard" class="img-btn btn bg-info d-block w-100">
+                            <img src="" alt="" id="cardImg" class="img-fluid" />
+                            <br />
+                            Click me to choose a Card
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-7">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">41</div>
+                        <div class="front spot" id="spot91"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">42</div>
+                        <div class="front spot" id="spot92"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">43</div>
+                        <div class="front spot" id="spot93"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">44</div>
+                        <div class="front spot" id="spot94"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">45</div>
+                        <div class="front spot" id="spot95"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">46</div>
+                        <div class="front spot" id="spot96"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">47</div>
+                        <div class="front spot" id="spot97"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">48</div>
+                        <div class="front spot" id="spot98"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">49</div>
+                        <div class="front spot" id="spot99"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">50</div>
+                        <div class="front spot" id="spot100"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">40</div>
+                        <div class="front spot" id="spot90"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">39</div>
+                        <div class="front spot" id="spot89"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">38</div>
+                        <div class="front spot" id="spot88"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">37</div>
+                        <div class="front spot" id="spot87"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">36</div>
+                        <div class="front spot" id="spot86"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">35</div>
+                        <div class="front spot" id="spot85"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">34</div>
+                        <div class="front spot" id="spot84"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">33</div>
+                        <div class="front spot" id="spot83"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">32</div>
+                        <div class="front spot" id="spot82"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">31</div>
+                        <div class="front spot" id="spot81"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">21</div>
+                        <div class="front spot" id="spot71"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">22</div>
+                        <div class="front spot" id="spot72"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">23</div>
+                        <div class="front spot" id="spot73"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">24</div>
+                        <div class="front spot" id="spot74"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">25</div>
+                        <div class="front spot" id="spot75"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">26</div>
+                        <div class="front spot" id="spot76"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">27</div>
+                        <div class="front spot" id="spot77"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">28</div>
+                        <div class="front spot" id="spot78"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">29</div>
+                        <div class="front spot" id="spot79"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">30</div>
+                        <div class="front spot" id="spot80"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">20</div>
+                        <div class="front spot" id="spot70"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">19</div>
+                        <div class="front spot" id="spot69"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">18</div>
+                        <div class="front spot" id="spot68"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">17</div>
+                        <div class="front spot" id="spot67"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">16</div>
+                        <div class="front spot" id="spot66"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">15</div>
+                        <div class="front spot" id="spot65"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">14</div>
+                        <div class="front spot" id="spot64"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">13</div>
+                        <div class="front spot" id="spot63"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">12</div>
+                        <div class="front spot" id="spot62"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">11</div>
+                        <div class="front spot" id="spot61"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">1</div>
+                        <div class="front spot" id="spot51"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">2</div>
+                        <div class="front spot" id="spot52"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">3</div>
+                        <div class="front spot" id="spot53"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">4</div>
+                        <div class="front spot" id="spot54"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">5</div>
+                        <div class="front spot" id="spot55"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">6</div>
+                        <div class="front spot" id="spot56"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">7</div>
+                        <div class="front spot" id="spot57"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">8</div>
+                        <div class="front spot" id="spot58"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">9</div>
+                        <div class="front spot" id="spot59"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">10</div>
+                        <div class="front spot" id="spot60"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">00</div>
+                        <div class="front spot" id="spot50"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">-10</div>
+                        <div class="front spot" id="spot40"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-9</div>
+                        <div class="front spot" id="spot41"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-8</div>
+                        <div class="front spot" id="spot42"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-7</div>
+                        <div class="front spot" id="spot43"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-6</div>
+                        <div class="front spot" id="spot44"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-5</div>
+                        <div class="front spot" id="spot45"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-4</div>
+                        <div class="front spot" id="spot46"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-3</div>
+                        <div class="front spot" id="spot47"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-2</div>
+                        <div class="front spot" id="spot48"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-1</div>
+                        <div class="front spot" id="spot49"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">-11</div>
+                        <div class="front spot" id="spot39"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-12</div>
+                        <div class="front spot" id="spot38"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-13</div>
+                        <div class="front spot" id="spot37"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-14</div>
+                        <div class="front spot" id="spot36"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-15</div>
+                        <div class="front spot" id="spot35"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-16</div>
+                        <div class="front spot" id="spot34"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-17</div>
+                        <div class="front spot" id="spot33"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-18</div>
+                        <div class="front spot" id="spot32"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-19</div>
+                        <div class="front spot" id="spot31"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-20</div>
+                        <div class="front spot" id="spot30"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">-30</div>
+                        <div class="front spot" id="spot20"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-29</div>
+                        <div class="front spot" id="spot21"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-28</div>
+                        <div class="front spot" id="spot22"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-27</div>
+                        <div class="front spot" id="spot23"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-26</div>
+                        <div class="front spot" id="spot24"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-25</div>
+                        <div class="front spot" id="spot25"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-24</div>
+                        <div class="front spot" id="spot26"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-23</div>
+                        <div class="front spot" id="spot27"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-22</div>
+                        <div class="front spot" id="spot28"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-21</div>
+                        <div class="front spot" id="spot29"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">-31</div>
+                        <div class="front spot" id="spot19"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-32</div>
+                        <div class="front spot" id="spot18"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-33</div>
+                        <div class="front spot" id="spot17"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-34</div>
+                        <div class="front spot" id="spot16"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-35</div>
+                        <div class="front spot" id="spot15"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-36</div>
+                        <div class="front spot" id="spot14"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-37</div>
+                        <div class="front spot" id="spot13"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-38</div>
+                        <div class="front spot" id="spot12"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-39</div>
+                        <div class="front spot" id="spot11"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-40</div>
+                        <div class="front spot" id="spot10"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col game-spot">
+                        <div class="back">-50</div>
+                        <div class="front spot" id="spot0"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-49</div>
+                        <div class="front spot" id="spot1"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-48</div>
+                        <div class="front spot" id="spot2"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-47</div>
+                        <div class="front spot" id="spot3"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-46</div>
+                        <div class="front spot" id="spot4"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-45</div>
+                        <div class="front spot" id="spot5"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-44</div>
+                        <div class="front spot" id="spot6"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-43</div>
+                        <div class="front spot" id="spot7"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-42</div>
+                        <div class="front spot" id="spot8"></div>
+                    </div>
+                    <div class="col game-spot">
+                        <div class="back">-41</div>
+                        <div class="front spot" id="spot9"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-lg-block col-lg-1 col-xl-2" id="gameHistory">
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="~/js/game-typescript.js" asp-append-version="true"></script>
+}
